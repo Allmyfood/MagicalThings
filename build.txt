@@ -1,0 +1,11 @@
+author = Allmyfood
+
+version = 0.1.0
+
+displayName = Magical Things
+homepage = 
+hidecode = false
+hideResources = false
+includeSource = true
+buildIgnore = *.user, obj\*, bin\*, .vs\*
+includePDB = true

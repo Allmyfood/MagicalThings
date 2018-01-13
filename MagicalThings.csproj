@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MagicalThings</RootNamespace>
+    <AssemblyName>MagicalThings</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\Gwen.cs" />
+    <Compile Include="Buffs\HeavenlyMount.cs" />
+    <Compile Include="Buffs\MartianMount.cs" />
+    <Compile Include="Buffs\PegasusMount.cs" />
+    <Compile Include="Buffs\PotionBuff.cs" />
+    <Compile Include="Buffs\VoidDragonBuff.cs" />
+    <Compile Include="Buffs\WarHorse.cs" />
+    <Compile Include="Buffs\WolfPet.cs" />
+    <Compile Include="Dusts\Smoke.cs" />
+    <Compile Include="Dusts\Sparkle.cs" />
+    <Compile Include="GlobalBootItem.cs" />
+    <Compile Include="Items\Accessory\ElementsparkBoots.cs" />
+    <Compile Include="Items\Accessory\DrowPiwafwi.cs" />
+    <Compile Include="Items\Accessory\MercuryBoots.cs" />
+    <Compile Include="Items\Accessory\SmoothBoots.cs" />
+    <Compile Include="Items\Armor\DrowBreastplate.cs" />
+    <Compile Include="Items\Armor\DrowHelmet.cs" />
+    <Compile Include="Items\Armor\DrowLeggings.cs" />
+    <Compile Include="Items\Armor\DrowMask.cs" />
+    <Compile Include="Items\BrokenWarSword.cs" />
+    <Compile Include="Items\ClenseBomb.cs" />
+    <Compile Include="Items\CorruptBomb.cs" />
+    <Compile Include="Items\EdenApple.cs" />
+    <Compile Include="Items\FleshBomb.cs" />
+    <Compile Include="Items\FrozenHook.cs" />
+    <Compile Include="Items\HolyBomb.cs" />
+    <Compile Include="Items\InfiniteClenseBomb.cs" />
+    <Compile Include="Items\InfiniteCorruptBomb.cs" />
+    <Compile Include="Items\InfiniteFleshBomb.cs" />
+    <Compile Include="Items\InfiniteHolyBomb.cs" />
+    <Compile Include="Items\MillenniumApple.cs" />
+    <Compile Include="Items\NaniteAssembler.cs" />
+    <Compile Include="Items\Placeable\EnkryptionMusicBox.cs" />
+    <Compile Include="Items\Potion.cs" />
+    <Compile Include="Items\SpiritHook.cs" />
+    <Compile Include="Items\Weapons\IcingDeath.cs" />
+    <Compile Include="Items\Weapons\LightBlade.cs" />
+    <Compile Include="Items\Weapons\PantherStatuete.cs" />
+    <Compile Include="Items\Weapons\RiftStaff.cs" />
+    <Compile Include="Items\Weapons\Twinkle.cs" />
+    <Compile Include="Items\WolfPet.cs" />
+    <Compile Include="MagicalPlayer.cs" />
+    <Compile Include="MagicalThings.cs" />
+    <Compile Include="Mounts\HeavenHorse.cs" />
+    <Compile Include="Mounts\HorseofWar.cs" />
+    <Compile Include="Mounts\MiTV.cs" />
+    <Compile Include="Mounts\Pegasus.cs" />
+    <Compile Include="NPCs\MagicalGlobalNPC.cs" />
+    <Compile Include="Projectiles\ClenseBombProj.cs" />
+    <Compile Include="Projectiles\CorruptBombProj.cs" />
+    <Compile Include="Projectiles\FleshBombProj.cs" />
+    <Compile Include="Projectiles\HolyBombProj.cs" />
+    <Compile Include="Projectiles\LightBladeShot.cs" />
+    <Compile Include="Projectiles\Minions\GwenProj.cs" />
+    <Compile Include="Projectiles\Minions\GwenClaws.cs" />
+    <Compile Include="Projectiles\Minions\HoverShooter.cs" />
+    <Compile Include="Projectiles\Minions\Minion.cs" />
+    <Compile Include="Projectiles\Minions\Minion2.cs" />
+    <Compile Include="Projectiles\Minions\VoidDragon.cs" />
+    <Compile Include="Projectiles\Pets\WolfPet.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TerraUI\Enums\Contexts.cs" />
+    <Compile Include="TerraUI\Enums\MouseButtons.cs" />
+    <Compile Include="TerraUI\Enums\Sounds.cs" />
+    <Compile Include="TerraUI\ExampleWindow.cs" />
+    <Compile Include="TerraUI\Objects\UIButton.cs" />
+    <Compile Include="TerraUI\Objects\UICheckBox.cs" />
+    <Compile Include="TerraUI\Objects\UIItemSlot.cs" />
+    <Compile Include="TerraUI\Objects\UILabel.cs" />
+    <Compile Include="TerraUI\Objects\UINumberBox.cs" />
+    <Compile Include="TerraUI\Objects\UIObject.cs" />
+    <Compile Include="TerraUI\Objects\UIObjectBordered.cs" />
+    <Compile Include="TerraUI\Objects\UIProgressBar.cs" />
+    <Compile Include="TerraUI\Objects\UITextBox.cs" />
+    <Compile Include="TerraUI\Panels\UIPanel.cs" />
+    <Compile Include="TerraUI\Utilities\BaseTextureDrawing.cs" />
+    <Compile Include="TerraUI\Utilities\Events.cs" />
+    <Compile Include="TerraUI\Utilities\KeyboardUtils.cs" />
+    <Compile Include="TerraUI\Utilities\MouseUtils.cs" />
+    <Compile Include="TerraUI\Utilities\UIColors.cs" />
+    <Compile Include="TerraUI\Utilities\UIUtils.cs" />
+    <Compile Include="Tiles\EnkryptionMusicBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="ReLogic">
+      <HintPath>.\ReLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Terraria">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TerraUI\.git" />
+    <None Include="TerraUI\.gitignore" />
+    <None Include="TerraUI\Textures\Buttons\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sounds\Music\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TerraUI\Textures\1x1.png" />
+    <Content Include="TerraUI\Textures\Background.png" />
+    <Content Include="TerraUI\Textures\BackgroundSolid.png" />
+    <Content Include="TerraUI\Textures\Buttons\Cross.png" />
+    <Content Include="TerraUI\Textures\Buttons\Enter.png" />
+    <Content Include="TerraUI\Textures\Buttons\Integrate.png" />
+    <Content Include="TerraUI\Textures\Corner.png" />
+    <Content Include="TerraUI\Textures\CornerSolid.png" />
+    <Content Include="TerraUI\Textures\DownArrow.png" />
+    <Content Include="TerraUI\Textures\Side.png" />
+    <Content Include="TerraUI\Textures\SideSolid.png" />
+    <Content Include="TerraUI\Textures\Tick.png" />
+    <Content Include="TerraUI\Textures\UpArrow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\Terraria.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

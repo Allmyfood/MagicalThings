@@ -1,0 +1,20 @@
+Magical Things add a few different items from swords to summons. Adds a dedicated boot slot, but still allows boots to be equipped. 
+Useful for different kinds of boots. Still a work-in-progress. Shoe slot doesn't show on player correctly.
+Should be fixed in the future.
+
+Items Added:
+
+3 Swords, 3 Mounts, 2 Summons, 1 Pet, 1 Hook, 1 Armor Set, 1 Cloak, 2 Boots plus 1 cheat boot.
+4 Bombs that explode and convert blocks to their matching solution. It’s a very large area!
+1 MusicBox (Featuring artist modbom)
+
+Big thanks to Examplemod, and WingSlot for their help.
+
+Warning! Unequip your current shoes from shoe slot before updating.
+
+[Known Bugs]
+
+Shoe slot does not draw on player. Frozen Hook a (Static Hook) doesn't work or have recipe.
+
+[Credits]
+Sprites from: Cyrus Annihilator, Mageker, and Shadow443.
