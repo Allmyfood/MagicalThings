@@ -17,6 +17,7 @@ namespace MagicalThings.Buffs
 		{
 			player.mount.SetMount(mod.MountType<Mounts.HeavenHorse>(), player);
 			player.buffTime[buffIndex] = 10;
+            player.nightVision = true;
 		}
 	}
 }
