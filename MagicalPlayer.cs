@@ -9,9 +9,9 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using TerraUI;
 using TerraUI.Objects;
-using TerraUI.Utilities;
+using Terraria.ID;
+using Terraria.UI;
 
 namespace MagicalThings
 {
@@ -31,6 +31,16 @@ namespace MagicalThings
         public bool WolfPet = false;
         public bool GwenMinion = false;
         public bool VoidDragonMinion = false;
+        public bool WindPixieMinion = false;
+        public bool CardinalSpriteMinion = false;
+        public bool JaySpriteMinion = false;
+        public bool CrimsonDaggerMinion = false;
+        public bool AzureSpinnerMinion = false;
+        public bool CrimsonPuffMinion = false;
+        public bool SlimeBirdMinion = false;
+        public bool SwarmMinion = false;
+        public bool ServantMinion = false;
+        public bool SidheMinion = false;
 
         /// <summary>
         /// Whether to autoload the ModPlayer.
@@ -39,44 +49,48 @@ namespace MagicalThings
         {
             return true;
         }
-
+        #region Shoe Slot
         /// <summary>
         /// Initialize the ModPlayer.
         /// </summary>
         public override void Initialize()
         {
-            EquipShoeSlot = new UIItemSlot(Vector2.Zero, context: Contexts.EquipAccessory, hoverText: "Shoes",
+            EquipShoeSlot = new UIItemSlot(Vector2.Zero, context: ItemSlot.Context.EquipAccessory, hoverText: "Shoes",
                 conditions: Slot_Conditions, drawBackground: Slot_DrawBackground, scaleToInventory: true);
-            VanityShoeSlot = new UIItemSlot(Vector2.Zero, context: Contexts.EquipAccessoryVanity, hoverText:
+            VanityShoeSlot = new UIItemSlot(Vector2.Zero, context: ItemSlot.Context.EquipAccessoryVanity, hoverText: //context: Contexts.EquipAccessoryVanity, hoverText:
                 Language.GetTextValue("LegacyInterface.11") + " Shoes",
                 conditions: Slot_Conditions, drawBackground: Slot_DrawBackground, scaleToInventory: true);
-            ShoeDyeSlot = new UIItemSlot(Vector2.Zero, context: Contexts.EquipDye, conditions: ShoeDyeSlot_Conditions,
+            ShoeDyeSlot = new UIItemSlot(Vector2.Zero, context: ItemSlot.Context.EquipDye, conditions: ShoeDyeSlot_Conditions,
                 drawBackground: ShoeDyeSlot_DrawBackground, scaleToInventory: true);
             VanityShoeSlot.Partner = EquipShoeSlot;
             EquipShoeSlot.BackOpacity = VanityShoeSlot.BackOpacity = ShoeDyeSlot.BackOpacity = .8f;
 
-            // Big thanks to thegamemaster1234 for the example code used to write this! And WingSlot!
-            shoesDye = new PlayerLayer(UIUtils.Mod.Name, SHOE_DYE_LAYER, delegate (PlayerDrawInfo drawInfo)
+            // Big thanks to thegamemaster1234 for the example code used to write this! And WingSlot for how this even works!
+            shoesDye = new PlayerLayer(mod.Name, SHOE_DYE_LAYER, delegate (PlayerDrawInfo drawInfo)  //(UIUtils.Mod.Name, SHOE_DYE_LAYER, delegate
             {
                 Player player = drawInfo.drawPlayer;
-                MagicalPlayer mpp = player.GetModPlayer<MagicalPlayer>(UIUtils.Mod);
+                MagicalPlayer mpp = player.GetModPlayer<MagicalPlayer>(mod); //(UIUtils.Mod);
                 Item shoes = mpp.GetDyedShoes();
                 Item dye = mpp.ShoeDyeSlot.Item;
-                int index = Main.playerDrawData.Count - 1;
+                //int index = Main.playerDrawData.Count - 1; //changed
 
                 if (dye.stack <= 0 || shoes.stack <= 0 || !shoes.active || shoes.noUseGraphic || player.mount.Active ||
                   (mpp.VanityShoeSlot.Item.stack <= 0 && !mpp.EquipShoeSlot.ItemVisible))
                     return;
 
-                if (shoes.flame)
-                    index -= 1;
+                int shader = GameShaders.Armor.GetShaderIdFromItemId(dye.type); //new
 
-                if (index < 0 || index > Main.playerDrawData.Count)
-                    return;
+                //if (shoes.flame)
+                //    index -= 1;
 
-                DrawData data = Main.playerDrawData[index];
-                data.shader = GameShaders.Armor.GetShaderIdFromItemId(dye.type);
-                Main.playerDrawData[index] = data;
+                //if (index < 0 || index > Main.playerDrawData.Count)
+                //return; //removed
+                for (int i = 0; i < Main.playerDrawData.Count; i++) //new
+                {
+                    DrawData data = Main.playerDrawData[i]; // Main.playerDrawData[index];
+                    data.shader = shader; //GameShaders.Armor.GetShaderIdFromItemId(dye.type);
+                    Main.playerDrawData[i] = data; //Main.playerDrawData[index] = data;
+                }
             });
 
             InitializeShoes();
@@ -163,12 +177,12 @@ namespace MagicalThings
                 int context = ReadShoesLegacy(ref shoes1, reader);
                 ReadShoesLegacy(ref shoes2, reader);
 
-                if (context == (int)Contexts.EquipAccessory)
+                if (context == ItemSlot.Context.EquipAccessory) //(int)Contexts.EquipAccessory)
                 {
                     SetShoes(false, shoes1);
                     SetShoes(true, shoes2);
                 }
-                else if (context == (int)Contexts.EquipAccessoryVanity)
+                else if (context == ItemSlot.Context.EquipAccessoryVanity)
                 {
                     SetShoes(true, shoes1);
                     SetShoes(false, shoes2);
@@ -331,7 +345,7 @@ namespace MagicalThings
                 VanityShoeSlot.Update();
                 ShoeDyeSlot.Update();
 
-                UIUtils.UpdateInput();
+                //UIUtils.UpdateInput(); //removed?
             }
         }
 
@@ -341,7 +355,7 @@ namespace MagicalThings
         /// <returns>whether to draw the slots</returns>
         public bool ShouldDrawSlots()
         {
-            if (Main.playerInventory && Main.EquipPage == 2)
+            if (Main.playerInventory && Main.EquipPage == 2) //new style main page ppfftt = 0 I set mine to 2
             {
                 return true;
             }
@@ -430,7 +444,8 @@ namespace MagicalThings
             {
                 item.favorited = false;
                 player.inventory[fromSlot] = slot.Item.Clone();
-                UIUtils.PlaySound(Sounds.Grab);
+                Main.PlaySound(SoundID.Grab);
+                //UIUtils.PlaySound(Sounds.Grab);
                 Recipe.FindRecipes();
                 SetShoes(isVanity, item);
             }
@@ -449,7 +464,8 @@ namespace MagicalThings
             {
                 item.favorited = false;
                 player.inventory[fromSlot] = ShoeDyeSlot.Item.Clone();
-                UIUtils.PlaySound(Sounds.Grab);
+                Main.PlaySound(SoundID.Grab);
+                //UIUtils.PlaySound(Sounds.Grab); old
                 Recipe.FindRecipes();
                 SetDye(item);
             }
@@ -472,11 +488,36 @@ namespace MagicalThings
 
             return new Item();
         }
+        #endregion
+
+        #region Reset Effects
+
+        // --------Reset Effects---------
         public override void ResetEffects() 
         {
             WolfPet = false;
             GwenMinion = false;
             VoidDragonMinion = false;
+            WindPixieMinion = false;
+            CardinalSpriteMinion = false;
+            JaySpriteMinion = false;
+            CrimsonDaggerMinion = false;
+            AzureSpinnerMinion = false;
+            CrimsonPuffMinion = false;
+            SlimeBirdMinion = false;
+            SwarmMinion = false;
+            ServantMinion = false;
+            SidheMinion = false;
+    }
+
+        #endregion
+
+        public override void SetupStartInventory(IList<Item> items)
+        {
+            Item item = new Item();
+            item.SetDefaults(mod.ItemType("Animus"));
+            item.stack = 1;
+            items.Add(item);
         }
     }
 }

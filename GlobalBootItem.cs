@@ -1,11 +1,10 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework.Input;
 using Terraria;
 using Terraria.ModLoader;
 using TerraUI.Utilities;
 
-namespace MagicalThings {
+namespace MagicalThings
+{
     class GlobalBootItem : GlobalItem {
         public override bool Autoload(ref string name) {
             return true;

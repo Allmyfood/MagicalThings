@@ -8,16 +8,19 @@ namespace MagicalThings
 {
 	public class MagicalThings : Mod
 	{
+        public static int shakeIntensity = 0; //used for Weaponout info
+        public static int shakeTick = 0; //used for Weaponout info
         public const string SHOE_SLOT_BACK_TEX = "ShoeSlotBackground";
         internal static MagicalThings instance;
 
         public MagicalThings()
 		{
-			Properties = new ModProperties()
-			{
-				Autoload = true,
-				AutoloadGores = true,
-				AutoloadSounds = true
+            Properties = new ModProperties()
+            {
+                Autoload = true,
+                AutoloadGores = true,
+                AutoloadSounds = true,
+                AutoloadBackgrounds = true //changed
 			};
             TerraUI.Utilities.UIUtils.Mod = this;
             TerraUI.Utilities.UIUtils.Subdirectory = "TerraUI";
@@ -36,21 +39,14 @@ namespace MagicalThings
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(ItemID.SpectreBoots, 1);
             recipe.AddRecipe();
-        
-            recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.PalladiumBar, 10);
-            recipe.AddIngredient(ItemID.SoulofNight, 2);
-            recipe.AddTile(TileID.MythrilAnvil);
-            recipe.SetResult(null, "Twinkle", 1);
-            recipe.AddRecipe();
-       
-            recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.PalladiumBar, 10);
-            recipe.AddIngredient(ItemID.SoulofNight, 1);
-            recipe.AddIngredient(ItemID.IceBlock, 1);
-            recipe.AddTile(TileID.MythrilAnvil);
-            recipe.SetResult(null, "IcingDeath", 1);
-            recipe.AddRecipe();
+
+        //Added to normal recipe section
+//            recipe = new ModRecipe(this);
+//            recipe.AddIngredient(ItemID.PalladiumBar, 10);
+//            recipe.AddIngredient(ItemID.SoulofNight, 2);
+//            recipe.AddTile(TileID.MythrilAnvil);
+//            recipe.SetResult(null, "Twinkle", 1);
+//            recipe.AddRecipe();
         }
 
         public override void Unload()
@@ -64,10 +60,6 @@ namespace MagicalThings
             {
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/Enkryption"), ItemType("EnkryptionMusicBox"), TileType("EnkryptionMusicBox"));
             }
-        }
-        public override void UpdateMusic(ref int music)
-        {
-            
         }
     }
 }

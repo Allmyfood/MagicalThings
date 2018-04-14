@@ -4,9 +4,15 @@ Should be fixed in the future.
 
 Items Added:
 
+Updated!
+Now has a companion weapon class. Including Mage, Range, Ninja, Summoner, and Melee. Each class can be upgraded to pre hard-mode
+Demonite or Crimtane bars at an altar. More tiers yet to come.
+
 3 Swords, 3 Mounts, 2 Summons, 1 Pet, 1 Hook, 1 Armor Set, 1 Cloak, 2 Boots plus 1 cheat boot.
-4 Bombs that explode and convert blocks to their matching solution. It’s a very large area!
+4 Bombs that explode and convert blocks to their matching solution. Its a very large area!
 1 MusicBox (Featuring artist modbom)
+
+Equip shoes with Right click, vanity shoes with Shift Right click (although since they don't display not much point in that yet).
 
 Big thanks to Examplemod, and WingSlot for their help.
 
@@ -14,7 +20,9 @@ Warning! Unequip your current shoes from shoe slot before updating.
 
 [Known Bugs]
 
-Shoe slot does not draw on player. Frozen Hook a (Static Hook) doesn't work or have recipe.
+Shoe slot still does not draw on player. But shoe accessory still works fine. Frozen Hook a (Static Hook) doesn't work or have recipe.
 
 [Credits]
+Coders: Big help from the tmodloader community and of course, jopojelly, bluemagic, and Wingslot.
 Sprites from: Cyrus Annihilator, Mageker, and Shadow443.
+Music from: modbom's ENKRYPTION album.
