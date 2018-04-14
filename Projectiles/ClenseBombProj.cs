@@ -107,7 +107,7 @@ namespace MagicalThings.Projectiles
                             NetMessage.SendTileSquare(-1, xPosition, yPosition, 1);
                         }
                             //WorldGen.KillTile(xPosition, yPosition, false, false, false);  //this make the explosion destroy tiles  
-                            Dust.NewDust(position, 144, 144, DustID.Smoke, -3.0f, -3.0f, 120, new Color(), 1f);  //this is the dust that will spawn after the explosion
+                            Dust.NewDust(projectile.position, projectile.width, projectile.height, 74, 0f, 0f, 80, new Color(), 1f);  //this is the dust that will spawn after the explosion
                         }
                     }
                 }
