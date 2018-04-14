@@ -37,17 +37,25 @@ namespace MagicalThings.Items.Weapons
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.PalladiumBar, 10);
+            recipe.AddIngredient(ItemID.SoulofNight, 1);
+            recipe.AddIngredient(ItemID.IceBlock, 1);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {
             if (Main.rand.Next(14) == 0)
             {
-                int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, mod.DustType("Sparkle"));
+                int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 67); // mod.DustType("Sparkle"));
             }
         }
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(BuffID.Chilled, 60); //60 is the buff time
+            target.AddBuff(BuffID.Chilled, 160); //60 is the buff time
         }
 
     }

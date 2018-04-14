@@ -53,6 +53,7 @@ namespace MagicalThings.Items.Armor
             player.AddBuff(BuffID.NightOwl, 2);
             player.magicCrit += 1;
             player.rangedCrit += 1;
+            player.thrownCrit += 1;
             player.meleeCrit += 1;
             player.meleeSpeed += 0.05f; //5%
             player.lifeRegen += 1;
@@ -60,6 +61,7 @@ namespace MagicalThings.Items.Armor
             player.statManaMax2 += 60;
             player.ammoCost75 = true;
             player.manaCost -= .25f;
+            player.shroomiteStealth = true;
         }
 
 	//	public override void AddRecipes()

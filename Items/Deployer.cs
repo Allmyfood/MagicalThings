@@ -5,32 +5,33 @@ using Terraria.ModLoader;
 
 namespace MagicalThings.Items
 {
-	public class NaniteAssembler : ModItem
+	public class Deployer : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Assemble your MiTV!");
+            Tooltip.SetDefault("Deploy your own personal submarine!");
         }
         public override void SetDefaults()
 		{
-			item.width = 36;
-			item.height = 48;
+			item.width = 28;
+			item.height = 32;
 			item.useTime = 20;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.value = 30000;
 			item.rare = 3;
-			item.UseSound = SoundID.Item90;
+			item.UseSound = SoundID.Item21;
 			item.noMelee = true;
-			item.mountType = mod.MountType("MiTV");
+			item.mountType = mod.MountType("SSMonkfish");
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Nanites, 50);
-            recipe.AddIngredient(ItemID.MartianConduitPlating, 10);
-            recipe.AddTile(TileID.MythrilAnvil);
+			recipe.AddIngredient(ItemID.SharkFin, 1);
+            recipe.AddIngredient(ItemID.Glowstick, 10);
+            recipe.AddIngredient(ItemID.GillsPotion, 1);
+            recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

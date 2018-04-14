@@ -36,6 +36,13 @@ namespace MagicalThings.Items.Weapons
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.PalladiumBar, 10);
+            recipe.AddIngredient(ItemID.SoulofNight, 2);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {
@@ -46,7 +53,7 @@ namespace MagicalThings.Items.Weapons
         }
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(BuffID.Venom, 60);
+            target.AddBuff(BuffID.Venom, 160);
         }
 
     }
