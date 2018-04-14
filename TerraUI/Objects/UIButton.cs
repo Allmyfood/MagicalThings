@@ -55,6 +55,20 @@ namespace TerraUI.Objects {
         }
 
         /// <summary>
+        /// Fires when the mouse enters the UIButton.
+        /// </summary>
+        public override void OnMouseEnter() {
+            BackColor = UIColors.LightBackColorTransparent;
+        }
+
+        /// <summary>
+        /// Fires when the mouse leaves the UIButton.
+        /// </summary>
+        public override void OnMouseLeave() {
+            BackColor = UIColors.DarkBackColorTransparent;
+        }
+
+        /// <summary>
         /// Draw the UIButton.
         /// </summary>
         /// <param name="spriteBatch">drawing SpriteBatch</param>
@@ -62,7 +76,7 @@ namespace TerraUI.Objects {
             Rectangle = new Rectangle((int)RelativePosition.X, (int)RelativePosition.Y, (int)Size.X, (int)Size.Y);
 
             if(BackTexture == null || !BackTextureReplaces) {
-                BaseTextureDrawing.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
+                DrawingUtils.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
             }
 
             if(BackTexture != null) {

@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Terraria;
+using Terraria.GameInput;
 using TerraUI.Objects;
 using TerraUI.Panels;
 using TerraUI.Utilities;
@@ -56,22 +57,22 @@ namespace TerraUI {
         /// Move the window.
         /// </summary>
         private void DoMovement() {
-            Rectangle oldMouseRect = new Rectangle(MouseUtils.LastState.X, MouseUtils.LastState.Y, 1, 1);
+            Rectangle oldMouseRect = new Rectangle(PlayerInput.MouseInfoOld.X, PlayerInput.MouseInfoOld.Y, 1, 1);
 
             if(oldMouseRect.Intersects(Window.Rectangle) &&
                MouseUtils.Rectangle.Intersects(Window.Rectangle) &&
                UIUtils.NoChildrenIntersect(Window, MouseUtils.Rectangle)) {
-                if(MouseUtils.State.LeftButton == ButtonState.Pressed) {
+                if(PlayerInput.MouseInfo.LeftButton == ButtonState.Pressed) {
                     distance = MouseUtils.Position - Window.Position;
                     CanMove = true;
                 }
             }
 
             if(CanMove) {
-                Window.Position = new Vector2(Main.mouseX, Main.mouseY) - distance;
+                Window.Position = MouseUtils.Position - distance;
             }
 
-            if(MouseUtils.State.LeftButton == ButtonState.Released) {
+            if(PlayerInput.MouseInfo.LeftButton == ButtonState.Released) {
                 CanMove = false;
             }
         }

@@ -137,7 +137,7 @@ namespace TerraUI.Objects {
         public override void Draw(SpriteBatch spriteBatch) {
             Rectangle = new Rectangle((int)RelativePosition.X, (int)RelativePosition.Y, (int)Size.X, (int)Size.Y);
 
-            BaseTextureDrawing.DrawRectangleBox(spriteBatch, BoxBorderColor, BoxColor, new Rectangle(Rectangle.X, Rectangle.Y,
+            DrawingUtils.DrawRectangleBox(spriteBatch, BoxBorderColor, BoxColor, new Rectangle(Rectangle.X, Rectangle.Y,
                 BoxSize, BoxSize), BoxBorderWidth);
 
             if(Checked) {

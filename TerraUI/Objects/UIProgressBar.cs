@@ -172,8 +172,8 @@ namespace TerraUI.Objects {
 
             barRectangle.Width = (int)((Size.X * Percent) - BarMargin.X * 2);
 
-            BaseTextureDrawing.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
-            BaseTextureDrawing.DrawRectangleBox(spriteBatch, Color.Transparent, BarColor, barRectangle, 0);
+            DrawingUtils.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
+            DrawingUtils.DrawRectangleBox(spriteBatch, Color.Transparent, BarColor, barRectangle, 0);
 
             base.Draw(spriteBatch);
         }

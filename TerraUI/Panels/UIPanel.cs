@@ -56,10 +56,10 @@ namespace TerraUI.Panels {
             }
             else {
                 if(DrawStyledBox) {
-                    BaseTextureDrawing.DrawTerrariaStyledBox(spriteBatch, BackColor, Rectangle);
+                    DrawingUtils.DrawTerrariaStyledBox(spriteBatch, BackColor, Rectangle);
                 }
                 else {
-                    BaseTextureDrawing.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
+                    DrawingUtils.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
                 }
             }
 

@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameInput;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.UI;
 using Terraria.UI.Chat;
@@ -43,7 +44,7 @@ namespace TerraUI.Objects {
         /// <summary>
         /// The context for the slot.
         /// </summary>
-        public Contexts Context { get; set; }
+        public int Context { get; set; }
         /// <summary>
         /// The text to show when the mouse hovers over the slot. If blank, text is determined by slot context.
         /// </summary>
@@ -78,14 +79,14 @@ namespace TerraUI.Objects {
         /// </summary>
         public float BackOpacity {
             get { return backOpacity; }
-            set { backOpacity = UIUtils.Clamp(value, 0f, 1f); }
+            set { backOpacity = MathHelper.Clamp(value, 0f, 1f); }
         }
         /// <summary>
         /// The opacity of the item texture in the slot (between 0 and 1).
         /// </summary>
         public float ItemOpacity {
             get { return itemOpacity; }
-            set { itemOpacity = UIUtils.Clamp(value, 0f, 1f); }
+            set { itemOpacity = MathHelper.Clamp(value, 0f, 1f); }
         }
 
         /// <summary>
@@ -102,10 +103,11 @@ namespace TerraUI.Objects {
         /// <param name="postDrawItem">run after item in slot is drawn; use to draw elements over the item</param>
         /// <param name="drawAsNormalSlot">draw as a normal inventory ItemSlot</param>
         /// <param name="scaleToInventory">whether to scale with the inventory</param>
-        public UIItemSlot(Vector2 position, int size = 52, Contexts context = Contexts.InventoryItem, string hoverText = "",
-            UIObject parent = null, ConditionHandler conditions = null, DrawHandler drawBackground = null,
-            DrawHandler drawItem = null, DrawHandler postDrawItem = null, bool drawAsNormalSlot = false,
-            bool scaleToInventory = false) : base(position, new Vector2(size), parent, false) {
+        public UIItemSlot(Vector2 position, int size = 52, int context = ItemSlot.Context.InventoryItem,
+            string hoverText = "", UIObject parent = null, ConditionHandler conditions = null,
+            DrawHandler drawBackground = null, DrawHandler drawItem = null, DrawHandler postDrawItem = null,
+            bool drawAsNormalSlot = false, bool scaleToInventory = false)
+            : base(position, new Vector2(size), parent, false) {
             Item = new Item();
             Context = context;
             HoverText = hoverText;
@@ -145,7 +147,7 @@ namespace TerraUI.Objects {
         /// <param name="item2">second item</param>
         public void Swap(ref Item item1, ref Item item2) {
             UIUtils.SwitchItems(ref item1, ref item2);
-            UIUtils.PlaySound(Sounds.Grab);
+            Main.PlaySound(SoundID.Grab);
             Recipe.FindRecipes();
         }
 
@@ -154,7 +156,7 @@ namespace TerraUI.Objects {
         /// </summary>
         public void ToggleVisibility() {
             ItemVisible = !ItemVisible;
-            UIUtils.PlaySound(Sounds.MenuTick);
+            Main.PlaySound(SoundID.MenuTick);
         }
 
         /// <summary>
@@ -320,9 +322,9 @@ namespace TerraUI.Objects {
         /// </summary>
         /// <returns>whether the slot has a tick</returns>
         public bool HasTick() {
-            if(Context == Contexts.EquipAccessory ||
-               Context == Contexts.EquipLight ||
-               Context == Contexts.EquipPet) {
+            if(Context == ItemSlot.Context.EquipAccessory ||
+               Context == ItemSlot.Context.EquipLight ||
+               Context == ItemSlot.Context.EquipPet) {
                 return true;
             }
 

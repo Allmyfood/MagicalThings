@@ -23,7 +23,23 @@ namespace TerraUI.Objects {
         /// <summary>
         /// The text displayed in the UITextBox.
         /// </summary>
-        public string Text { get; set; }
+        public string Text {
+            get { return text; }
+            set {
+                string oldText = text;
+
+                if(!string.IsNullOrEmpty(Strip)) {
+                    text = Regex.Replace(value, Strip, "");
+                }
+                else {
+                    text = value;
+                }
+
+                if(!text.Equals(oldText) && TextChanged != null) {
+                    TextChanged(this, new ValueChangedEventArgs<string>(oldText, text));
+                }
+            }
+        }
         /// <summary>
         /// The font used in the UITextBox.
         /// </summary>
@@ -175,7 +191,7 @@ namespace TerraUI.Objects {
         public override void Draw(SpriteBatch spriteBatch) {
             Rectangle = new Rectangle((int)RelativePosition.X, (int)RelativePosition.Y, (int)Size.X, (int)Size.Y);
 
-            BaseTextureDrawing.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
+            DrawingUtils.DrawRectangleBox(spriteBatch, BorderColor, BackColor, Rectangle, BorderWidth);
 
             if(Focused) {
                 spriteBatch.DrawString(Font, Text.Insert(SelectionStart, "|"), RelativePosition + new Vector2(2), TextColor);
