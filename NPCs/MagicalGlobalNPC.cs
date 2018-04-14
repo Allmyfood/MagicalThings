@@ -15,7 +15,7 @@ namespace MagicalThings.NPCs
                 return true;
             }
         }
-          
+
         public override void SetupShop(int type, Chest shop, ref int nextSlot)
         {
             switch (type)
@@ -45,15 +45,29 @@ namespace MagicalThings.NPCs
                         //nextSlot++;
                     }
                     break;
-                    }
             }
+        }
         public override void NPCLoot(NPC npc)
         {
             if (npc.type == NPCID.Wolf)
             {
-                if (Main.rand.Next(24)==0)
+                if (Main.rand.Next(24) == 0)
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("WolfPet"));
+                }
+            }
+            if (npc.type == NPCID.MartianDrone)
+            {
+                if (Main.rand.Next(35) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("NaniteAssembler"));
+                }
+            }
+            if (npc.type == NPCID.Shark)
+            {
+                if (Main.rand.Next(20) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Deployer"));
                 }
             }
         }
