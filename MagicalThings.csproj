@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MagicalThings</RootNamespace>
+    <AssemblyName>MagicalThings</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\ArmorBreak.cs" />
+    <Compile Include="Buffs\BarnBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\AzureSpinnerBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\CardinalBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\CrimsonDaggerBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\CrimsonPuffBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\FireRingBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\FlameSkullBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\FreeSpiritBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\JayBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\ServantBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\SidheBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\SlimeBirdBuff.cs" />
+    <Compile Include="Buffs\CompanionBuffs\YoungValkyrieBuff.cs" />
+    <Compile Include="Buffs\Pets\EyeBuff.cs" />
+    <Compile Include="Buffs\Gwen.cs" />
+    <Compile Include="Buffs\HeavenlyMount.cs" />
+    <Compile Include="Buffs\MartianMount.cs" />
+    <Compile Include="Buffs\Pets\FoxBuff.cs" />
+    <Compile Include="Buffs\Pets\MedicBuff.cs" />
+    <Compile Include="Buffs\MonkfishMount.cs" />
+    <Compile Include="Buffs\Pets\MouseyBuff.cs" />
+    <Compile Include="Buffs\PegasusMount.cs" />
+    <Compile Include="Buffs\PotionBuff.cs" />
+    <Compile Include="Buffs\Slowed.cs" />
+    <Compile Include="Buffs\SodaBuffs\BlueberryLimeBuff.cs" />
+    <Compile Include="Buffs\SodaBuffs\CreamSodaBuff.cs" />
+    <Compile Include="Buffs\SodaBuffs\MelonBlastBuff.cs" />
+    <Compile Include="Buffs\SodaBuffs\GrapeOrangeBuff.cs" />
+    <Compile Include="Buffs\SodaBuffs\OrangeTwistBuff.cs" />
+    <Compile Include="Buffs\SodaBuffs\SuicideSodaBuff.cs" />
+    <Compile Include="Buffs\SodaBuffs\SurgeBuff.cs" />
+    <Compile Include="Buffs\SwarmBuff.cs" />
+    <Compile Include="Buffs\VoidDragonBuff.cs" />
+    <Compile Include="Buffs\WarHorse.cs" />
+    <Compile Include="Buffs\CompanionBuffs\WindPixieBuff.cs" />
+    <Compile Include="Buffs\Pets\WolfPet.cs" />
+    <Compile Include="Buffs\WaspBuff.cs" />
+    <Compile Include="Dusts\Smoke.cs" />
+    <Compile Include="Dusts\Sparkle.cs" />
+    <Compile Include="GlobalBootItem.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Items\Accessory\BarnTonic.cs" />
+    <Compile Include="Items\Accessory\CheeseWheel.cs" />
+    <Compile Include="Items\Accessory\ElementsparkBoots.cs" />
+    <Compile Include="Items\Accessory\DrowPiwafwi.cs" />
+    <Compile Include="Items\Accessory\IlluminationTriangle.cs" />
+    <Compile Include="Items\Accessory\MercuryBoots.cs" />
+    <Compile Include="Items\Accessory\RopeChew.cs" />
+    <Compile Include="Items\Accessory\ShinobiEmblem.cs" />
+    <Compile Include="Items\Accessory\ShinyMedkit.cs" />
+    <Compile Include="Items\Accessory\SmoothBoots.cs" />
+    <Compile Include="Items\Animus.cs" />
+    <Compile Include="Items\AntiAnimus.cs" />
+    <Compile Include="Items\Armor\Cultist\CultistBottoms.cs" />
+    <Compile Include="Items\Armor\Cultist\CultistHood.cs" />
+    <Compile Include="Items\Armor\Cultist\CultistRobes.cs" />
+    <Compile Include="Items\Armor\Drow\DrowBreastplate.cs" />
+    <Compile Include="Items\Armor\Drow\DrowHelmet.cs" />
+    <Compile Include="Items\Armor\Drow\DrowLeggings.cs" />
+    <Compile Include="Items\Armor\Drow\DrowMask.cs" />
+    <Compile Include="Items\Armor\FlyMask\FlyMask.cs" />
+    <Compile Include="Items\Armor\Timposter\Timposter.cs" />
+    <Compile Include="Items\BrokenWarSword.cs" />
+    <Compile Include="Items\CleanseBomb.cs" />
+    <Compile Include="Items\Companion\Bags\Mage\BookOfSpellsV6Bag.cs" />
+    <Compile Include="Items\Companion\Bags\Mage\HellBurstStaffBag.cs" />
+    <Compile Include="Items\Companion\Bags\Mage\HellMarkTomeBag.cs" />
+    <Compile Include="Items\Companion\Bags\Mage\UnholyStormBag.cs" />
+    <Compile Include="Items\Companion\Bags\Ninja\BurningBloodDaggerBag.cs" />
+    <Compile Include="Items\Companion\Bags\Ninja\HellfireKunaiBag.cs" />
+    <Compile Include="Items\Companion\Bags\Ranger\DarkBlasterBag.cs" />
+    <Compile Include="Items\Companion\Bags\Ranger\NightmareBowBag.cs" />
+    <Compile Include="Items\Companion\Bags\Summoner\BrokenLanceBag.cs" />
+    <Compile Include="Items\Companion\Bags\Summoner\FlameSkullLampBag.cs" />
+    <Compile Include="Items\Companion\Bags\Warrior\DarkFlailBag.cs" />
+    <Compile Include="Items\Companion\Bags\Warrior\DarkThrowBag.cs" />
+    <Compile Include="Items\Companion\Bags\Warrior\HellfireBidentBag.cs" />
+    <Compile Include="Items\Companion\Bags\Warrior\HellfireSwordBag.cs" />
+    <Compile Include="Items\Companion\Mage\BookOfSpells.cs" />
+    <Compile Include="Items\Companion\Mage\BoomStick.cs" />
+    <Compile Include="Items\Companion\Mage\EverlastUrn.cs" />
+    <Compile Include="Items\Companion\Mage\RockStick.cs" />
+    <Compile Include="Items\Companion\Mage\StarStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier3\BookOfSpellsV2.cs" />
+    <Compile Include="Items\Companion\Mage\Tier3\EmberStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier3\EverlastSprayer.cs" />
+    <Compile Include="Items\Companion\Mage\Tier3\StarSpinnerStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier4\BookOfSpellsV3.cs" />
+    <Compile Include="Items\Companion\Mage\Tier4\LivingEmber.cs" />
+    <Compile Include="Items\Companion\Mage\Tier4\LivingStarSpinner.cs" />
+    <Compile Include="Items\Companion\Mage\Tier4\StormStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier5\BookOfSpellsV4.cs" />
+    <Compile Include="Items\Companion\Mage\Tier5\GrandEmberStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier5\SpitStormStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier5\StarMark.cs" />
+    <Compile Include="Items\Companion\Mage\Tier6\BoneStorm.cs" />
+    <Compile Include="Items\Companion\Mage\Tier6\BookOfSpellsV5.cs" />
+    <Compile Include="Items\Companion\Mage\Tier6\DeathMark.cs" />
+    <Compile Include="Items\Companion\Mage\Tier6\FlameSkullStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier7\BookOfSpellsV6.cs" />
+    <Compile Include="Items\Companion\Mage\Tier7\HellBurstStaff.cs" />
+    <Compile Include="Items\Companion\Mage\Tier7\HellMarkTome.cs" />
+    <Compile Include="Items\Companion\Mage\Tier7\UnholyStorm.cs" />
+    <Compile Include="Items\Companion\Ninja\BoneAxe.cs" />
+    <Compile Include="Items\Companion\Ninja\BoneKatar.cs" />
+    <Compile Include="Items\Companion\Ninja\BurningBloodDagger.cs" />
+    <Compile Include="Items\Companion\Ninja\Dirtball.cs" />
+    <Compile Include="Items\Companion\Ninja\EndlessKnives.cs" />
+    <Compile Include="Items\Companion\Ninja\EndlessSlime.cs" />
+    <Compile Include="Items\Companion\Ninja\HellfireKunai.cs" />
+    <Compile Include="Items\Companion\Ninja\PiercerGlove.cs" />
+    <Compile Include="Items\Companion\Ninja\PoisonGlove.cs" />
+    <Compile Include="Items\Companion\Ninja\SplinterClaw.cs" />
+    <Compile Include="Items\Companion\Ninja\Stinger.cs" />
+    <Compile Include="Items\Companion\Ninja\TaintedKama.cs" />
+    <Compile Include="Items\Companion\Ninja\TaintedStar.cs" />
+    <Compile Include="Items\Companion\Ranger\CrustyPistol.cs" />
+    <Compile Include="Items\Companion\Ranger\DarkBlaster.cs" />
+    <Compile Include="Items\Companion\Ranger\GreenwoodBow.cs" />
+    <Compile Include="Items\Companion\Ranger\IvoryMagnum.cs" />
+    <Compile Include="Items\Companion\Ranger\LeadShot.cs" />
+    <Compile Include="Items\Companion\Ranger\NightmareBow.cs" />
+    <Compile Include="Items\Companion\Ranger\Pebble.cs" />
+    <Compile Include="Items\Companion\Ranger\PebbleGun.cs" />
+    <Compile Include="Items\Companion\Ranger\PlatedBow.cs" />
+    <Compile Include="Items\Companion\Ranger\ScrapCannon.cs" />
+    <Compile Include="Items\Companion\Ranger\SkeletalBow.cs" />
+    <Compile Include="Items\Companion\Ranger\SlimeBow.cs" />
+    <Compile Include="Items\Companion\Ranger\SlimeCannon.cs" />
+    <Compile Include="Items\Companion\Ranger\SlimeShot.cs" />
+    <Compile Include="Items\Companion\Ranger\Slingshot.cs" />
+    <Compile Include="Items\Companion\Ranger\TaintedBow.cs" />
+    <Compile Include="Items\Companion\Summoner\AzureStaff.cs" />
+    <Compile Include="Items\Companion\Summoner\BrokenLance.cs" />
+    <Compile Include="Items\Companion\Summoner\CardinalWand.cs" />
+    <Compile Include="Items\Companion\Summoner\CrimsonDagger.cs" />
+    <Compile Include="Items\Companion\Summoner\FireRingScepter.cs" />
+    <Compile Include="Items\Companion\Summoner\FlameSkullLamp.cs" />
+    <Compile Include="Items\Companion\Summoner\FluffyWand.cs" />
+    <Compile Include="Items\Companion\Summoner\FreeSpiritStaff.cs" />
+    <Compile Include="Items\Companion\Summoner\PerchStaff.cs" />
+    <Compile Include="Items\Companion\Summoner\ServantWand.cs" />
+    <Compile Include="Items\Companion\Summoner\SidheStaff.cs" />
+    <Compile Include="Items\Companion\Summoner\SlimeOrb.cs" />
+    <Compile Include="Items\Companion\Summoner\WindOrb.cs" />
+    <Compile Include="Items\Companion\Warrior\Branch.cs" />
+    <Compile Include="Items\Companion\Warrior\PointyBranch.cs" />
+    <Compile Include="Items\Companion\Warrior\RockString.cs" />
+    <Compile Include="Items\Companion\Warrior\SticknStone.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier3\DualSpear.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier3\RichThrow.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier3\SapphireBlade.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier3\SpikedFlail.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier4\GemBlade.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier4\LivingSpear.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier4\SlimeLeash.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier4\SlimeThrow.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier5\CorruptSpear.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier5\Infested.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier5\InfestedFlail.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier5\TaintedThrow.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier6\BoneCutter.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier6\BoneNaginata.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier6\SkullFlail.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier6\SkullThrow.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier7\DarkFlail.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier7\DarkThrow.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier7\HellfireBident.cs" />
+    <Compile Include="Items\Companion\Warrior\Tier7\HellfireSword.cs" />
+    <Compile Include="Items\Companion\Warrior\WoodMess.cs" />
+    <Compile Include="Items\CorruptBomb.cs" />
+    <Compile Include="Items\Deployer.cs" />
+    <Compile Include="Items\Dev\Maverick\MaverickBoots.cs" />
+    <Compile Include="Items\Dev\Maverick\MaverickChest.cs" />
+    <Compile Include="Items\Dev\Maverick\MaverickHelm.cs" />
+    <Compile Include="Items\Dev\Maverick\MaverickStaff.cs" />
+    <Compile Include="Items\Dev\Mugen\MugenBlade.cs" />
+    <Compile Include="Items\Dev\Mugen\MugenBoots.cs" />
+    <Compile Include="Items\Dev\Mugen\MugenChest.cs" />
+    <Compile Include="Items\Dev\Mugen\MugenHelm.cs" />
+    <Compile Include="Items\EdenApple.cs" />
+    <Compile Include="Items\FleshBomb.cs" />
+    <Compile Include="Items\FrozenHook.cs" />
+    <Compile Include="Items\HolyBomb.cs" />
+    <Compile Include="Items\InfiniteCleanseBomb.cs" />
+    <Compile Include="Items\InfiniteCorruptBomb.cs" />
+    <Compile Include="Items\InfiniteFleshBomb.cs" />
+    <Compile Include="Items\InfiniteHolyBomb.cs" />
+    <Compile Include="Items\MillenniumApple.cs" />
+    <Compile Include="Items\NaniteAssembler.cs" />
+    <Compile Include="Items\Placeable\EnkryptionMusicBox.cs" />
+    <Compile Include="Items\Placeable\SodaMachine.cs" />
+    <Compile Include="Items\Potion.cs" />
+    <Compile Include="Items\Soda\BlueberryLime.cs" />
+    <Compile Include="Items\Soda\CreamSoda.cs" />
+    <Compile Include="Items\Soda\GrapeOrange.cs" />
+    <Compile Include="Items\Soda\MelonBlast.cs" />
+    <Compile Include="Items\Soda\OrangeTwist.cs" />
+    <Compile Include="Items\Soda\SuicideSoda.cs" />
+    <Compile Include="Items\Soda\Surge.cs" />
+    <Compile Include="Items\SpiritHook.cs" />
+    <Compile Include="Items\Weapons\DarkBlade.cs" />
+    <Compile Include="Items\Weapons\EnchantedBeehive.cs" />
+    <Compile Include="Items\Weapons\IcingDeath.cs" />
+    <Compile Include="Items\Weapons\LightBlade.cs" />
+    <Compile Include="Items\Weapons\PantherStatuete.cs" />
+    <Compile Include="Items\Weapons\RiftStaff.cs" />
+    <Compile Include="Items\Weapons\StickyHoneyComb.cs" />
+    <Compile Include="Items\Weapons\Twinkle.cs" />
+    <Compile Include="Items\WolfPet.cs" />
+    <Compile Include="MagicalPlayer.cs" />
+    <Compile Include="MagicalThings.cs" />
+    <Compile Include="ModConfig.cs" />
+    <Compile Include="Mounts\Centaur.cs" />
+    <Compile Include="Mounts\HeavenHorse.cs" />
+    <Compile Include="Mounts\HorseofWar.cs" />
+    <Compile Include="Mounts\MiTV.cs" />
+    <Compile Include="Mounts\Pegasus.cs" />
+    <Compile Include="Mounts\SSMonkfish.cs" />
+    <Compile Include="NPCs\MagicalGlobalNPC.cs" />
+    <Compile Include="PacketMessageType.cs" />
+    <Compile Include="Projectiles\CleanseBombProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\CardinalSpriteProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Dirtballproj.cs" />
+    <Compile Include="Projectiles\CompanionProj\EmberProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\EndlessKnifeProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\HoverShooter2.cs" />
+    <Compile Include="Projectiles\CompanionProj\JaySpriteProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\LeadShotProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\BoneStormProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\DeathMarkProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\DragonSkullProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\EyePortalProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\FlameSkullProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\HellBurstBoltProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\HellBurstFireballProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\HellMarkProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\LivingEmberProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\LivingFireballProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\SpitProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\StarMarkProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\StormStaffProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Mage\VolcanoProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minion3.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minion4.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\AzureSpinnerProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\CrimsonDaggerProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\CrimsonPuffProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\FireRingProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\FlameSkeletonProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\FreeSpiritProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\ServantProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\SidheProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\SlimeBirdProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\SlimeStingerProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Minions\YoungValkyrieProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Ninja\EndlessSlimeProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Ninja\HellfireKunaiProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Ninja\TaintedStarProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\PebbleProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\PointyBranchProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Ranger\SlimeShotProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\RockStringProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\SpiritFireProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\StarSpinnerProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\SticknStoneProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\BoneNaginataProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\CorruptSpearProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\DarkFlailProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\DarkThrowProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\DualSpearProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\HellfireBidentProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\InfestedFlailProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\InfestedProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\LivingSpearProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\RichThrowProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\SkullFlailProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\SkullThrowProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\SlimeLeashProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\SlimeThrowProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\SpikedFlailProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\Warrior\TaintedThrowProj.cs" />
+    <Compile Include="Projectiles\CompanionProj\WindPixieProj.cs" />
+    <Compile Include="Projectiles\CorruptBombProj.cs" />
+    <Compile Include="Projectiles\ExplosionFake.cs" />
+    <Compile Include="Projectiles\FleshBombProj.cs" />
+    <Compile Include="Projectiles\HolyBombProj.cs" />
+    <Compile Include="Projectiles\LightBladeShot.cs" />
+    <Compile Include="Projectiles\MaverickProj.cs" />
+    <Compile Include="Projectiles\Minions\GwenProj.cs" />
+    <Compile Include="Projectiles\Minions\HoverShooter.cs" />
+    <Compile Include="Projectiles\Minions\Minion.cs" />
+    <Compile Include="Projectiles\Minions\Minion2.cs" />
+    <Compile Include="Projectiles\Minions\SwarmProj.cs" />
+    <Compile Include="Projectiles\Minions\VoidDragon.cs" />
+    <Compile Include="Projectiles\Minions\WaspProj.cs" />
+    <Compile Include="Projectiles\MugenGreatSlashProj.cs" />
+    <Compile Include="Projectiles\MugenProj.cs" />
+    <Compile Include="Projectiles\Pets\FoxPetProj.cs" />
+    <Compile Include="Projectiles\Pets\IlluminationProj.cs" />
+    <Compile Include="Projectiles\Pets\MedicProj.cs" />
+    <Compile Include="Projectiles\Pets\MousePetProj.cs" />
+    <Compile Include="Projectiles\Pets\WolfPet.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Sounds\Item\SodaCan.cs" />
+    <Compile Include="TerraUI\Events.cs" />
+    <Compile Include="TerraUI\ExampleWindow.cs" />
+    <Compile Include="TerraUI\MouseButtons.cs" />
+    <Compile Include="TerraUI\Objects\UIButton.cs" />
+    <Compile Include="TerraUI\Objects\UICheckBox.cs" />
+    <Compile Include="TerraUI\Objects\UIItemSlot.cs" />
+    <Compile Include="TerraUI\Objects\UILabel.cs" />
+    <Compile Include="TerraUI\Objects\UINumberBox.cs" />
+    <Compile Include="TerraUI\Objects\UIObject.cs" />
+    <Compile Include="TerraUI\Objects\UIObjectBordered.cs" />
+    <Compile Include="TerraUI\Objects\UIProgressBar.cs" />
+    <Compile Include="TerraUI\Objects\UITextBox.cs" />
+    <Compile Include="TerraUI\Panels\UIPanel.cs" />
+    <Compile Include="TerraUI\Utilities\DrawingUtils.cs" />
+    <Compile Include="TerraUI\Utilities\KeyboardUtils.cs" />
+    <Compile Include="TerraUI\Utilities\MouseUtils.cs" />
+    <Compile Include="TerraUI\Utilities\UIColors.cs" />
+    <Compile Include="TerraUI\Utilities\UIUtils.cs" />
+    <Compile Include="Tiles\EnkryptionMusicBox.cs" />
+    <Compile Include="Tiles\SodaMachineBox.cs" />
+    <Compile Include="UIDyeItemSlot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReLogic">
+      <HintPath>.\ReLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Terraria">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TerraUI\.git" />
+    <None Include="TerraUI\.gitignore" />
+    <None Include="TerraUI\Textures\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sounds\Music\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TerraUI\Textures\1x1.png" />
+    <Content Include="TerraUI\Textures\Background.png" />
+    <Content Include="TerraUI\Textures\BackgroundSolid.png" />
+    <Content Include="TerraUI\Textures\Buttons\Cross.png" />
+    <Content Include="TerraUI\Textures\Buttons\Enter.png" />
+    <Content Include="TerraUI\Textures\Buttons\Integrate.png" />
+    <Content Include="TerraUI\Textures\Corner.png" />
+    <Content Include="TerraUI\Textures\CornerSolid.png" />
+    <Content Include="TerraUI\Textures\DownArrow.png" />
+    <Content Include="TerraUI\Textures\Side.png" />
+    <Content Include="TerraUI\Textures\SideSolid.png" />
+    <Content Include="TerraUI\Textures\Tick.png" />
+    <Content Include="TerraUI\Textures\UpArrow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
