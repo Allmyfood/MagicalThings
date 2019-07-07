@@ -355,6 +355,7 @@
     <Compile Include="Projectiles\Pets\MedicProj.cs" />
     <Compile Include="Projectiles\Pets\MousePetProj.cs" />
     <Compile Include="Projectiles\Pets\WolfPet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -405,8 +406,8 @@
       <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ReLogic">
-      <HintPath>.\ReLogic.dll</HintPath>
+    <Reference Include="ReLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\references\ReLogic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">

@@ -29,7 +29,9 @@ namespace MagicalThings.Items.Dev.Mugen
             player.maxRunSpeed += 0.50f;
             player.moveSpeed += 0.15f; //15% increase
             player.noFallDmg = true;
-		}
+            player.buffImmune[BuffID.Obstructed] = true;
+            player.buffImmune[BuffID.MoonLeech] = true;
+        }
 
 	//	public override void AddRecipes()
 	//	{

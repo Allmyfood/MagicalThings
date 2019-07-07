@@ -1,7 +1,7 @@
 Magical Things add a few different items from swords to summons. Adds a dedicated boot slot, but still allows boots to be equipped. 
 Useful for different kinds of boots. Still a work-in-progress. Shoe slot doesn't show on player correctly.
 Shoe slot now has a configuration for the equipment pages and to allow shoes to be equipped in the non shoe slot. 
-
+Equip shoes with Right click, vanity shoes with Shift Right click
 Warning! Unequip your current shoes from shoe slot before updating. Usually fine, but just in case.
 
 Configuration shows up under Mod Configs. Named MagicalThings
@@ -28,27 +28,6 @@ Added Dev armor and weapons not available normally. Cheat in only.
 
 Known Bugs: Boot slot doesn't display properly.
 Medium Core players death gives a new Animus scroll.
----------------------------------------------------------
-Bug Fixes
-Hot-fixed a couple of sound effects.
-
-Items Added:
-Now has a companion weapon class. Including Mage, Range, Ninja, Summoner, and Melee. Each class can be upgraded to pre hard-mode
-Demonite or Crimtane bars at an altar. More tiers yet to come.
-
-3 Swords, 3 Mounts, 2 Summons, 1 Pet, 1 Hook, 1 Armor Set, 1 Cloak, 2 Boots plus 1 cheat boot.
-4 Bombs that explode and convert blocks to their matching solution. Its a very large area!
-1 MusicBox (Featuring artist modbom)
-
-Equip shoes with Right click, vanity shoes with Shift Right click (although since they don't display not much point in that yet).
-
-Big thanks to Examplemod, and WingSlot for their help.
-
-Warning! Unequip your current shoes from shoe slot before updating.
-
-[Known Bugs]
-
-Shoe slot still does not draw on player. But shoe accessory still works fine. Frozen Hook a (Static Hook) doesn't work or have recipe.
 
 [Credits]
 Coders: Big help from the tmodloader community and of course, jopojelly, bluemagic, and Wingslot.
