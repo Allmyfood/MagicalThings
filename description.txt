@@ -8,7 +8,9 @@ Configuration shows up under Mod Configs. Named MagicalThings
   allowShoesInAccessorySlots: true or false
   slotLocation: 1 Shoe slot is on the Main Inventory page. 2 Shoe slot is on the Equipment menu 
   
-Updated! v0.1.3
+Updated! v0.1.4
+
+Quick fix for Nurse pet.
 
 Bug Fixes 7-6-2019
 Changed : Flesh bomb and Corrupt bomb no longer replace each others blocks. Change to holy or pure biomes first.

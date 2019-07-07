@@ -1,6 +1,6 @@
 author = Allmyfood
 
-version = 0.1.3
+version = 0.1.4
 displayName = Magical Things
 homepage = https://forums.terraria.org/index.php?threads/magical-things-mod.68698/
 hideCode = false
