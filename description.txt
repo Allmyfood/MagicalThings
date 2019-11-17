@@ -10,21 +10,12 @@ Configuration shows up under Mod Configs. Named MagicalThings
   
 Updated! v0.1.5
 
-Quick fix for Nurse pet.
-
-Bug Fixes 7-6-2019
-Changed : Flesh bomb and Corrupt bomb no longer replace each others blocks. Change to holy or pure biomes first.
-Redid boot slots functionality, still no working draw effect. -.-
-
-Fixed : Reduced all Cleanse type bombs dust effects so they don't cause lag on explode.
-Fixed some spelling errors.
-
-Added : All companion tiers! All companion weapons are complete!
-Added companion boots for each tier.
-Crafted with silk at a loom and a corresponding item.
-A new Animus scroll is dropped from the moon lord.
-Fixed various bugs and spelling errors.
-Next update will bring mod to the current version of tmodloader.
+All companion weapons finished
+Updated companion weapons
+Added companion boots
+Start with silk at loom with corresponding item.
+Fixed many bugs and spelling errors.
+Next update will be to current version of tmodloader.
 
 Added Dev armor and weapons not available normally. Cheat in only.
 
