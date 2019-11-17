@@ -11,7 +11,7 @@ namespace MagicalThings.Items.Companion.Ranger
         {
             DisplayName.SetDefault("Dark Blaster");
             Tooltip.SetDefault("Shoots standard bullets" 
-                + "\nMay sometimes not consume bullets");
+                + "\nMay sometimes not consume bullets" + "\nTier7 Ranger Class" + "\nMaterial");
         }
 
         public override void SetDefaults()

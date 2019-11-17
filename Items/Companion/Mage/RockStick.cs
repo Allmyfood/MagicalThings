@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Mage
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A powerful staff of magic! Eh, maybe...");
+			Tooltip.SetDefault("A powerful staff of magic! Eh, maybe..." + "\nMagic Weapon");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
@@ -17,6 +17,7 @@ namespace MagicalThings.Items.Companion.Mage
 		{
 			item.damage = 2;
 			item.magic = true;
+            item.melee = false; //bonk them with the staff but do magic damage
 			item.mana = 0;
 			item.width = 44;
 			item.height = 42;
@@ -24,7 +25,6 @@ namespace MagicalThings.Items.Companion.Mage
 			item.useAnimation = 12;
             item.useStyle = 1; // 5; //Is default staff
 			item.noMelee = false; //so the item's animation doesn't do damage
-            item.melee = true; //bonk them with the staff
 			item.knockBack = 1;
 			item.value = 10;
 			item.rare = 0;
@@ -49,7 +49,7 @@ namespace MagicalThings.Items.Companion.Mage
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Animus", 1);
-            recipe.AddIngredient(ItemID.Wood, 1);
+            recipe.AddRecipeGroup("Wood", 1);
             recipe.AddIngredient(ItemID.StoneBlock, 1);
             recipe.SetResult(this);
             recipe.AddRecipe();

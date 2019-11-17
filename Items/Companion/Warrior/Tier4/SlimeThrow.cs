@@ -23,8 +23,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier4
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Slime Throw");
-			Tooltip.SetDefault("A slime covered Yo-Yo"
-                + "\nLegend says it will not make you rich");
+			Tooltip.SetDefault("A slime covered Yo-Yo");
 		}
 
         public override void AddRecipes()

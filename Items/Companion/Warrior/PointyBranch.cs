@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Warrior
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A now pointy Mess of Wood");
+			Tooltip.SetDefault("A now pointy Mess of Wood" + "\nA Spear");
 		}
 
 		public override void SetDefaults()

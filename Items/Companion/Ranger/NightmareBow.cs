@@ -11,7 +11,7 @@ namespace MagicalThings.Items.Companion.Ranger
         {
             DisplayName.SetDefault("Nightmare Bow");
             Tooltip.SetDefault("A dark bow" 
-                + "\n May sometimes not consume ammo");
+                + "\n May sometimes not consume ammo" + "\nTier7 Ranger Class" + "\nMaterial");
         }
 
         public override void SetDefaults()

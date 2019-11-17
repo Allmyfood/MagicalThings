@@ -8,7 +8,7 @@ namespace MagicalThings.Items.Companion.Warrior
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Stick n' Stone");
-            Tooltip.SetDefault("A Wood Mess trimmed down, and a stone attached with some webs");
+            Tooltip.SetDefault("A Wood Mess trimmed down, and a stone attached with some webs" + "\nA Flail");
         }
         public override void SetDefaults()
         {

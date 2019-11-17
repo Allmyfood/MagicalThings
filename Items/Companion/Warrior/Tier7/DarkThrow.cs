@@ -23,7 +23,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier7
 		{
 			DisplayName.SetDefault("Dark Throw");
 			Tooltip.SetDefault("A shadowy Yo-Yo"
-                + "\nMay shoot shadowy crystals");
+                + "\nMay shoot shadowy crystals" + "\nTier7 Melee Class" + "\nMaterial");
 		}
 
         public override void AddRecipes()

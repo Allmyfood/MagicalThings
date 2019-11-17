@@ -40,14 +40,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier5
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "BookOfSpellsV3", 1);
-            recipe.AddIngredient(ItemID.DemoniteBar, 10);
-            recipe.AddTile(TileID.DemonAltar);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "BookOfSpellsV3", 1);
-            recipe.AddIngredient(ItemID.CrimtaneBar, 10);
+            recipe.AddRecipeGroup("MagicalThings:Demonite Bar", 10);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();

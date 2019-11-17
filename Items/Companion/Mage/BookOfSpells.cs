@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Mage
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A strange book, what could happen?");
+			Tooltip.SetDefault("A strange book, what could happen?" + "\nMagic that changes with progress");
 			//Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
@@ -49,7 +49,7 @@ namespace MagicalThings.Items.Companion.Mage
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "RockStick", 1);
-            recipe.AddIngredient(ItemID.Wood, 1);
+            recipe.AddRecipeGroup("Wood", 1);
             recipe.AddIngredient(ItemID.Rope, 10);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

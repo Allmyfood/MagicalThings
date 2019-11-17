@@ -7,7 +7,7 @@ namespace MagicalThings.Items.Companion.Ninja
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A lump of dirt with rocks");
+            Tooltip.SetDefault("A lump of dirt with rocks" + "\nThrowing Weapon");
         }
         public override void SetDefaults()
         {

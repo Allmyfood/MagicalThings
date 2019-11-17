@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Placeable
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Soda Machine");
-            Tooltip.SetDefault("Soda Machine");
+            Tooltip.SetDefault("Soda Machine" + "\nUse money for sodas");
         }
 
         public override void SetDefaults()
@@ -30,8 +30,9 @@ namespace MagicalThings.Items.Placeable
         public override void AddRecipes()   //This defines the crafting recepe for this item
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddRecipeGroup("IronBar", 10);
+            recipe.AddIngredient(ItemID.Glass, 10);
+            recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }

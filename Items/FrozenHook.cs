@@ -15,6 +15,8 @@ namespace MagicalThings.Items
         }
         public override void SetDefaults()
         {
+            item.CloneDefaults(ItemID.StaticHook);
+            item.shootSpeed = 30f; // how quickly the hook is shot.
             /*
 				item.noUseGraphic = true;
 				item.damage = 0;
@@ -33,8 +35,7 @@ namespace MagicalThings.Items
 				item.value = 20000;
 			*/
             // Instead of copying these values, we can clone and modify the ones we want to copy
-            item.CloneDefaults(ItemID.StaticHook);
-            item.shootSpeed = 30f; // how quickly the hook is shot.
+
             //item.shoot = mod.ProjectileType("FrozenHookProjectile");
         }
         //     public override void AddRecipes()
@@ -117,7 +118,7 @@ namespace MagicalThings.Items
             // Amethyst Hook is 300, Static Hook is 600
             public override float GrappleRange()
             {
-                return 1200f;
+                return 2200f;
             }
 
             //public override void NumGrappleHooks(Player player, ref int numHooks)

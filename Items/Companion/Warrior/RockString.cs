@@ -24,7 +24,7 @@ namespace MagicalThings.Items.Companion.Warrior
 		{
 			DisplayName.SetDefault("Stone Yo-Yo");
 			Tooltip.SetDefault("A string tied to a rock"
-                + "\nFormaly a Wood Mess used for parts");
+                + "\nFormaly a Wood Mess used for parts" + "\nA Yo-Yo");
 		}
 
         public override void AddRecipes()

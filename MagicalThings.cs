@@ -7,13 +7,12 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework.Graphics;
 using ModConfiguration;
+using Terraria.Localization;
 
 namespace MagicalThings
 {
     public class MagicalThings : Mod
-	{
-        public static int shakeIntensity = 0; //used for Weaponout info
-        public static int shakeTick = 0; //used for Weaponout info
+    {
         public const string AllowAccessorySlots = "allowShoesInAccessorySlots";
         public const string SlotLocation = "slotLocation";
         //public const string SHOE_SLOT_BACK_TEX = "ShoeSlotBackground";
@@ -25,19 +24,30 @@ namespace MagicalThings
         internal static MagicalThings instance;
 
         public MagicalThings()
-		{
+        {
             Properties = new ModProperties()
             {
                 Autoload = true,
                 AutoloadGores = true,
                 AutoloadSounds = true,
                 AutoloadBackgrounds = true //changed
-			};
+            };
             Config.Add(AllowAccessorySlots, true);
             Config.Add(SlotLocation, 2);
             Config.Load();
-            TerraUI.Utilities.UIUtils.Mod = this;
-            TerraUI.Utilities.UIUtils.Subdirectory = "TerraUI";
+            //TerraUI.Utilities.UIUtils.Mod = this;
+            //TerraUI.Utilities.UIUtils.Subdirectory = "TerraUI";
+        }
+
+        #region Load-Unload Sprite Draws
+        public override void Load()
+        {
+            instance = this;
+            if (!Main.dedServ)
+            {
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/Enkryption"), ItemType("EnkryptionMusicBox"), TileType("EnkryptionMusicBox"));
+                AddEquipTexture(null, EquipType.Legs, "GreatWizardRobes_Legs", "MagicalThings/Items/Armor/GreatWizard/GreatWizardRobes_Legs");
+            }
         }
 
         public override void Unload()
@@ -50,7 +60,7 @@ namespace MagicalThings
         {
             string keyword = args[0] as string;
             Func<bool> func = args[1] as Func<bool>;
-            if(string.IsNullOrEmpty(keyword) || func == null)
+            if (string.IsNullOrEmpty(keyword) || func == null)
             {
                 return null;
             }
@@ -137,12 +147,103 @@ namespace MagicalThings
             return false;
         }
 
+        #endregion
+
+        #region Recipe Groups
+        public override void AddRecipeGroups()
+        {
+            #region Tier 7 Classes
+            // Creates a new recipe group
+            RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Tier 7 Mage Class" + Lang.GetItemNameValue(ItemType("Tier 7 Mage Class")), new int[]
+            {
+                ItemType("HellMarkTome"),
+                ItemType("HellBurstStaff"),
+                ItemType("BookOfSpellsV6"),
+                ItemType("UnholyStorm")
+            });
+            // Registers the new recipe group with the specified name
+            RecipeGroup.RegisterGroup("MagicalThings:Tier 7 Mage Class", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Tier 7 Ninja Class" + Lang.GetItemNameValue(ItemType("Tier 7 Ninja Class")), new int[]
+            {
+                ItemType("HellfireKunai"),
+                ItemType("BurningBloodDagger")
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Tier 7 Ninja Class", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Tier 7 Ranger Class" + Lang.GetItemNameValue(ItemType("Tier 7 Ranger Class")), new int[]
+            {
+                ItemType("NightmareBow"),
+                ItemType("DarkBlaster")
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Tier 7 Ranger Class", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Tier 7 Summoner Class" + Lang.GetItemNameValue(ItemType("Tier 7 Summoner Class")), new int[]
+            {
+                ItemType("FlameSkullLamp"),
+                ItemType("BrokenLance")
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Tier 7 Summoner Class", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Tier 7 Melee Class" + Lang.GetItemNameValue(ItemType("Tier 7 Melee Class")), new int[]
+            {
+                ItemType("HellfireSword"),
+                ItemType("DarkFlail"),
+                ItemType("HellfireBident"),
+                ItemType("DarkThrow")
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Tier 7 Melee Class", group);
+            #endregion
+
+            #region Bar Groups
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Demonite Bar", new int[]
+            {
+                ItemID.DemoniteBar,
+                ItemID.CrimtaneBar
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Demonite Bar", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Cobalt Bar", new int[]
+            {
+                ItemID.CobaltBar,
+                ItemID.PalladiumBar
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Cobalt Bar", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Mythril Bar", new int[]
+            {
+                ItemID.MythrilBar,
+                ItemID.OrichalcumBar
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Mythril Bar", group);
+
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Adamantite Bar", new int[]
+            {
+                ItemID.AdamantiteBar,
+                ItemID.TitaniumBar
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Adamantite Bar", group);
+            #endregion
+
+            #region Boot Groups
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Hermes Boots", new int[]
+            {
+                ItemID.HermesBoots,
+                ItemID.FlurryBoots,
+                ItemID.SailfishBoots,
+                ItemType("MercuryBoots")
+            });
+            RecipeGroup.RegisterGroup("MagicalThings:Hermes Boots", group);
+
+            #endregion
+        }
+        #endregion
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(this);
-            recipe.AddIngredient(ItemID.RocketBoots, 1);
             recipe.AddIngredient(null, "MercuryBoots", 1);
+            recipe.AddIngredient(ItemID.RocketBoots, 1);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(ItemID.SpectreBoots, 1);
             recipe.AddRecipe();
@@ -154,15 +255,6 @@ namespace MagicalThings
 //            recipe.AddTile(TileID.MythrilAnvil);
 //            recipe.SetResult(null, "Twinkle", 1);
 //            recipe.AddRecipe();
-        }
-
-        public override void Load()
-        {
-            instance = this;
-            if (!Main.dedServ)
-            {
-                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/Enkryption"), ItemType("EnkryptionMusicBox"), TileType("EnkryptionMusicBox"));
-            }
         }
     }
 }

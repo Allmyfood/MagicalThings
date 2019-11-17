@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Summoner
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Summons a young Valkyrie to help");
+			Tooltip.SetDefault("Summons a young Valkyrie to help" + "\nTier7 Summoner Class" + "\nMaterial");
 		}
 
 		public override void SetDefaults()

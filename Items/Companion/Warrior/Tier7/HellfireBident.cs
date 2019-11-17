@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier7
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A fiery bident");
+			Tooltip.SetDefault("A fiery bident" + "\nTier7 Melee Class" + "\nMaterial");
 		}
 
 		public override void SetDefaults()

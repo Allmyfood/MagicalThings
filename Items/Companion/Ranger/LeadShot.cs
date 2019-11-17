@@ -29,16 +29,10 @@ namespace MagicalThings.Items.Companion.Ranger
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.IronBar, 1);
+            recipe.AddRecipeGroup("IronBar", 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this, 50);
 			recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.LeadBar, 1);
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this, 50);
-            recipe.AddRecipe();
         }
 	}
 }

@@ -22,7 +22,7 @@ namespace MagicalThings.Items.Accessory
             item.CloneDefaults(ItemID.FrostsparkBoots);
             item.width = 32;
             item.height = 32;
-            item.value = 10000;
+            item.value = Item.sellPrice(platinum: 1);
             item.rare = 10;
             item.accessory = true;
         }
@@ -46,9 +46,9 @@ namespace MagicalThings.Items.Accessory
                 player.rocketTime += 12;
                 player.aggro += 300;
                 player.meleeCrit += 17;
-                player.meleeDamage += 0.22f;
+                player.meleeDamage += 0.22f; //22%
                 player.meleeSpeed += 0.15f;
-                player.moveSpeed += 2.15f;
+                player.moveSpeed += 2.15f; //215%!
                 player.rangedCrit += 7;
                 player.rangedDamage += 0.16f;
                 player.maxMinions += 8;
@@ -65,7 +65,7 @@ namespace MagicalThings.Items.Accessory
                 player.fireWalk = true;
                 player.waterWalk = true;
                 player.lavaImmune = true;
-                player.maxRunSpeed += 2.15f;
+                player.maxRunSpeed += 2.15f; //215% max run speed for player. This is normally capped.
                 player.statDefense += 100;
                 player.statLifeMax2 += 60;
                 player.ignoreWater = true;

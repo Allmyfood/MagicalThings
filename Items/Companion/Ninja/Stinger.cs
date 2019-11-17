@@ -7,7 +7,7 @@ namespace MagicalThings.Items.Companion.Ninja
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A palm spike that shoots stingers");
+            Tooltip.SetDefault("A palm spike that shoots stingers" + "\nA endless throwing item");
         }
         public override void SetDefaults()
         {
@@ -32,7 +32,7 @@ namespace MagicalThings.Items.Companion.Ninja
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Dirtball", 1);
-            recipe.AddIngredient(ItemID.Wood, 1);
+            recipe.AddRecipeGroup("Wood", 1);
             recipe.AddIngredient(ItemID.WoodenArrow, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

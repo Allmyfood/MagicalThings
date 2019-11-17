@@ -14,14 +14,14 @@ namespace MagicalThings.Items.Accessory
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("The wearer can run super fast, immune to fall damage, can walk\n" +
-                "on lava and water, and extra mobility on ice");
+                "on lava and water, and extra mobility on ice" + "\n10% increased movement speed and max run speed" + "\nRun speed is added not set");
     }
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.FrostsparkBoots);
             item.width = 34;
-            item.height = 28;
-            item.value = 60000;
+            item.height = 32;
+            item.value = Item.sellPrice(gold: 20);
             item.rare = 8;
             item.accessory = true;
         }
@@ -38,14 +38,15 @@ namespace MagicalThings.Items.Accessory
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.noFallDmg = true;
-            player.accRunSpeed += 8.75f;
+            player.accRunSpeed += 8.75f; //Run Speed different call = 8.75%
             player.rocketBoots = 3;
-            player.moveSpeed += 0.2f;
-            player.maxRunSpeed += 0.2f;
+            player.moveSpeed += 0.1f; //10% += means stacks
+            player.maxRunSpeed += 0.10f; //15%
             player.fireWalk = true;
-            player.lavaImmune = true;
+            player.lavaMax = 600; //is time /60fps so 420/60 = 7 seconds. 600 for 10 secs lava charm
             player.waterWalk = true;
             player.waterWalk2 = true;
+            player.iceSkate = true;
         }
     }
 }

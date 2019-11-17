@@ -10,7 +10,7 @@ namespace MagicalThings.Items.Companion.Summoner
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Summons a cardinal to help");
+			Tooltip.SetDefault("Summons a cardinal to help" + "\nUses 1/2 minion slot");
 		}
 
 		public override void SetDefaults()
@@ -37,7 +37,7 @@ namespace MagicalThings.Items.Companion.Summoner
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "WindOrb", 1);
-            recipe.AddIngredient(ItemID.Wood, 10);
+            recipe.AddRecipeGroup("Wood", 10);
             recipe.AddIngredient(ItemID.YellowMarigold, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

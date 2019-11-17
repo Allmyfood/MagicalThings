@@ -30,7 +30,7 @@ namespace MagicalThings.Items.Accessory
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Hay, 1);
             recipe.AddIngredient(ItemID.BottledWater, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddTile(TileID.AlchemyTable);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

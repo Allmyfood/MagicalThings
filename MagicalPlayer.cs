@@ -55,6 +55,24 @@ namespace MagicalThings
         public bool Medic = false;
         public bool FoxPet = false;
         public bool WaspMinion = false;
+        public bool PWNCrystalMinion = false;
+        public bool BloodAxeMinion = false;
+        public bool ShadowHammerMinion = false;
+        public bool VirtueMinion = false;
+        public bool Cut = false;
+        public bool DoomSpectreMinion = false;
+        public bool SpiritDragonMinion = false;
+        public bool PillarDemonMinion = false;
+        public bool PillarDragonMinion = false;
+        public bool MsDeathMinion = false;
+        public int lastNPCHitMsDeathMinion = -1;
+        public int DeathCoolDown = 0;
+        public bool ValkyrieMinion = false;
+        public int lastNPCHitValkyrieMinion = -1;
+        public int ValkyrieCoolDown = 0;
+        public int ValkyrieArrowCoolDown = 0;
+        public int ValgrindShotCount = 0;
+        public bool MugenArmorEquiped = false;
 
         #region OnHitBuffs
         public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
@@ -225,7 +243,7 @@ namespace MagicalThings
             if (shoes.stack > 0)
             {
                 player.VanillaUpdateAccessory(player.whoAmI, shoes, !EquipShoeSlot.ItemVisible, ref wallSpeedBuff, ref tileSpeedBuff,
-                    ref tileRangeBuff);
+                    ref tileRangeBuff); //.whoami, shoes
                 player.VanillaUpdateEquip(shoes);
             }
 
@@ -340,7 +358,7 @@ namespace MagicalThings
                 return;
             }
 
-            Texture2D tex = Main.extraTexture[54];
+            Texture2D tex = Main.extraTexture[54]; //54
             Rectangle rectangle = tex.Frame(3, 6, 1 % 3);
             rectangle.Width -= 2;
             rectangle.Height -= 2;
@@ -437,7 +455,7 @@ namespace MagicalThings
                     slotCount = 7;
                 }
 
-                rX = Main.screenWidth - 92 - 14 - (47 * 3) - (int)(Main.extraTexture[58].Width * Main.inventoryScale);
+                rX = Main.screenWidth - 92 - 14 - (47 * 3) - (int)(Main.extraTexture[58].Width * Main.inventoryScale); //58
                 rY = (int)(mapH + 127 + 4 + slotCount * 56 * Main.inventoryScale);
             }
 
@@ -648,17 +666,61 @@ namespace MagicalThings
             Medic = false;
             FoxPet = false;
             WaspMinion = false;
+            PWNCrystalMinion = false;
+            BloodAxeMinion = false;
+            ShadowHammerMinion = false;
+            VirtueMinion = false;
+            Cut = false;
+            DoomSpectreMinion = false;
+            SpiritDragonMinion = false;
+            PillarDemonMinion = false;
+            PillarDragonMinion = false;
+            MsDeathMinion = false;
+            ValkyrieMinion = false;
+            MugenArmorEquiped = false;
     }
+        #endregion
 
+        #region Post Updates and Timers
+        public override void PostUpdateEquips()
+        {
+            if (DeathCoolDown >= 0)
+            {
+                DeathCoolDown--;
+            }
+            if (ValkyrieCoolDown >= 0)
+            {
+                ValkyrieCoolDown--;
+            }
+            if (ValkyrieArrowCoolDown >= 0)
+            {
+                ValkyrieArrowCoolDown--;
+            }
+        }
+        #endregion
+
+        #region Dead Reset Effects
+        public override void UpdateDead()
+        {
+            Cut = false;
+        }
         #endregion
 
         #region DeBuffs BadLife Regen
-        //public override void UpdateBadLifeRegen()
-        //{
-        //    //empty for now
-        //}
+        public override void UpdateBadLifeRegen()
+        {
+            if (Cut)
+            {
+                if (player.lifeRegen > 0)
+                {
+                    player.lifeRegen = 0;
+                }
+                player.lifeRegenTime = 0;
+                player.lifeRegen -= 16;
+            }
+        }
         #endregion
-
+        
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath = false)
         {            
             Item item = new Item();       

@@ -31,14 +31,7 @@ namespace MagicalThings.Items.Weapons
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CobaltBar, 10);
-            recipe.AddIngredient(ItemID.SoulofNight, 2);
-            recipe.AddTile(TileID.MythrilAnvil);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.PalladiumBar, 10);
+            recipe.AddRecipeGroup("MagicalThings:Cobalt Bar", 10);
             recipe.AddIngredient(ItemID.SoulofNight, 2);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);

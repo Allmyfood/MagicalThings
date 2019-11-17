@@ -25,7 +25,7 @@ namespace MagicalThings.Items.Companion.Ninja
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Splinter Claw");
+			DisplayName.SetDefault("Splinter Claw" + "\nA claw");
 			Tooltip.SetDefault("Claws of Wood!");
 		}
 
@@ -33,7 +33,7 @@ namespace MagicalThings.Items.Companion.Ninja
 		{
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Dirtball", 1);
-            recipe.AddIngredient(ItemID.Wood, 1);
+            recipe.AddRecipeGroup("Wood", 1);
             recipe.AddIngredient(ItemID.Rope, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

@@ -18,7 +18,7 @@ namespace MagicalThings.Items.Soda
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
-            item.maxStack = 99;                 //this is where you set the max stack of item
+            item.maxStack = 999;                 //this is where you set the max stack of item
             item.consumable = true;           //this make that the item is consumable when used
             item.width = 16; //20
             item.height = 24; //28

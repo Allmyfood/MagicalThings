@@ -24,7 +24,8 @@ namespace MagicalThings.Projectiles.CompanionProj
 		{
 		}
 
-		public override void Behavior()
+        #region Behavior
+        public override void Behavior()
 		{
 			Player player = Main.player[projectile.owner];
 			float spacing = (float)projectile.width * spacingMult;
@@ -210,8 +211,9 @@ namespace MagicalThings.Projectiles.CompanionProj
 				}
 			}
 		}
+        #endregion
 
-		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
+        public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
 		{
 			fallThrough = true;
 			return true;

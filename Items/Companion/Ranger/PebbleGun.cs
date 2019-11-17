@@ -44,7 +44,7 @@ namespace MagicalThings.Items.Companion.Ranger
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Slingshot", 1);
-            recipe.AddIngredient(ItemID.Wood, 5);
+            recipe.AddRecipeGroup("Wood", 5);
             recipe.AddIngredient(ItemID.StoneBlock, 5);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

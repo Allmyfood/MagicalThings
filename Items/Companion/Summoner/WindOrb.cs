@@ -10,7 +10,7 @@ namespace MagicalThings.Items.Companion.Summoner
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Summons a pixie to help");
+			Tooltip.SetDefault("Summons a pixie to help" + "\nSummoning Weapon");
 		}
 
 		public override void SetDefaults()
@@ -37,7 +37,7 @@ namespace MagicalThings.Items.Companion.Summoner
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Animus", 1);
-            recipe.AddIngredient(ItemID.SandBlock, 1);
+            recipe.AddRecipeGroup("Sand", 1);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

@@ -30,15 +30,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier3
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Branch", 1);
-            recipe.AddIngredient(ItemID.IronBar, 5);
-            recipe.AddIngredient(ItemID.Sapphire, 2);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "Branch", 1);
-            recipe.AddIngredient(ItemID.LeadBar, 5);
+            recipe.AddRecipeGroup("IronBar", 5);
             recipe.AddIngredient(ItemID.Sapphire, 2);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);

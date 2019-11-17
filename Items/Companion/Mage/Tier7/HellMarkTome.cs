@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier7
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Create a Hell Mark at the cursor");
+			Tooltip.SetDefault("Create a Hell Mark at the cursor" + "\nTier7 Mage Class" + "\nMaterial");
 			//Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 

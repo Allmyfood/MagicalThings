@@ -10,7 +10,7 @@ namespace MagicalThings.Items.Companion.Summoner
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Flame Skeleton Lamp");
-			Tooltip.SetDefault("Summons a fire spirit to help");
+			Tooltip.SetDefault("Summons a fire spirit to help" + "\nTier7 Summoner Class" + "\nMaterial");
 		}
 
 		public override void SetDefaults()

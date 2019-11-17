@@ -32,7 +32,7 @@ namespace MagicalThings.Items.Companion.Ninja
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Burning Blood Dagger");
-			Tooltip.SetDefault("A fiery dagger, strikes like a claw");
+			Tooltip.SetDefault("A fiery dagger, strikes like a claw" + "\nTier7 Ninja Class" + "\nMaterial");
 		}
 
 		public override void AddRecipes()

@@ -65,6 +65,8 @@ namespace MagicalThings.Items.Dev.Mugen
             player.shroomiteStealth = true;
             player.moveSpeed += 0.15f;
             player.maxMinions++;
+            MagicalPlayer mpm = player.GetModPlayer<MagicalPlayer>();
+            mpm.MugenArmorEquiped = true;
         }
 
 	//	public override void AddRecipes()

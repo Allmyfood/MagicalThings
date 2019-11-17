@@ -31,23 +31,16 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.autoReuse = true;
 		}
 
-		//public override Vector2? HoldoutOffset()
-		//{
-		//	return new Vector2(2, 0);
-		//}
+        //public override Vector2? HoldoutOffset()
+        //{
+        //	return new Vector2(2, 0);
+        //}
 
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "GreenwoodBow", 1);
-            recipe.AddIngredient(ItemID.IronBar, 5);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "GreenwoodBow", 1);
-            recipe.AddIngredient(ItemID.LeadBar, 5);
+            recipe.AddRecipeGroup("IronBar", 5);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

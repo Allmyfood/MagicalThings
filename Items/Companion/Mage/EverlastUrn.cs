@@ -7,7 +7,7 @@ namespace MagicalThings.Items.Companion.Mage
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A magic bubbler");
+			Tooltip.SetDefault("A magic bubbler" + "\nWater magic");
 			//Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 

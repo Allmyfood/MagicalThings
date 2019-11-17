@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -8,7 +9,7 @@ namespace MagicalThings.Items.Companion.Ninja
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Bone Axe");
-            Tooltip.SetDefault("A poisoned and corrupted axe");
+            Tooltip.SetDefault("A sturdy bone axe");
         }
         public override void SetDefaults()
         {
@@ -25,7 +26,7 @@ namespace MagicalThings.Items.Companion.Ninja
             item.rare = 6;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = 182; //mod.ProjectileType("TaintedStarProj");
+            item.shoot = mod.ProjectileType("BoneAxeProj");
             item.shootSpeed = 11.75f;
             item.crit += 8;
         }
@@ -39,6 +40,14 @@ namespace MagicalThings.Items.Companion.Ninja
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
+        }
+
+        public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+        {
+            if (Main.rand.Next(3) == 0)
+            {
+                target.AddBuff(mod.BuffType("ArmorBreak"), 240); //60 is the buff time
+            }
         }
     }
 }

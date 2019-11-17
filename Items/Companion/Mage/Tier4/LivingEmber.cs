@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
 		public override void SetStaticDefaults()
 		{
             DisplayName.SetDefault("Living Ember Staff");
-            Tooltip.SetDefault("Cast a homing fire");
+            Tooltip.SetDefault("Shoot a homing ember");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 

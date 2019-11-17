@@ -20,7 +20,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
         {
             projectile.netImportant = true;
             projectile.CloneDefaults(317);
-            aiType = 317;
+            aiType = 625;//317
             projectile.width = 40;
             projectile.height = 60;
             projectile.friendly = true;

@@ -7,7 +7,7 @@ namespace MagicalThings.Items.Companion.Warrior
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A Mess of Wood shaped into a sword");
+            Tooltip.SetDefault("A Mess of Wood shaped into a sword" + "\nA sword");
         }
         public override void SetDefaults()
         {

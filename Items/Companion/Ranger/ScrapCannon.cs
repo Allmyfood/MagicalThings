@@ -44,15 +44,7 @@ namespace MagicalThings.Items.Companion.Ranger
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "PebbleGun", 1);
-            recipe.AddIngredient(ItemID.IronBar, 10);
-            recipe.AddIngredient(ItemID.Chain, 1);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "PebbleGun", 1);
-            recipe.AddIngredient(ItemID.LeadBar, 10);
+            recipe.AddRecipeGroup("IronBar", 10);
             recipe.AddIngredient(ItemID.Chain, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);

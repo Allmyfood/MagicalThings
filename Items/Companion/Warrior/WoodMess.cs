@@ -7,7 +7,7 @@ namespace MagicalThings.Items.Companion.Warrior
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A bunch of wood stuck together");
+            Tooltip.SetDefault("A bunch of wood stuck together" + "\nMelee Weapon");
         }
         public override void SetDefaults()
         {
@@ -32,7 +32,7 @@ namespace MagicalThings.Items.Companion.Warrior
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Animus", 1);
-            recipe.AddIngredient(ItemID.Wood, 10);
+            recipe.AddRecipeGroup("Wood", 10);
             recipe.AddIngredient(ItemID.Gel, 1);
             recipe.SetResult(this);
             recipe.AddRecipe();

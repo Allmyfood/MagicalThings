@@ -30,6 +30,7 @@ namespace MagicalThings.Projectiles
             //aiType = ProjectileID.Bullet;
             ProjectileID.Sets.TrailCacheLength[projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[projectile.type] = 0;
+            projectile.usesLocalNPCImmunity = true;
             //projectile.alpha = 255;
         }
 
@@ -83,7 +84,7 @@ namespace MagicalThings.Projectiles
 
             public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            target.immune[projectile.owner] = 5; //target will take damage in 5 frames instead of default 10 usually 2 hits per shot
+            target.immune[projectile.owner] = 1; //target will take damage in 5 frames instead of default 10 usually 2 hits per shot
             target.AddBuff(BuffID.CursedInferno, 2400);   //this make so when the projectile/flame hit a npc, gives it the buff  onfire , 80 = 3 seconds
             target.AddBuff(mod.BuffType("ArmorBreak"), 2400);
         }

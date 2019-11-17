@@ -5,7 +5,7 @@ using TerraUI;
 using TerraUI.Objects;
 
 namespace MagicalThings {
-    // Because I can't change TerraUI, I subclass UIItemSlot to get proper dye slot behavior.
+    // Because I can't change TerraUI, I subclass UIItemSlot to get proper dye slot behavior. I think
     internal class UIDyeItemSlot : UIItemSlot {
         public UIDyeItemSlot(Vector2 position, int size = 52, int context = 0, string hoverText = "", UIObject parent = null, ConditionHandler conditions = null, DrawHandler drawBackground = null, DrawHandler drawItem = null, DrawHandler postDrawItem = null, bool drawAsNormalSlot = false, bool scaleToInventory = false) : base(position, size, context, hoverText, parent, conditions, drawBackground, drawItem, postDrawItem, drawAsNormalSlot, scaleToInventory) {
         }

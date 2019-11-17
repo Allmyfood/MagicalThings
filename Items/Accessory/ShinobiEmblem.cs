@@ -11,15 +11,15 @@ namespace MagicalThings.Items.Accessory
 
 			item.width = 28;
 			item.height = 28;
-			item.value = 20000;
-			item.rare = 4;
+			item.value = Item.sellPrice(gold: 2);
+            item.rare = 4;
 			item.accessory = true;
 		}
 
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Shinobi Emblem");
-			Tooltip.SetDefault("15% increased throwing damage");
+			Tooltip.SetDefault("15% increased Throwing damage");
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)

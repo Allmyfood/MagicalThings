@@ -59,6 +59,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
         //			}
         //		}
 
+
         public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
 		{
 			Texture2D texture = ModLoader.GetTexture("MagicalThings/Projectiles/CompanionProj/Warrior/SkullFlail_Chain");
@@ -95,5 +96,5 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
 
 			return true;
 		}
-	}
+    }
 }

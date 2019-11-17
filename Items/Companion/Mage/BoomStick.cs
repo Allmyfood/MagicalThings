@@ -8,7 +8,7 @@ namespace MagicalThings.Items.Companion.Mage
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A powerful staff of magic explosions!");
+			Tooltip.SetDefault("A powerful staff of magic explosions!" + "\nFire magic");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
@@ -37,7 +37,7 @@ namespace MagicalThings.Items.Companion.Mage
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "RockStick", 1);
-            recipe.AddIngredient(ItemID.Wood, 5);
+            recipe.AddRecipeGroup("Wood", 5);
             recipe.AddIngredient(ItemID.Bomb, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

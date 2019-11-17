@@ -10,7 +10,7 @@ namespace MagicalThings.Items.Companion.Ninja
         {
             DisplayName.SetDefault("Hellfire Kunai");
             Tooltip.SetDefault("A fiery kunai"
-			+ "\nRight click to swing");
+			+ "\nRight click to swing" + "\nTier7 Ninja Class" + "\nMaterial");
         }
         public override void SetDefaults()
         {

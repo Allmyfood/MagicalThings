@@ -28,7 +28,7 @@ namespace MagicalThings.Projectiles
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            target.immune[projectile.owner] = 5; //the time allowed to be immune to damage default 10 Arkhalis is 5
+            target.immune[projectile.owner] = 3; //the time allowed to be immune to damage default 10 Arkhalis is 5
             target.AddBuff(mod.BuffType("ArmorBreak"), 2400); //2400 / 60 = secs, the buff time; 40 seconds.
             target.AddBuff(BuffID.CursedInferno, 2400);
         }
@@ -66,29 +66,62 @@ namespace MagicalThings.Projectiles
                     projectile.position.X = (Main.player[projectile.owner].Center.X + (0 - DistXT)) - 30;  //30;
                     projectile.position.Y = (Main.player[projectile.owner].Center.Y + (0 - DistYT)) - 30;  //30;
                 }
-                if (Main.rand.Next(25) == 0)
+                #region Great Slash with Armor
+                Player player = Main.player[projectile.owner];
+                var mpm = player.GetModPlayer<MagicalPlayer>();
+                if (mpm.MugenArmorEquiped == true)
                 {
-                    Vector2 target = Main.screenPosition + new Vector2(Main.mouseX, Main.mouseY);
-                    //position = SPos;
-                    //Getting the shooting trajectory
-                    float shootToX = target.X + projectile.width * 0.5f - projectile.Center.X;
-                    float shootToY = target.Y + projectile.height * 0.5f - projectile.Center.Y;
-                    float distance = (float)System.Math.Sqrt(shootToX * shootToX + shootToY * shootToY);
-                    //Dividing the factor of 2f which is the desired velocity by distance
-                    distance = 1.6f / distance;
-                    //Multiplying the shoot trajectory with distance times a multiplier if you so choose to
-                    shootToX *= distance * 3;
-                    shootToY *= distance * 3;
-                    int damage = 880;
+                    if (Main.rand.Next(6) == 0)
                     {
-                        Main.PlaySound(SoundID.Item125.WithVolume(0.5f), projectile.position);
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("MugenGreatSlashProj"), damage, 0, Main.myPlayer, 0f, 0f);
-                        //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, mod.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
-                        //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
+                        Vector2 target = Main.screenPosition + new Vector2(Main.mouseX, Main.mouseY);
+                        //position = SPos;
+                        //Getting the shooting trajectory
+                        float shootToX = target.X + projectile.width * 0.5f - projectile.Center.X;
+                        float shootToY = target.Y + projectile.height * 0.5f - projectile.Center.Y;
+                        float distance = (float)System.Math.Sqrt(shootToX * shootToX + shootToY * shootToY);
+                        //Dividing the factor of 2f which is the desired velocity by distance
+                        distance = 1.6f / distance;
+                        //Multiplying the shoot trajectory with distance times a multiplier if you so choose to
+                        shootToX *= distance * 3;
+                        shootToY *= distance * 3;
+                        int damage = 880;
+                        {
+                            Main.PlaySound(SoundID.Item125.WithVolume(0.5f), projectile.position);
+                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("MugenGreatSlashProj"), damage, 0, Main.myPlayer, 0f, 0f);
+                            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, mod.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
+                            //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
+                        }
                     }
                 }
-            }
+                #endregion
 
+                #region Great Slash without Armor
+                if (mpm.MugenArmorEquiped == false)
+                {
+                    if (Main.rand.Next(25) == 0)
+                    {
+                        Vector2 target = Main.screenPosition + new Vector2(Main.mouseX, Main.mouseY);
+                        //position = SPos;
+                        //Getting the shooting trajectory
+                        float shootToX = target.X + projectile.width * 0.5f - projectile.Center.X;
+                        float shootToY = target.Y + projectile.height * 0.5f - projectile.Center.Y;
+                        float distance = (float)System.Math.Sqrt(shootToX * shootToX + shootToY * shootToY);
+                        //Dividing the factor of 2f which is the desired velocity by distance
+                        distance = 1.6f / distance;
+                        //Multiplying the shoot trajectory with distance times a multiplier if you so choose to
+                        shootToX *= distance * 3;
+                        shootToY *= distance * 3;
+                        int damage = 880;
+                        {
+                            Main.PlaySound(SoundID.Item125.WithVolume(0.5f), projectile.position);
+                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("MugenGreatSlashProj"), damage, 0, Main.myPlayer, 0f, 0f);
+                            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, mod.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
+                            //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
+                        }
+                    }
+                }
+                #endregion
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier7
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Dark Flail");
-            Tooltip.SetDefault("A shadowy flail");
+            Tooltip.SetDefault("A shadowy flail" + "\nTier7 Melee Class" + "\nMaterial");
         }
         public override void SetDefaults()
         {

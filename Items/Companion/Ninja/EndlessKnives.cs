@@ -35,15 +35,7 @@ namespace MagicalThings.Items.Companion.Ninja
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Stinger", 1);
             recipe.AddIngredient(ItemID.ThrowingKnife, 1);
-            recipe.AddIngredient(ItemID.IronBar, 2);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "Stinger", 1);
-            recipe.AddIngredient(ItemID.ThrowingKnife, 1);
-            recipe.AddIngredient(ItemID.LeadBar, 2);
+            recipe.AddRecipeGroup("IronBar", 2);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

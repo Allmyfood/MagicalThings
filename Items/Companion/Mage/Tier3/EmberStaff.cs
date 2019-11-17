@@ -37,15 +37,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier3
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "BoomStick", 1);
-            recipe.AddIngredient(ItemID.IronBar, 2);
-            recipe.AddIngredient(ItemID.Torch, 3);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "BoomStick", 1);
-            recipe.AddIngredient(ItemID.LeadBar, 2);
+            recipe.AddRecipeGroup("IronBar", 2);
             recipe.AddIngredient(ItemID.Torch, 3);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);

@@ -47,7 +47,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
         {
             if (Main.rand.Next(24) == 0)
             {
-                target.AddBuff(BuffID.Bleeding, 160); //60 is the buff time
+                target.AddBuff(mod.BuffType("CutDebuff"), 160); //60 is the buff time
             }
         }
 
@@ -55,14 +55,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "GemBlade", 1);
-            recipe.AddIngredient(ItemID.DemoniteBar, 10);
-            recipe.AddTile(TileID.DemonAltar);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "GemBlade", 1);
-            recipe.AddIngredient(ItemID.CrimtaneBar, 10);
+            recipe.AddRecipeGroup("MagicalThings:Demonite Bar", 10);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();

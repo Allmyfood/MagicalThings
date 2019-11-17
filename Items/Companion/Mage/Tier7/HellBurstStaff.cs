@@ -11,7 +11,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier7
 		{
             DisplayName.SetDefault("Hell Burst Staff");
             Tooltip.SetDefault("Fire a large fireball"
-			+ "\nexplodes into homing bolts");
+			+ "\nexplodes into homing bolts" + "\nTier7 Mage Class" + "\nMaterial");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 

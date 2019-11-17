@@ -9,7 +9,7 @@ namespace MagicalThings.Items.Companion.Ranger
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A simple slingshot shoots pebbles");
+			Tooltip.SetDefault("A simple slingshot shoots pebbles" + "\nRange Weapon");
 		}
 
 		public override void SetDefaults()
@@ -41,7 +41,7 @@ namespace MagicalThings.Items.Companion.Ranger
 		{
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Animus", 1);
-            recipe.AddIngredient(ItemID.Wood, 1);
+            recipe.AddRecipeGroup("Wood", 1);
             recipe.AddIngredient(ItemID.Gel, 1);
             recipe.SetResult(this);
             recipe.AddRecipe();

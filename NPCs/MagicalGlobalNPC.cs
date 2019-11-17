@@ -18,6 +18,24 @@ namespace MagicalThings.NPCs
         }
 
         public bool ArmorBreak = false;
+        public bool Cut = false;
+        public bool PrimeSpear = false;
+        public bool EctoSpear = false;
+        public bool SkypiercerSpear = false;
+        public bool BrionacSpear = false;
+        public bool ValkyrieArrow = false;
+
+        #region Defaults for Items
+        public override void SetDefaults(NPC npc)
+        {
+            // Make Spears buff act like a bone javelin
+            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.PrimeSpearBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.EctoSpearBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.SkypiercerBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.BrionacBuff>()] = npc.buffImmune[BuffID.Daybreak];
+            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.ValkyrieArrowBuff>()] = npc.buffImmune[BuffID.Daybreak];
+        }
+        #endregion
 
         #region OnHitBuffs
         public override void ModifyHitByItem(NPC npc, Player player, Item item, ref int damage, ref float knockback, ref bool crit)
@@ -59,13 +77,141 @@ namespace MagicalThings.NPCs
                 npc.velocity *= 0.80f;
             }
         }
+        #endregion
 
+        #region Life Regen Buff / Debuffs
+        public override void UpdateLifeRegen(NPC npc, ref int damage)
+        {
+            if (Cut)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                npc.lifeRegen -= 16;
+                if (damage < 2)
+                {
+                    damage = 4;
+                }
+            }
+            if (PrimeSpear)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                int PrimeSpearCount = 0;
+                for (int i = 0; i < 1000; i++)
+                {
+                    Projectile p = Main.projectile[i];
+                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.PrimeSpearProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    {
+                        PrimeSpearCount++;
+                    }
+                }
+                npc.lifeRegen -= PrimeSpearCount * 2 * 3;
+                if (damage < PrimeSpearCount * 3)
+                {
+                    damage = PrimeSpearCount * 3;
+                }
+            }
+            if (EctoSpear)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                int EctoSpearCount = 0;
+                for (int i = 0; i < 1000; i++)
+                {
+                    Projectile p = Main.projectile[i];
+                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.EctoSpearProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    {
+                        EctoSpearCount++;
+                    }
+                }
+                npc.lifeRegen -= EctoSpearCount * 2 * 4;
+                if (damage < EctoSpearCount * 4)
+                {
+                    damage = EctoSpearCount * 4;
+                }
+            }
+            if (SkypiercerSpear)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                int SkypiercerSpearCount = 0;
+                for (int i = 0; i < 1000; i++)
+                {
+                    Projectile p = Main.projectile[i];
+                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.SkypiercerProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    {
+                        SkypiercerSpearCount++;
+                    }
+                }
+                npc.lifeRegen -= SkypiercerSpearCount * 6 * 6;
+                if (damage < SkypiercerSpearCount * 6)
+                {
+                    damage = SkypiercerSpearCount * 6;
+                }
+            }
+            if (BrionacSpear)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                int BrionacSpearCount = 0;
+                for (int i = 0; i < 1000; i++)
+                {
+                    Projectile p = Main.projectile[i];
+                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.BrionacProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    {
+                        BrionacSpearCount++;
+                    }
+                }
+                npc.lifeRegen -= BrionacSpearCount * 8 * 14;
+                if (damage < BrionacSpearCount * 14)
+                {
+                    damage = BrionacSpearCount * 14;
+                }
+            }
+            if (ValkyrieArrow)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                int ValkyrieArrowCount = 0;
+                for (int i = 0; i < 1000; i++)
+                {
+                    Projectile p = Main.projectile[i];
+                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Ranger.ValkyrieArrowProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    {
+                        ValkyrieArrowCount++;
+                    }
+                }
+                npc.lifeRegen -= ValkyrieArrowCount * 6 * 12;
+                if (damage < ValkyrieArrowCount * 12)
+                {
+                    damage = ValkyrieArrowCount * 12;
+                }
+            }
+        }
         #endregion
 
         #region Reset Effects
         public override void ResetEffects(NPC npc)
         {
             ArmorBreak = false;
+            Cut = false;
+            PrimeSpear = false;
+            EctoSpear = false;
+            SkypiercerSpear = false;
+            BrionacSpear = false;
+            ValkyrieArrow = false;
         }
         #endregion
 
@@ -209,6 +355,41 @@ namespace MagicalThings.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("FlyMask"));
                 }
             }
+
+            if (npc.type == NPCID.Nurse) 
+            {
+                if (Main.rand.Next(1) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ShinyMedkit"));
+                }
+            }
+
+            if (npc.type == NPCID.Pirate)
+            {
+                if (Main.rand.Next(1) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CaptainsHat"));
+                }
+            }
+
+            if (npc.type == NPCID.DarkCaster)
+            {
+                if (Main.rand.NextFloat() < .25f) //25% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GreatWizardHat"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GreatWizardRobes"));
+                }
+            }
+
+            #region Animus Drop
+            if (npc.type == NPCID.MoonLordCore)
+            {
+                if (Main.rand.Next(1) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Animus"));
+                }
+            }
+            #endregion
         }
     }
     #endregion

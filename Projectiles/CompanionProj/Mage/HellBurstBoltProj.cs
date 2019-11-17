@@ -30,14 +30,14 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Hell Burst Bolt");
-            ProjectileID.Sets.Homing[projectile.type] = true;
+            //ProjectileID.Sets.Homing[projectile.type] = true;
 
         }
         public override void AI()
         {
             //int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 59, projectile.velocity.X * 0.2f, projectile.velocity.Y * 0.2f, 155, default(Color), 0.9f);
             //Main.dust[dust].noGravity = true;
-
+            #region Homing and Dusts
             if (projectile.localAI[0] == 0f)
             {
                 AdjustMagnitude(ref projectile.velocity);
@@ -71,8 +71,8 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                 int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 59, projectile.velocity.X * 0.2f, projectile.velocity.Y * 0.2f, 155, default(Color), 0.9f);
                 Main.dust[dust].velocity /= 1f;
             }
+            #endregion
         }
-
         private void AdjustMagnitude(ref Vector2 vector)
         {
             float magnitude = (float)Math.Sqrt(vector.X * vector.X + vector.Y * vector.Y);

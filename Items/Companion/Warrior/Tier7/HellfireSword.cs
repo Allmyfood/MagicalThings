@@ -11,7 +11,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier7
         {
             DisplayName.SetDefault("Hellfire Sword");
             Tooltip.SetDefault("A searing hot blade"
-                + "\nMay cause Armor Break debuff on hit.");
+                + "\nMay cause Armor Break debuff on hit" + "\nTier7 Melee Class" + "\nMaterial");
         }
         public override void SetDefaults()
         {
