@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier10
 {
@@ -33,7 +34,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier10
             item.UseSound = SoundID.Item44;
             item.autoReuse = true;
             item.buffType = mod.BuffType("VortexShieldBuff");
-            //item.shoot = mod.ProjectileType("VolcanoProj"); //this is a mod projectile
+            //item.shoot = ProjectileType<VolcanoProj>(); //this is a mod projectile
             //item.shootSpeed = 4.5f; //not needed for stationary sentry
             //item.sentry = true;
         }

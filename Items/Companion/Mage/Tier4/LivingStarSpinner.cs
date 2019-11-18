@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier4
 {
@@ -30,7 +31,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
 			item.rare = 4;
 			item.UseSound = SoundID.Item9;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("StarSpinnerProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.StarSpinnerProj>(); //this is a mod projectile
 			item.shootSpeed = 3f;
 		}
         //Shoot multiple projectiles in an even ark.

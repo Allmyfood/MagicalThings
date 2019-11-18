@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.Pets
 {
@@ -31,7 +32,7 @@ namespace MagicalThings.Projectiles.Pets
 		public override void AI()
 		{
 			Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.WolfPet = false;

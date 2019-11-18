@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier10
 {
@@ -17,7 +18,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier10
 			item.width = 30;
 			item.height = 26;
 			item.shootSpeed = 32f;
-			item.shoot = mod.ProjectileType("TheStormProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.TheStormProj>();
 			item.knockBack = 2.5f;
 			item.value = 250;
 			item.rare = 10;

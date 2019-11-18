@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
  
 namespace MagicalThings.Projectiles       //We need this to basically indicate the folder where it is to be read from, so you the texture will load correctly
 {

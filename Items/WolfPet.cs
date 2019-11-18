@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items
 {
@@ -14,7 +15,7 @@ namespace MagicalThings.Items
         public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.DogWhistle);
-			item.shoot = mod.ProjectileType("WolfPet");
+			item.shoot = ProjectileType<Projectiles.Pets.WolfPet>();
 			item.buffType = mod.BuffType("WolfPet");
 		}
 

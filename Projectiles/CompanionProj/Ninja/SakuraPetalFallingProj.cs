@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Ninja
 {
@@ -49,7 +50,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ninja
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
                     //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 90, projectile.damage *2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("SakuraPetalProj"), projectile.damage, 1f, projectile.owner);//, 0f, Main.rand.Next(-30, 2));
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileType<SakuraPetalProj>(), projectile.damage, 1f, projectile.owner);//, 0f, Main.rand.Next(-30, 2));
                 }
             }
         }

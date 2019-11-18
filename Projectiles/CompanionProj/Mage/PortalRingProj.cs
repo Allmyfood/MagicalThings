@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -47,7 +48,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             if (projectile.timeLeft == 1260 && projectile.owner == Main.myPlayer)
             {
                 Main.PlaySound(29, (int)projectile.position.X, (int)projectile.position.Y, 99);
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, mod.ProjectileType("BlackHoleProj"), 450, 1f, projectile.owner);
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileType<BlackHoleProj>(), 450, 1f, projectile.owner);
             }
 
             #region Velocity and frame selection
@@ -190,7 +191,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         {
             Player player = Main.player[projectile.owner];
             Main.PlaySound(4, (int)projectile.position.X, (int)projectile.position.Y, 62);
-            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("CollapsingStarFlashProj"), projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X, projectile.velocity.Y, ModContent.ProjectileType("CollapsingStarFlashProj"), projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
             if (projectile.owner == Main.myPlayer)
             {
                 int num220 = Main.rand.Next(5, 15);//20,31

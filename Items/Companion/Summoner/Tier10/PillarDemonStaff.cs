@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner.Tier10
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Summoner.Tier10
             item.value = 250;
             item.rare = 10;
             item.UseSound = SoundID.Item25;
-            item.shoot = mod.ProjectileType("PillarDemonProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.PillarDemonProj>();
 			item.shootSpeed = 5f;
 			item.buffType = mod.BuffType("PillarDemonBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

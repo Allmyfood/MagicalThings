@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner.Tier8
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Summoner.Tier8
             item.value = 120;
             item.rare = 9;
             item.UseSound = SoundID.Item25;
-            item.shoot = mod.ProjectileType("ExplosionFake");
+            item.shoot = ProjectileType<Projectiles.ExplosionFake>();
 			item.shootSpeed = 5f;
 			item.buffType = mod.BuffType("PoEBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds
@@ -54,11 +55,11 @@ namespace MagicalThings.Items.Companion.Summoner.Tier8
             int choice = Main.rand.Next(2);
             if(choice == 0)
             {
-                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("ShadowHammerProj"), damage, knockBack, player.whoAmI, target, 0f);
+                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileType<Projectiles.CompanionProj.Minions.ShadowHammerProj>(), damage, knockBack, player.whoAmI, target, 0f);
             }
             else if (choice == 1)
             {
-                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("BloodAxeProj"), damage, knockBack, player.whoAmI, target, 0f);
+                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileType<Projectiles.CompanionProj.Minions.BloodAxeProj>(), damage, knockBack, player.whoAmI, target, 0f);
             }
             return player.altFunctionUse != 2;
         }

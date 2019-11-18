@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.Pets
 {
@@ -34,7 +35,7 @@ namespace MagicalThings.Projectiles.Pets
 		{
             drawOffsetX = -2;
             Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.Medic = false;

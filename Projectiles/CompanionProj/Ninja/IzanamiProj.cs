@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
 using Terraria.ID;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ModLoader;
 
 namespace MagicalThings.Projectiles.CompanionProj.Ninja
@@ -41,7 +42,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ninja
             target.immune[projectile.owner] = 4;           
             Vector2 vel1 = new Vector2(-1, -1);
             vel1 *= 0f;
-            Projectile.NewProjectile(target.position.X, target.position.Y, vel1.X, vel1.Y, mod.ProjectileType("IzanamiFaintProj"), projectile.damage, 0, Main.myPlayer); //#6 bottom right
+            Projectile.NewProjectile(target.position.X, target.position.Y, vel1.X, vel1.Y, ProjectileType<IzanamiFaintProj>(), projectile.damage, 0, Main.myPlayer); //#6 bottom right
             
         }
 

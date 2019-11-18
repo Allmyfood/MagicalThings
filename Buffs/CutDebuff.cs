@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using MagicalThings.NPCs;
 using Terraria.ID;
 
@@ -19,7 +20,7 @@ namespace MagicalThings.Buffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.GetModPlayer<MagicalPlayer>(mod).Cut = true;
+            player.GetModPlayer<MagicalPlayer>().Cut = true;
             int num1 = Dust.NewDust(player.position, player.width, player.height, 90);    //this is the dust/flame effect that will apear on npc or player if is hit by this buff   
             Main.dust[num1].scale = 0.8f; //the dust scale , the higher is the value the large is the dust
             Main.dust[num1].velocity *= 0.5f; //the dust velocity
@@ -28,7 +29,7 @@ namespace MagicalThings.Buffs
 
         public override void Update(NPC npc, ref int buffIndex)
         {
-            npc.GetGlobalNPC<MagicalGlobalNPC>(mod).Cut = true;
+            npc.GetGlobalNPC<MagicalGlobalNPC>().Cut = true;
             int num1 = Dust.NewDust(npc.position, npc.width, npc.height, 90);    //this is the dust/flame effect that will apear on npc or player if is hit by this buff   
             Main.dust[num1].scale = 0.8f; //the dust scale , the higher is the value the large is the dust
             Main.dust[num1].velocity *= 0.5f; //the dust velocity

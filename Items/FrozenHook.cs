@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items
 {
@@ -36,7 +37,7 @@ namespace MagicalThings.Items
 			*/
             // Instead of copying these values, we can clone and modify the ones we want to copy
 
-            //item.shoot = mod.ProjectileType("FrozenHookProjectile");
+            //item.shoot = ProjectileType<FrozenHookProjectile>();
         }
         //     public override void AddRecipes()
         //     {

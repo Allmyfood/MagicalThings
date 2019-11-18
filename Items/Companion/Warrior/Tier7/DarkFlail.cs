@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier7
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier7
             item.noUseGraphic = true;
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
-            item.shoot = mod.ProjectileType("DarkFlailProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.DarkFlailProj>();
             item.shootSpeed = 15.75f;
         }
 

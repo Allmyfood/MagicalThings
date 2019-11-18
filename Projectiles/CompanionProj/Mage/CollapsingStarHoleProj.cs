@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -39,7 +40,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         {
             Player player = Main.player[projectile.owner];
             Main.PlaySound(4, (int)projectile.position.X, (int)projectile.position.Y, 62);
-            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("CollapsingStarFlashProj"), projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileType<CollapsingStarFlashProj>(),, projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
             if (projectile.owner == Main.myPlayer)
             {
                 int num220 = Main.rand.Next(5, 15);//20,31
@@ -103,7 +104,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     int randshoty = Main.rand.Next(-2, 2);
                     if (randshoty >= 0 && randshoty < 1) randshotx = 1;
                     if (randshoty < -1 && randshoty >= 0) randshotx = -1;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, randshotx, randshoty, mod.ProjectileType("CollapsingStarShotProj"), projectile.damage, 0, Main.myPlayer, 0f, 0f);
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, randshotx, randshoty, ProjectileType<CollapsingStarShotProj>(), projectile.damage, 0, Main.myPlayer, 0f, 0f);
                     projectile.ai[0] = 0;
                 }
                 // Every 30 ticks, the cloud drops a bomb. Currently 75
@@ -114,12 +115,12 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                 //    for (int i = 0; i < droprate; i++)
                 //    {
                 //        Vector2 playerPosition = projectile.Center;
-                //        int projectileIndex = Projectile.NewProjectile(playerPosition.X, playerPosition.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("CollapsingStarShotProj"), projectile.damage, projectile.knockBack);
+                //        int projectileIndex = Projectile.NewProjectile(playerPosition.X, playerPosition.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileType<CollapsingStarShotProj>(),, projectile.damage, projectile.knockBack);
 
                 //        CollapsingStarShotProj projectileName = Main.projectile[projectileIndex].modProjectile as CollapsingStarShotProj;
                 //        float angle = (360f / droprate) * i;
                 //    }
-                //    //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X / 4, 3, mod.ProjectileType("CollapsingStarShotProj"), projectile.damage, projectile.knockBack, projectile.owner, 0f);
+                //    //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X / 4, 3, ProjectileType<CollapsingStarShotProj>(),, projectile.damage, projectile.knockBack, projectile.owner, 0f);
                 //}
 
                 #region Frame Select

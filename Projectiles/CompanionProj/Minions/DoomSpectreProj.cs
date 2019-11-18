@@ -50,7 +50,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
             //projectile.spriteDirection = projectile.direction = (projectile.velocity.X > 0).ToDirectionInt();
             //projectile.rotation = projectile.velocity.ToRotation() + (projectile.spriteDirection == 1 ? 0f : MathHelper.Pi);
             Player player = Main.player[projectile.owner];
-            MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+            MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
             if (player.dead)
             {
                 modPlayer.DoomSpectreMinion = false;

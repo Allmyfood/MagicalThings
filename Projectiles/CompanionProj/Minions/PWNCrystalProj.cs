@@ -32,7 +32,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 			projectile.ignoreWater = true;
 			inertia = 8f;
             projectile.damage = 65;
-            //shoot = mod.ProjectileType("SpiritFireProj");
+            //shoot = ModContent.ProjectileType("SpiritFireProj");
             shoot = 440;
             shootSpeed = 17f;
             shootCool = 35f; //called from Hovershooter2
@@ -42,7 +42,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 		{
             //projectile.spriteDirection = projectile.direction;
             Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.PWNCrystalMinion = false;

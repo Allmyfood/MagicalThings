@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier9
 {
@@ -31,10 +32,10 @@ namespace MagicalThings.Items.Companion.Ranger.Tier9
             item.UseSound = SoundID.Item68;
             item.autoReuse = true;
             item.shoot = 10; //10 is default for guns.
-            //item.shoot = mod.ProjectileType("PebbleProj");
+            //item.shoot = ProjectileType<PebbleProj>();
             item.shootSpeed = 14.0f;
             //item.useAmmo = AmmoID.Bullet; //Normal ammos.
-            item.useAmmo = mod.ItemType("PulseAmmo");
+            item.useAmmo = ItemType<Tier8.PulseAmmo>();
             item.magic = false;
             item.noUseGraphic = false;
             //item.channel = true;

@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier11
 {
@@ -35,7 +36,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier11
             item.autoReuse = true;
             item.shoot = 10; //10 is default for guns.
             item.shootSpeed = 18.0f;
-            item.useAmmo = mod.ItemType("VortexMissileAmmo");
+            item.useAmmo = ItemType<Tier10.VortexMissileAmmo>();
             item.magic = false;
             item.noUseGraphic = false;
             item.channel = true;

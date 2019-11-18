@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -67,25 +68,25 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                 Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 74);
                 Vector2 vel = new Vector2(-1, 0);
                 vel *= 10f;
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vel.X, vel.Y, mod.ProjectileType("ExplosionFake"), projectile.damage, 0, Main.myPlayer); //Initial projectile death
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vel.X, vel.Y, ProjectileType<ExplosionFake>(), projectile.damage, 0, Main.myPlayer); //Initial projectile death
                 Vector2 vel1 = new Vector2(-1, -1);
                 vel1 *= 10f;
-                Projectile.NewProjectile(projectile.Center.X + 50, projectile.Center.Y + 50, vel1.X, vel1.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#6 bottom right
+                Projectile.NewProjectile(projectile.Center.X + 50, projectile.Center.Y + 50, vel1.X, vel1.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#6 bottom right
                 Vector2 vel2 = new Vector2(1, 1);
                 vel2 *= 10f;
-                Projectile.NewProjectile(projectile.Center.X - 50, projectile.Center.Y - 50, vel2.X, vel2.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#1 top left
+                Projectile.NewProjectile(projectile.Center.X - 50, projectile.Center.Y - 50, vel2.X, vel2.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#1 top left
                 Vector2 vel3 = new Vector2(1, -1);
                 vel3 *= 10f;
-                Projectile.NewProjectile(projectile.Center.X - 50, projectile.Center.Y + 50, vel3.X, vel3.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#4 bottom left
+                Projectile.NewProjectile(projectile.Center.X - 50, projectile.Center.Y + 50, vel3.X, vel3.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#4 bottom left
                 Vector2 vel4 = new Vector2(-1, 1);
                 vel4 *= 10f;
-                Projectile.NewProjectile(projectile.Center.X + 50, projectile.Center.Y - 50, vel4.X, vel4.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#3 top right
+                Projectile.NewProjectile(projectile.Center.X + 50, projectile.Center.Y - 50, vel4.X, vel4.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#3 top right
                 Vector2 vel5 = new Vector2(0, -1);
                 vel5 *= 10f;
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y + 75, vel5.X, vel5.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#5 center bottom
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y + 75, vel5.X, vel5.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#5 center bottom
                 Vector2 vel6 = new Vector2(0, 1);
                 vel6 *= 10f;
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 75, vel6.X, vel6.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#2 center top
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 75, vel6.X, vel6.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#2 center top
             }
             return false;
         }
@@ -100,26 +101,26 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                 Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 74);
                 Vector2 vel = new Vector2(0, -1);
                 vel *= 0f;
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vel.X, vel.Y, mod.ProjectileType("ExplosionFake"), projectile.damage, 0, Main.myPlayer);
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vel.X, vel.Y, ProjectileType<ExplosionFake>(), projectile.damage, 0, Main.myPlayer);
             }
             Vector2 vel1 = new Vector2(-1, -1);
             vel1 *= 10f;
-            Projectile.NewProjectile(target.position.X + 50, target.position.Y + 50, vel1.X, vel1.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#6 bottom right
+            Projectile.NewProjectile(target.position.X + 50, target.position.Y + 50, vel1.X, vel1.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#6 bottom right
             Vector2 vel2 = new Vector2(1, 1);
             vel2 *= 10f;
-            Projectile.NewProjectile(target.position.X - 50, target.position.Y - 50, vel2.X, vel2.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#1 top left
+            Projectile.NewProjectile(target.position.X - 50, target.position.Y - 50, vel2.X, vel2.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#1 top left
             Vector2 vel3 = new Vector2(1, -1);
             vel3 *= 10f;
-            Projectile.NewProjectile(target.position.X - 50, target.position.Y + 50, vel3.X, vel3.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#4 bottom left
+            Projectile.NewProjectile(target.position.X - 50, target.position.Y + 50, vel3.X, vel3.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#4 bottom left
             Vector2 vel4 = new Vector2(-1, 1);
             vel4 *= 10f;
-            Projectile.NewProjectile(target.position.X + 50, target.position.Y - 50, vel4.X, vel4.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#3 top right
+            Projectile.NewProjectile(target.position.X + 50, target.position.Y - 50, vel4.X, vel4.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#3 top right
             Vector2 vel5 = new Vector2(0, -1);
             vel5 *= 10f;
-            Projectile.NewProjectile(target.position.X, target.position.Y + 75, vel5.X, vel5.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#5 center bottom
+            Projectile.NewProjectile(target.position.X, target.position.Y + 75, vel5.X, vel5.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#5 center bottom
             Vector2 vel6 = new Vector2(0, 1);
             vel6 *= 10f;
-            Projectile.NewProjectile(target.position.X, target.position.Y - 75, vel6.X, vel6.Y, mod.ProjectileType("HellBurstBoltProj"), projectile.damage, 0, Main.myPlayer); //#2 center top
+            Projectile.NewProjectile(target.position.X, target.position.Y - 75, vel6.X, vel6.Y, ProjectileType<HellBurstBoltProj>(), projectile.damage, 0, Main.myPlayer); //#2 center top
         }
 
     }

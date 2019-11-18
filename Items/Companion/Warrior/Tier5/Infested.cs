@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier5
 {
@@ -27,7 +28,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 7;
-            item.shoot = mod.ProjectileType("InfestedProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.InfestedProj>();
             item.shootSpeed = 5.5f;
         }
 

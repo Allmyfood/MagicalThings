@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Weapons
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Weapons
             item.rare = 9;
             item.UseSound = SoundID.Item116;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType<MechChains>();
+            item.shoot = ModContent.ProjectileType<MechChains>();
             item.shootSpeed = 11.0f;
             item.crit += 12;
             item.noMelee = true;

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Dev.Mugen
 {
@@ -37,7 +38,7 @@ namespace MagicalThings.Items.Dev.Mugen
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("MugenChest") && legs.type == mod.ItemType("MugenBoots");
+			return body.type == ItemType<MugenChest>() && legs.type == ItemType<MugenBoots>();
 		}
         
         

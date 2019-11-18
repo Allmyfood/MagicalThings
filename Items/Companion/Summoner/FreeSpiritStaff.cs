@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner
 {
@@ -27,7 +28,7 @@ namespace MagicalThings.Items.Companion.Summoner
             item.value = 70;
             item.rare = 6;
             item.UseSound = SoundID.Item25;
-			item.shoot = mod.ProjectileType("FreeSpiritProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.FreeSpiritProj>();
 			item.shootSpeed = 6f;
 			item.buffType = mod.BuffType("FreeSpiritBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

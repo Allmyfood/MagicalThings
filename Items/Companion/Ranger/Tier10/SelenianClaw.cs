@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier10
 {
@@ -51,7 +52,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier10
         {
             if (type == ProjectileID.WoodenArrowFriendly) // or ProjectileID.WoodenArrowFriendly
             {
-                type = mod.ProjectileType("RazorArrowProj");//ProjectileID.FrostburnArrow; // or ProjectileID.FireArrow;
+                type = ProjectileType<RazorArrowProj>();//ProjectileID.FrostburnArrow; // or ProjectileID.FireArrow;
             }
             return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
         }

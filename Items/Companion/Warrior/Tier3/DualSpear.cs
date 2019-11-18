@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier3
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier3
 			item.autoReuse = true; // Most spears don't autoReuse, but it's possible when used in conjunction with CanUseItem()
 
 			item.UseSound = SoundID.Item1;
-			item.shoot = mod.ProjectileType<DualSpearProj>();
+			item.shoot = ModContent.ProjectileType<DualSpearProj>();
 		}
 
         public override void AddRecipes()

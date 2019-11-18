@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner.Tier8
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Summoner.Tier8
             item.value = 120;
             item.rare = 9;
             item.UseSound = SoundID.Item25;
-            item.shoot = mod.ProjectileType("SwordOfVirtueProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.SwordOfVirtueProj>();
 			item.shootSpeed = 5f;
 			item.buffType = mod.BuffType("PoVBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

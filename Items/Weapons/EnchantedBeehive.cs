@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Weapons
 {
@@ -28,8 +29,8 @@ namespace MagicalThings.Items.Weapons
 			item.value = Item.buyPrice(0, 2, 0, 0);
 			item.rare = 1;
 			item.UseSound = SoundID.Item25;
-			item.shoot = mod.ProjectileType("SwarmProj");
-			item.shootSpeed = 6f;
+			item.shoot = ProjectileType<Projectiles.Minions.SwarmProj>();
+            item.shootSpeed = 6f;
 			item.buffType = mod.BuffType("SwarmBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds
 		}

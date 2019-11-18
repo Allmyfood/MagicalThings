@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier9
 {
@@ -13,7 +14,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier9
 			item.width = 30;
 			item.height = 26;
 			item.shootSpeed = 32f;
-			item.shoot = mod.ProjectileType("SpectreProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SpectreProj>();
 			item.knockBack = 2.5f;
 			item.value = 150;
 			item.rare = 9;

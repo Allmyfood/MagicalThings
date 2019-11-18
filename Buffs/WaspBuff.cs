@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs
 {
@@ -17,8 +18,8 @@ namespace MagicalThings.Buffs
 		public override void Update(Player player, ref int buffIndex)
 		{
             player.buffImmune[BuffID.Poisoned] = true;
-            MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
-			if (player.ownedProjectileCounts[mod.ProjectileType("WaspProj")] > 0)
+            MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
+			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.WaspProj>()] > 0)
 			{
 				modPlayer.WaspMinion = true;
 			}

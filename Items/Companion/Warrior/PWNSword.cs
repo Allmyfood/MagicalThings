@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Warrior
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 14;
-            item.shoot = 280; // mod.ProjectileType("InfestedProj");
+            item.shoot = 280; // ModContent.ProjectileType("InfestedProj");
             item.shootSpeed = 17.5f;
         }
 

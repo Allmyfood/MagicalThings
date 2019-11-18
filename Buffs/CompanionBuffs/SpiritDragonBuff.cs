@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs.CompanionBuffs
 {
@@ -15,8 +16,8 @@ namespace MagicalThings.Buffs.CompanionBuffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
-			if (player.ownedProjectileCounts[mod.ProjectileType("SpiritDragonProj")] > 0)
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
+			if (player.ownedProjectileCounts[ProjectileType<Projectiles.CompanionProj.Minions.SpiritDragonProj>()] > 0)
 
             {
 				modPlayer.SpiritDragonMinion = true;

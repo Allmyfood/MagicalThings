@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Dev.Maverick
 {
@@ -33,7 +34,7 @@ namespace MagicalThings.Items.Dev.Maverick
 			item.rare = 9;
             item.UseSound = SoundID.Item43;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("MaverickProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.MaverickProj>(); //this is a mod projectile
             item.shootSpeed = 3f;
         }
 

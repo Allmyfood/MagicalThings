@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items            //We need this to basically indicate the folder where it is to be read from, so you the texture will load correctly
 {
@@ -26,7 +27,7 @@ namespace MagicalThings.Items            //We need this to basically indicate th
             item.value = Item.buyPrice(0, 0, 3, 0);   //How much the item is worth, in copper coins, when you sell it to a merchant. It costs 1/5th of this to buy it back from them. An easy way to remember the value is platinum, gold, silver, copper or PPGGSSCC (so this item price is 3 silver)
             item.noUseGraphic = true;
             item.noMelee = true;      //Setting to True allows the weapon sprite to stop doing damage, so only the projectile does the damge
-            item.shoot = mod.ProjectileType<Projectiles.CleanseBombProj>(); //This defines what type of projectile this item will shoot
+            item.shoot = ModContent.ProjectileType<Projectiles.CleanseBombProj>(); //This defines what type of projectile this item will shoot
             item.shootSpeed = 5f; //This defines the projectile speed when shot
         }
         public override void AddRecipes()   //This defines the crafting recepe for this item

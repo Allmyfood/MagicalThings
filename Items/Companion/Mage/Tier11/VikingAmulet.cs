@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier11
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
             item.rare = 11;
             item.UseSound = SoundID.Item44;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("PortalRingProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.PortalRingProj>(); //this is a mod projectile
             item.shootSpeed =0.5f; //not needed for stationary sentry
             //item.sentry = true;
         }
@@ -40,7 +41,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             position = Main.MouseWorld;
-            Projectile.NewProjectile(position.X, position.Y, 0, 0, mod.ProjectileType("PortalRingProj"), damage, knockBack, player.whoAmI);
+            Projectile.NewProjectile(position.X, position.Y, 0, 0, ProjectileType<Projectiles.CompanionProj.Mage.PortalRingProj>(), damage, knockBack, player.whoAmI);
             for (int l = 0; l < Main.projectile.Length; l++)
             {                                                                  //this make so you can only spawn one of this projectile at the time,
                 Projectile proj = Main.projectile[l];
@@ -48,7 +49,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
                 {
                     proj.active = false;
                 }
-                Projectile other = Main.projectile[mod.ProjectileType("BlackHoleProj")];
+                Projectile other = Main.projectile[ProjectileType<Projectiles.CompanionProj.Mage.BlackHoleProj>()];
                 {
                     proj.Kill();
                 }

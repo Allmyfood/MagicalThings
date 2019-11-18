@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier10
 {
@@ -21,7 +22,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier10
 			item.knockBack = 7.5f;
 			item.value = 80;
 			item.rare = 10;
-			item.shoot = mod.ProjectileType("VortexMissileProj");   //The projectile shoot when your weapon using this ammo
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Ranger.VortexMissileProj>();   //The projectile shoot when your weapon using this ammo
 			//item.shootSpeed = 16f;                  //The speed of the projectile
             item.ammo = item.type;
             //item.useAmmo = AmmoID.Rocket;

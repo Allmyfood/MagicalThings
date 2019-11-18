@@ -30,7 +30,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 			projectile.ignoreWater = true;
 			inertia = 8f;
             projectile.damage = 140;
-            //shoot = mod.ProjectileType("DragnadoProj");
+            //shoot = ModContent.ProjectileType("DragnadoProj");
             shoot = 640;
             shootSpeed = 16f;
             shootCool = 30f; //called from Hovershooter2
@@ -41,7 +41,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 		{
             //projectile.spriteDirection = projectile.direction;
             Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.PillarDragonMinion = false;

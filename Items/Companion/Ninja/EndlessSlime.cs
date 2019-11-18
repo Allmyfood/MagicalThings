@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja
 {
@@ -27,7 +28,7 @@ namespace MagicalThings.Items.Companion.Ninja
             item.rare = 4;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("EndlessSlimeProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.EndlessSlimeProj>();
             item.shootSpeed = 11.5f;
             item.crit += 5;
         }

@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier7
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier7
 			item.rare = 7;
             item.UseSound = SoundID.Item73; //for default
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("HellBurstFireballProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.HellBurstFireballProj>(); //this is a mod projectile
 			item.shootSpeed = 12f;
 		}
 

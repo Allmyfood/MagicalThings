@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -48,7 +49,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
                     Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 90, projectile.damage * 2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
-                    //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, mod.ProjectileType("IceMistProj"), projectile.damage * 2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+                    //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ModContent.ProjectileType("IceMistProj"), projectile.damage * 2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                 }
             }
         }
@@ -62,7 +63,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             mpm.ValgrindShotCount++;
             if (mpm.ValgrindShotCount >= 5)
             {
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 0, mod.ProjectileType("ValgrindGateProj"), 0, 0f, projectile.owner);//, 0f, Main.rand.Next(-30, 2));
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 0, ProjectileType<ValgrindGateProj>(), 0, 0f, projectile.owner);//, 0f, Main.rand.Next(-30, 2));
                 mpm.ValgrindShotCount = 0;
             }
         }

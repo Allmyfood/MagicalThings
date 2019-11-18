@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Weapons
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Weapons
 			item.value = Item.buyPrice(0, 30, 0, 0);
 			item.rare = 9;
 			item.UseSound = SoundID.Item44;
-			item.shoot = mod.ProjectileType("VoidDragon");
+			item.shoot = ProjectileType<Projectiles.Minions.VoidDragon>();
 			item.shootSpeed = 10f;
 			item.buffType = mod.BuffType("VoidDragonBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

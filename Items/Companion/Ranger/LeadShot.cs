@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger
 {
@@ -21,7 +22,7 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.knockBack = 9.5f;
 			item.value = 30;
 			item.rare = 3;
-			item.shoot = mod.ProjectileType("LeadShotProj");   //The projectile shoot when your weapon using this ammo
+			item.shoot = ProjectileType<Projectiles.CompanionProj.LeadShotProj>();   //The projectile shoot when your weapon using this ammo
 			//item.shootSpeed = 16f;                  //The speed of the projectile
             item.ammo = item.type;            //The ammo class this ammo belongs to.
 		}

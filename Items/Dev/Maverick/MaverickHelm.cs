@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Dev.Maverick
 {
@@ -37,7 +38,7 @@ namespace MagicalThings.Items.Dev.Maverick
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("MaverickChest") && legs.type == mod.ItemType("MaverickBoots");
+			return body.type == ItemType<MaverickChest>() && legs.type == ItemType<MaverickBoots>();
 		}
         
         

@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs
 {
@@ -15,7 +16,7 @@ namespace MagicalThings.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.mount.SetMount(mod.MountType<Mounts.Centaur>(), player);
+			player.mount.SetMount(ModContent.MountType<Mounts.Centaur>(), player);
 			player.buffTime[buffIndex] = 10;
 		}
 	}

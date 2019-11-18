@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier4
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
 			item.rare = 4;
 			//item.UseSound = SoundID.Item13;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("StormStaffProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.StormStaffProj>(); //this is a mod projectile
 			item.shootSpeed = 12.5f;
 		}
         //-----------------------------------------------StarWrath projectile style----------------------------------------------

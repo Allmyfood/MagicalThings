@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Warrior
 {
@@ -50,7 +51,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
             Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.93f, 0.82f, 0.29f);
             //if (Main.rand.Next(16) == 0)
             //{
-            //    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("SinhtgruntExtraProj"), (int)(projectile.damage), projectile.knockBack, projectile.owner, 0f, 0f);
+            //    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ModContent.ProjectileType("SinhtgruntExtraProj"), (int)(projectile.damage), projectile.knockBack, projectile.owner, 0f, 0f);
             //}
             projectile.localAI[1] += 1f;
             if (projectile.localAI[1] >= 6f)
@@ -85,7 +86,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
                     }
                 }
                 vector *= 0.8f;
-                Projectile.NewProjectile(projectile.Center.X - vector.X, projectile.Center.Y - vector.Y, vector.X, vector.Y, mod.ProjectileType("SinhtgruntExtraProj"), projectile.damage, projectile.knockBack, projectile.owner, 0f, 0f);
+                Projectile.NewProjectile(projectile.Center.X - vector.X, projectile.Center.Y - vector.Y, vector.X, vector.Y, ProjectileType<SinhtgruntExtraProj>(), projectile.damage, projectile.knockBack, projectile.owner, 0f, 0f);
                 projectile.localAI[1] = 0f;
             }
         }

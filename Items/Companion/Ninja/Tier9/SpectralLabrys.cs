@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja.Tier9
 {
@@ -26,7 +27,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier9
             item.rare = 9;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("SpectralLabrysProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.SpectralLabrysProj>();
             item.shootSpeed = 14.0f;
             item.crit += 15;
         }

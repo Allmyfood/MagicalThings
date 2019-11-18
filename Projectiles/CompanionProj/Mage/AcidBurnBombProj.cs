@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -45,7 +46,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     Vector2 value17 = new Vector2(Main.rand.Next(-50, 50), Main.rand.Next(-50, 50));
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, mod.ProjectileType("AcidBurnCloudProj"), projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ProjectileType<AcidBurnCloudProj>(), projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                 }
             }
         }

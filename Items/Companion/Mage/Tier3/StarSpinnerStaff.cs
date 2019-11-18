@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier3
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier3
 			item.rare = 3;
 			item.UseSound = SoundID.Item9;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("StarSpinnerProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.StarSpinnerProj>(); //this is a mod projectile
 			item.shootSpeed = 3f;
 		}
         public override void AddRecipes()

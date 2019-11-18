@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier6
 {
@@ -13,7 +14,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier6
 			item.width = 30;
 			item.height = 26;
 			item.shootSpeed = 32f;
-			item.shoot = mod.ProjectileType("SkullThrowProj");
+			item.shoot = ProjectileType< Projectiles.CompanionProj.Warrior.SkullThrowProj>();
 			item.knockBack = 3.75f;
 			item.value = 70;
 			item.rare = 6;

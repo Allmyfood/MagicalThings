@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Mage
 			item.rare = 1;
 			item.UseSound = SoundID.Item9;
 			item.autoReuse = true;
-            item.shoot = 668; //mod.ProjectileType("LightBladeShot"); //this is a mod projectile
+            item.shoot = 668; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
 			item.shootSpeed = 8f;
 		}
 

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ObjectData;
 using Terraria.Localization;
 using System;
@@ -53,90 +54,7 @@ namespace MagicalThings.Tiles
 
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType("SodaMachine"));
+            Item.NewItem(i * 16, j * 16, 16, 32, ItemType<Items.Placeable.SodaMachine>());
         }
-
-        //public override void MouseOverFar(int i, int j)
-        //{
-        //    Player player = Main.LocalPlayer;
-        //    Tile tile = Main.tile[Player.tileTargetX, Player.tileTargetY];
-        //    int left = Player.tileTargetX;
-        //    int top = Player.tileTargetY;
-        //    left -= (int)(tile.frameX % 54 / 18);
-        //    if (tile.frameY % 74 != 0)//74
-        //    {
-        //        top--;
-        //    }
-        //    int chestIndex = Chest.FindChest(left, top);
-        //    player.showItemIcon2 = -1;
-        //    if (chestIndex < 0)
-        //    {
-        //        player.showItemIconText = Language.GetTextValue("Soda Machine");
-        //    }
-        //    else
-        //    {
-        //        if (Main.chest[chestIndex].name != "")
-        //        {
-        //            player.showItemIconText = Main.chest[chestIndex].name;
-        //        }
-        //        else
-        //        {
-        //            player.showItemIconText = chest;
-        //        }
-        //        if (player.showItemIconText == chest)
-        //        {
-        //            player.showItemIcon2 = mod.ItemType("Soda Machine");
-        //            player.showItemIconText = "";
-        //        }
-        //    }
-        //    player.noThrow = 2;
-        //    player.showItemIcon = true;
-        //    if (player.showItemIconText == "")
-        //    {
-        //        player.showItemIcon = false;
-        //        player.showItemIcon2 = 0;
-        //    }
-        //}
-
-        //public override void MouseOver(int i, int j)
-        //{
-        //    Player player = Main.LocalPlayer;
-        //    Tile tile = Main.tile[Player.tileTargetX, Player.tileTargetY];
-        //    int left = Player.tileTargetX;
-        //    int top = Player.tileTargetY;
-        //    left -= (int)(tile.frameX % 54 / 18);
-        //    if (tile.frameY % 70 != 0)//36
-        //    {
-        //        top--;
-        //    }
-        //    int num138 = Chest.FindChest(left, top);
-        //    player.showItemIcon2 = -1;
-        //    if (num138 < 0)
-        //    {
-        //        player.showItemIconText = Language.GetTextValue("Soda Machine");
-        //    }
-        //    else
-        //    {
-        //        if (Main.chest[num138].name != "")
-        //        {
-        //            player.showItemIconText = Main.chest[num138].name;
-        //        }
-        //        else
-        //        {
-        //            player.showItemIconText = chest;
-        //        }
-        //        if (player.showItemIconText == chest)
-        //        {
-        //            player.showItemIcon2 = mod.ItemType("Soda Machine");
-        //            player.showItemIconText = "";
-        //        }
-        //    }
-        //    player.noThrow = 2;
-        //    player.showItemIcon = true;
-        //    if (Main.tile[Player.tileTargetX, Player.tileTargetY].frameY > 0)
-        //    {
-        //        player.showItemIcon2 = ItemID.PiggyBank;
-        //    }
-        //}
     }
 }

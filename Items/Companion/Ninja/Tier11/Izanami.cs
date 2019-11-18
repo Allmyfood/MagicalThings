@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja.Tier11
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier11
             item.rare = 11;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("IzanamiProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.IzanamiProj>();
             item.shootSpeed = 17.0f;
             item.crit += 25;
             item.noMelee = true;

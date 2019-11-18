@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior
 {
@@ -24,7 +25,7 @@ namespace MagicalThings.Items.Companion.Warrior
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
             item.crit = -4;
-           // item.shoot = mod.ProjectileType("LightBladeShot");
+           // item.shoot = ProjectileType<LightBladeShot>();
            // item.shootSpeed = 4.5f;
         }
 

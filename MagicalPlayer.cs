@@ -8,6 +8,7 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ModLoader.IO;
 using TerraUI.Objects;
 using Terraria.ID;
@@ -724,7 +725,7 @@ namespace MagicalThings
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath = false)
         {            
             Item item = new Item();       
-            item.SetDefaults(mod.ItemType("Animus"));
+            item.SetDefaults(ItemType<Items.Animus>());
             item.stack = 1;
             items.Add(item);
         }

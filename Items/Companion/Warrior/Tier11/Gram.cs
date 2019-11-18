@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier11
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 20;
-            //item.shoot = 389; // mod.ProjectileType("InfestedProj");
+            //item.shoot = 389; // ModContent.ProjectileType("InfestedProj");
             item.shootSpeed = 12.5f;
         }
 
@@ -92,7 +93,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
                         break;
 
                     case 8:
-                        item.shoot = mod.ProjectileType("VortexMissileProj");
+                        item.shoot = ProjectileType<Projectiles.CompanionProj.Ranger.VortexMissileProj>();
                         break;
                 }
                 #endregion
@@ -102,7 +103,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            if (item.shoot == mod.ProjectileType("VortexMissileProj"))
+            if (item.shoot == ProjectileType<Projectiles.CompanionProj.Ranger.VortexMissileProj>())
             {
                 int numberProjectiles = 12 + Main.rand.Next(2);
                 for (int i = 0; i < numberProjectiles; i++)

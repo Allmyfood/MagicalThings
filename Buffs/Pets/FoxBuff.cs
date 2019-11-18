@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs.Pets
 {
@@ -16,11 +17,11 @@ namespace MagicalThings.Buffs.Pets
 		public override void Update(Player player, ref int buffIndex)
 		{
 			player.buffTime[buffIndex] = 18000;
-            player.GetModPlayer<MagicalPlayer>(mod).FoxPet = true;
-			bool petProjectileNotSpawned = player.ownedProjectileCounts[mod.ProjectileType("FoxPetProj")] <= 0;
+            player.GetModPlayer<MagicalPlayer>().FoxPet = true;
+			bool petProjectileNotSpawned = player.ownedProjectileCounts[ProjectileType<Projectiles.Pets.FoxPetProj>()] <= 0;
 			if (petProjectileNotSpawned && player.whoAmI == Main.myPlayer)
 			{
-				Projectile.NewProjectile(player.position.X + player.width / 2, player.position.Y + player.height / 2, 0f, 0f, mod.ProjectileType("FoxPetProj"), 0, 0f, player.whoAmI, 0f, 0f);
+				Projectile.NewProjectile(player.position.X + player.width / 2, player.position.Y + player.height / 2, 0f, 0f, ProjectileType<Projectiles.Pets.FoxPetProj>(), 0, 0f, player.whoAmI, 0f, 0f);
 			}
 		}
 	}

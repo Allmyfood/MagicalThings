@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier10
 {
@@ -38,7 +39,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier10
             //item.shoot = mod.itemType("PebbleProj");
             item.shootSpeed = 14.0f;
             //item.useAmmo = AmmoID.Bullet; //Normal ammos.
-            item.useAmmo = mod.ItemType("VortexMissileAmmo");
+            item.useAmmo = ItemType<VortexMissileAmmo>();
             item.magic = false;
             item.noUseGraphic = false;
             item.channel = true;

@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs.CompanionBuffs
 {
@@ -15,13 +16,13 @@ namespace MagicalThings.Buffs.CompanionBuffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
-			if (player.ownedProjectileCounts[mod.ProjectileType("ShadowHammerProj")] > 0)
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
+			if (player.ownedProjectileCounts[ProjectileType<Projectiles.CompanionProj.Minions.ShadowHammerProj>()] > 0)
 
             {
 				modPlayer.ShadowHammerMinion = true;
 			}
-            if (player.ownedProjectileCounts[mod.ProjectileType("BloodAxeProj")] > 0)
+            if (player.ownedProjectileCounts[ProjectileType<Projectiles.CompanionProj.Minions.BloodAxeProj>()] > 0)
 
             {
                 modPlayer.BloodAxeMinion = true;

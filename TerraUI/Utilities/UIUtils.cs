@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.UI;
 using TerraUI.Objects;
 

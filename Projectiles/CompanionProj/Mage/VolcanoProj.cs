@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to basically indicate the folder where it is to be read from, so you the texture will load correctly
 
@@ -80,7 +81,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
                         int damage = 50;  //this is the projectile2 damage
                         //Shoot projectile and set ai back to 0
                         {
-                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("HellBurstFireballProj"), damage, 0, Main.myPlayer, 0f, 0f);
+                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<HellBurstFireballProj>(), damage, 0, Main.myPlayer, 0f, 0f);
                             Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 24); //24 is the sound, so when this projectile is shot will make that sound
                         }
                         projectile.ai[0] = 0f;

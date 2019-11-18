@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier4
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier4
             item.noUseGraphic = true;
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
-            item.shoot = mod.ProjectileType("SlimeLeashProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SlimeLeashProj>();
             item.shootSpeed = 13.9f;
         }
 

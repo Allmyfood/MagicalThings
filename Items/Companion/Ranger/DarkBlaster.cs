@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger
 {
@@ -31,10 +32,10 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
 			item.shoot = 10; //10 is default for guns.
-            //item.shoot = mod.ProjectileType("PebbleProj");
+            //item.shoot = ProjectileType<PebbleProj>();
             item.shootSpeed = 13.0f;
 			item.useAmmo = AmmoID.Bullet; //Normal ammos.
-            //item.useAmmo = mod.ItemType("Pebble");
+            //item.useAmmo = ModContent.ItemType("Pebble");
             item.scale = 0.75f;
         }
 

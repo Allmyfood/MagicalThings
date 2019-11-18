@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using MagicalThings.Items.Companion.Ranger.Tier8;
 
 namespace MagicalThings.Projectiles.CompanionProj.Ranger
@@ -46,7 +47,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
             Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y, 0);
             if (projectile.owner == Main.myPlayer && Main.rand.NextFloat() < .125f)
             {
-                Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType<RazorArrow>(), 1, false, 0);
+                Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, ItemType<RazorArrow>(), 1, false, 0);
             }
         }
     }
