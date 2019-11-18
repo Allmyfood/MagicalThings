@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -175,7 +176,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
                 (target.Center - projectile.Center) *
                 0.75f; // Change velocity based on delta center of targets (difference between entity centers)
             projectile.netUpdate = true; // netUpdate this javelin
-            target.AddBuff(mod.BuffType<Buffs.CompanionBuffs.BrionacBuff>(), 1000); // Adds the ExampleJavelin debuff for a very small DoT
+            target.AddBuff(ModContent.BuffType<Buffs.CompanionBuffs.BrionacBuff>(), 1000); // Adds the ExampleJavelin debuff for a very small DoT
 
             projectile.damage = projectile.damage; // Makes sure the sticking javelins do not deal damage anymore
 

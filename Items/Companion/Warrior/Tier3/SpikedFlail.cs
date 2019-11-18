@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier3
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier3
             item.noUseGraphic = true;
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
-            item.shoot = mod.ProjectileType("SpikedFlailProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SpikedFlailProj>();
             item.shootSpeed = 12.9f;
         }
 

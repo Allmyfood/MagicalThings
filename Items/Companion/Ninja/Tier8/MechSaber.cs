@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja.Tier8
 {
@@ -27,7 +28,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier8
             item.rare = 9;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            //item.shoot = mod.ProjectileType("PWNDaggerProj");
+            //item.shoot = ProjectileType<PWNDaggerProj>();
             item.shootSpeed = 11.0f;
             item.crit += 14;
             item.noMelee = false;
@@ -68,7 +69,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier8
                 item.damage = 1;
                 item.noMelee = true;
                 item.noUseGraphic = true;
-                item.shoot = mod.ProjectileType("BlindPowderProj");
+                item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.BlindPowderProj>();
             }
             return base.CanUseItem(player);
         }

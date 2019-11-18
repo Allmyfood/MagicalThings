@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja
 {
@@ -27,7 +28,7 @@ namespace MagicalThings.Items.Companion.Ninja
             item.rare = 7;
             item.UseSound = SoundID.Item17;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("HellfireKunaiProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.HellfireKunaiProj>();
             item.shootSpeed = 14.0f;
             item.crit += 9;
             item.noMelee = true;
@@ -67,7 +68,7 @@ namespace MagicalThings.Items.Companion.Ninja
                 item.useTime = 15;
                 item.useAnimation = 15;
                 item.damage = 50;
-                item.shoot = mod.ProjectileType("HellfireKunaiProj");
+                item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.HellfireKunaiProj>();
             }
             return base.CanUseItem(player);
         }

@@ -4,6 +4,7 @@ using System.IO;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework.Graphics;
 using ModConfiguration;
@@ -80,7 +81,7 @@ namespace MagicalThings
 
         public override void PostDrawInterface(SpriteBatch spriteBatch)
         {
-            MagicalPlayer mpp = Main.player[Main.myPlayer].GetModPlayer<MagicalPlayer>(this);
+            MagicalPlayer mpp = Main.player[Main.myPlayer].GetModPlayer<MagicalPlayer>();
             mpp.Draw(spriteBatch);
         }
 
@@ -129,7 +130,8 @@ namespace MagicalThings
                     }
                     break;
                 default:
-                    ErrorLogger.Log("Magical Things: Unknown message type: " + message);
+                    Logger.InfoFormat("Magical Things: Unknown message type: ", DisplayName);
+                    //ErrorLogger.Log("Magical Things: Unknown message type: " + message);
                     break;
             }
         }

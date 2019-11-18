@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier10
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier10
 			item.rare = 10;
             item.UseSound = SoundID.Item42;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("PhoenixFlightProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.PhoenixFlightProj>(); //this is a mod projectile
 			item.shootSpeed = 15f;
 		}
         

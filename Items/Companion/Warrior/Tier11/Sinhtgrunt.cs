@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier11
 {
@@ -17,7 +18,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
 			item.width = 30;
 			item.height = 26;
 			item.shootSpeed = 32f;
-			item.shoot = mod.ProjectileType("SinhtgruntProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SinhtgruntProj>();
 			item.knockBack = 2.5f;
 			item.value = 1200000;
 			item.rare = 11;

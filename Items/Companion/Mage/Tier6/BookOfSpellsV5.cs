@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier6
 {
@@ -31,7 +32,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier6
             item.rare = 6;
             item.UseSound = SoundID.Item44;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("DragonSkullProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.DragonSkullProj>(); //this is a mod projectile
             //item.shootSpeed = 4.5f; //not needed for stationary sentry
             item.sentry = true;
         }

@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier4
 {
@@ -14,7 +15,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier4
 			item.height = 26;
 
 			item.shootSpeed = 28f;
-			item.shoot = mod.ProjectileType("SlimeThrowProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SlimeThrowProj>();
 			item.knockBack = 5.75f;
 			item.value = 40;
 			item.rare = 4;

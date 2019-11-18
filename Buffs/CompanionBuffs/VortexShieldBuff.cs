@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using MagicalThings.Items.Companion.Mage.Tier10;
 
 namespace MagicalThings.Buffs.CompanionBuffs
@@ -19,10 +20,10 @@ namespace MagicalThings.Buffs.CompanionBuffs
 		{
             player.statDefense += 60;
             player.AddBuff(mod.BuffType("VortexShieldBuff"), 2);
-            if (player.ownedProjectileCounts[mod.ProjectileType("VortexShieldProj")] <= 0)
+            if (player.ownedProjectileCounts[ProjectileType<Projectiles.CompanionProj.Mage.VortexShieldProj>()] <= 0)
             {
-                Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, mod.ProjectileType("SpectralRingProj"), 90, 13, player.whoAmI);
-                Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, mod.ProjectileType("VortexShieldProj"), 0, 0, player.whoAmI);
+                Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, ProjectileType<Projectiles.CompanionProj.Mage.SpectralRingProj>(), 90, 13, player.whoAmI);
+                Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, ProjectileType<Projectiles.CompanionProj.Mage.VortexShieldProj>(), 0, 0, player.whoAmI);
             }
         }
 	}

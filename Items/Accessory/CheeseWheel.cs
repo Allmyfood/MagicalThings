@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Accessory
 {
@@ -16,7 +17,7 @@ namespace MagicalThings.Items.Accessory
 			item.CloneDefaults(ItemID.DogWhistle);
 			item.width = 16;
             item.height = 12;
-			item.shoot = mod.ProjectileType("MousePetProj");
+			item.shoot = ProjectileType<Projectiles.Pets.MousePetProj>();
 			item.buffType = mod.BuffType("MouseyBuff");
         }
 

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Accessory
 {
@@ -16,7 +17,7 @@ namespace MagicalThings.Items.Accessory
 			item.CloneDefaults(ItemID.MagicLantern);
             item.width = 12;
             item.height = 12;
-            item.shoot = mod.ProjectileType("IlluminationProj");
+            item.shoot = ProjectileType<Projectiles.Pets.IlluminationProj>();
 			item.buffType = mod.BuffType("EyeBuff");
 		}
 

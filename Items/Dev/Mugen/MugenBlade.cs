@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Dev.Mugen
 {
@@ -27,13 +28,13 @@ namespace MagicalThings.Items.Dev.Mugen
             //item.noMelee = true;
             item.value = 500000;
             item.rare = 9;
-            item.shoot = mod.ProjectileType("MugenProj");
+            item.shoot = ProjectileType<Projectiles.MugenProj>();
             item.shootSpeed = 15;
 		}
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            type = mod.ProjectileType("MugenProj");
+            type = ProjectileType<Projectiles.MugenProj>();
             return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
         }
 

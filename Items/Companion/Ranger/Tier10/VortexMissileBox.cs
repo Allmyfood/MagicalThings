@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier10
 {
@@ -21,8 +22,8 @@ namespace MagicalThings.Items.Companion.Ranger.Tier10
 			item.knockBack = 7.5f;
 			item.value = 80;
 			item.rare = 10;
-			item.shoot = mod.ProjectileType("VortexMissileProj");   //The projectile shoot when your weapon using this ammo
-            item.ammo = mod.ItemType("VortexMissileAmmo");            //The ammo class this ammo belongs to.
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Ranger.VortexMissileProj>();   //The projectile shoot when your weapon using this ammo
+            item.ammo = ItemType<VortexMissileAmmo>();            //The ammo class this ammo belongs to.
 		}
 
 		public override void AddRecipes()

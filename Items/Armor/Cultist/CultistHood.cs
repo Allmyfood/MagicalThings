@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Armor.Cultist
 {
@@ -31,7 +32,7 @@ namespace MagicalThings.Items.Armor.Cultist
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("CultistRobes") && legs.type == mod.ItemType("CultistBottoms");
+			return body.type == ItemType<CultistRobes>() && legs.type == ItemType<CultistBottoms>();
 		}
         
         

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier4
 {
@@ -30,7 +31,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
 			item.rare = 4;
             item.UseSound = SoundID.Item9; //for default
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("LivingEmberProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.LivingEmberProj>(); //this is a mod projectile
 			item.shootSpeed = 12f;
 		}
 

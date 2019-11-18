@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier11
 {
@@ -34,7 +35,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
 			item.rare = 11;
             //item.UseSound = SoundID.Item68; //for default
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("MimirsShotProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.MimirsShotProj>(); //this is a mod projectile
 			item.shootSpeed = 10f;
 		}
 

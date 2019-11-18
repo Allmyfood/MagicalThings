@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Warrior
             item.noUseGraphic = true;
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;
-            item.shoot = mod.ProjectileType("SticknStoneProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.SticknStoneProj>();
             item.shootSpeed = 10.9f;
         }
 

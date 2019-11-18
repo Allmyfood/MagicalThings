@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using TerraUI.Utilities;
 
 namespace MagicalThings
@@ -25,7 +26,7 @@ namespace MagicalThings
                 return;
             }
 
-            MagicalPlayer mp = player.GetModPlayer<MagicalPlayer>(mod);
+            MagicalPlayer mp = player.GetModPlayer<MagicalPlayer>();
             mp.EquipShoes(KeyboardUtils.HeldDown(Keys.LeftShift), item);
         }
     }

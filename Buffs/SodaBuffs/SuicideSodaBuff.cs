@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs.SodaBuffs
 {
@@ -38,7 +39,7 @@ namespace MagicalThings.Buffs.SodaBuffs
                 player.maxMinions += 1;
                 player.lifeForce = true;
                 player.statLifeMax2 += player.statLifeMax / 5 / 20 * 20;
-                player.GetModPlayer<MagicalPlayer>(mod).SurgeBuff = true;
+                player.GetModPlayer<MagicalPlayer>().SurgeBuff = true;
                 #endregion
                 #region CreamSodaBuff
                 player.slowFall = true;

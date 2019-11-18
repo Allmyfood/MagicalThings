@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja.Tier10
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier10
             item.rare = 10;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("TwistingNebulaProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.TwistingNebulaProj>();
             item.shootSpeed = 15.0f;
             item.crit += 18;
             item.noMelee = true;

@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier10
 {
@@ -33,7 +34,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier10
 			item.rare = 10;
             item.UseSound = SoundID.Item68; //for default
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("StarFieldProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.StarFieldProj>(); //this is a mod projectile
 			item.shootSpeed = 5f;
 		}
 
@@ -46,7 +47,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier10
             {
                 float posX = playerPosition.X + (Main.rand.Next(-40, 40) * 16);
                 float posY = playerPosition.Y + (Main.rand.Next(-20, 7) * 16);
-                Projectile.NewProjectile(posX, posY, 0, 0, mod.ProjectileType("StarFieldProj"), damage, knockBack, player.whoAmI);
+                Projectile.NewProjectile(posX, posY, 0, 0, ProjectileType<Projectiles.CompanionProj.Mage.StarFieldProj>(), damage, knockBack, player.whoAmI);
             }
             #endregion
             return false;

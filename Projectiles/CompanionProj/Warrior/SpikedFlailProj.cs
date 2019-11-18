@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Warrior
 {
@@ -50,7 +51,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
 
 		public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
 		{
-			Texture2D texture = ModLoader.GetTexture("MagicalThings/Projectiles/CompanionProj/Warrior/SpikedFlail_Chain");
+			Texture2D texture = ModContent.GetTexture("MagicalThings/Projectiles/CompanionProj/Warrior/SpikedFlail_Chain");
 
 			Vector2 position = projectile.Center;
 			Vector2 mountedCenter = Main.player[projectile.owner].MountedCenter;

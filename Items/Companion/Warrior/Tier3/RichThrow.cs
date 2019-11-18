@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier3
 {
@@ -14,7 +15,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier3
 			item.height = 26;
 
 			item.shootSpeed = 26f;
-			item.shoot = mod.ProjectileType("RichThrowProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.RichThrowProj>();
 			item.knockBack = 5.5f;
 			item.value = 30;
 			item.rare = 3;

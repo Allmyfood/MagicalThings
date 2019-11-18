@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using MagicalThings.Items.Companion.Ranger.Tier11;
 using System;
@@ -68,7 +69,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
                     heading *= new Vector2(speedX, speedY).Length();
                     speedX = heading.X;
                     speedY = heading.Y + Main.rand.Next(40, 81);//*.02f;
-                    Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("ValkyrieArrowProj2"), damage * 4, knockback, projectile.whoAmI, 0f, ceilingLimit);
+                    Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileType<ValkyrieArrowProj2>(), damage * 4, knockback, projectile.whoAmI, 0f, ceilingLimit);
                     mpm.ValkyrieArrowCoolDown = 5;
                 }
             }
@@ -169,7 +170,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
                 (target.Center - projectile.Center) *
                 0.75f; // Change velocity based on delta center of targets (difference between entity centers)
             projectile.netUpdate = true; // netUpdate this javelin
-            target.AddBuff(mod.BuffType<Buffs.CompanionBuffs.ValkyrieArrowBuff>(), 1000); // Adds the ExampleJavelin debuff for a very small DoT
+            target.AddBuff(ModContent.BuffType<Buffs.CompanionBuffs.ValkyrieArrowBuff>(), 1000); // Adds the ExampleJavelin debuff for a very small DoT
 
             projectile.damage = 5; // Makes sure the sticking javelins do not deal damage anymore
 

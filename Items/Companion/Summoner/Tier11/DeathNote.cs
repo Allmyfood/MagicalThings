@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner.Tier11
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Summoner.Tier11
             item.value = 1200000;
             item.rare = 11;
             item.UseSound = SoundID.Item117;
-            item.shoot = mod.ProjectileType("DeathProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.DeathProj>();
             item.shootSpeed = 5f;
             item.buffType = mod.BuffType("MsDeathBuff");    //The buff added to player after used the item
             item.buffTime = 3600;               //The duration of the buff, here is 60 seconds

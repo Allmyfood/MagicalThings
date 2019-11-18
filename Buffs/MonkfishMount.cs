@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs
 {
@@ -16,7 +17,7 @@ namespace MagicalThings.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.mount.SetMount(mod.MountType<Mounts.SSMonkfish>(), player);
+			player.mount.SetMount(MountType<Mounts.SSMonkfish>(), player);
 			player.buffTime[buffIndex] = 10;
             Lighting.AddLight((int)(player.position.X + (double)(player.width / 2)) / 16, (int)(player.position.Y + (double)(player.height / 2)) / 16, 15.8f, 15.95f, 16f); //default 0.8f, 0.95f, 1f
             player.gills = true;

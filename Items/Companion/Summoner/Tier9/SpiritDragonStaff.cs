@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner.Tier9
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Summoner.Tier9
             item.value = 150;
             item.rare = 9;
             item.UseSound = SoundID.Item25;
-            item.shoot = mod.ProjectileType("SpiritDragonProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.SpiritDragonProj>();
 			item.shootSpeed = 5f;
 			item.buffType = mod.BuffType("SpiritDragonBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

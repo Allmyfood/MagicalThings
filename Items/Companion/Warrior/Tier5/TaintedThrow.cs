@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier5
 {
@@ -14,7 +15,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
 			item.height = 32;
 
 			item.shootSpeed = 30f;
-			item.shoot = mod.ProjectileType("TaintedThrowProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.TaintedThrowProj>();
 			item.knockBack = 3.75f;
 			item.value = 50;
 			item.rare = 5;

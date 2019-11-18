@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger
 {
@@ -21,7 +22,7 @@ namespace MagicalThings.Items.Companion.Ranger
             item.height = 20;
             item.useTime = 45;
             //item.shoot = 10;
-            item.shoot = mod.ProjectileType("LeadShotProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.LeadShotProj>();
             item.shootSpeed = 16f;
             item.useAnimation = 45;
             item.useStyle = 5;
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Ranger
             item.knockBack = 9;
             item.value = 30;
             //item.useAmmo = AmmoID.Arrow;
-            item.useAmmo = mod.ItemType("LeadShot");
+            item.useAmmo = ItemType<LeadShot>();
             item.rare = 3;
             item.UseSound = SoundID.Item14;//14 is explosion sound
             item.autoReuse = true;

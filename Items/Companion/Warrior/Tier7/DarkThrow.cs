@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier7
 {
@@ -13,7 +14,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier7
 			item.width = 30;
 			item.height = 26;
 			item.shootSpeed = 32f;
-			item.shoot = mod.ProjectileType("DarkThrowProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.DarkThrowProj>();
 			item.knockBack = 3.75f;
 			item.value = 80;
 			item.rare = 7;

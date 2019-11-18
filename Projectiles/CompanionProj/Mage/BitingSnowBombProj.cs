@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -142,7 +143,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                 }
                 if (num566 > (float)projectile.damage * 0.1f)
                 {
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, mod.ProjectileType("BitingSnowDropProj"), (int)num566, projectile.knockBack * 0.55f, projectile.owner, 0f, (float)Main.rand.Next(3));//344 is snowflake
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileType<BitingSnowDropProj>(), (int)num566, projectile.knockBack * 0.55f, projectile.owner, 0f, (float)Main.rand.Next(3));//344 is snowflake
                     return;
                 }
             }

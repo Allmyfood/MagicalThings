@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier11
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 22;
-            item.shoot = 645;//mod.ProjectileType("OgmiosShotProj"); //645;
+            item.shoot = 645;//ModContent.ProjectileType("OgmiosShotProj"); //645;
             item.shootSpeed = 10;//12.5f;
         }
 

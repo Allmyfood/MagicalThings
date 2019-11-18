@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items
 {
@@ -35,7 +36,7 @@ namespace MagicalThings.Items
             // Instead of copying these values, we can clone and modify the ones we want to copy
             item.CloneDefaults(ItemID.DiamondHook);
             item.shootSpeed = 30f; // how quickly the hook is shot.
-            item.shoot = mod.ProjectileType("SpiritHookProjectile");
+            item.shoot = ProjectileType<SpiritHookProjectile>();
         }
         public override void AddRecipes()
         {

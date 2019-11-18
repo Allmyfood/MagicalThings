@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier4
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shoot = 85; //mod.ProjectileType("LightBladeShot"); //this is a mod projectile
+            item.shoot = 85; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
 			item.shootSpeed = 4.5f;
 		}
         

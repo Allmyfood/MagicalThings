@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Weapons
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Weapons
 			item.value = Item.buyPrice(0, 4, 0, 0);
 			item.rare = 1;
 			item.UseSound = SoundID.Item25;
-			item.shoot = mod.ProjectileType("WaspProj");
+			item.shoot = ProjectileType<Projectiles.Minions.WaspProj>();
 			item.shootSpeed = 6f;
 			item.buffType = mod.BuffType("WaspBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

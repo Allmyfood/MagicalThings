@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using MagicalThings.Items.Companion.Mage.Tier9;
 
 namespace MagicalThings.Buffs.CompanionBuffs
@@ -21,10 +22,10 @@ namespace MagicalThings.Buffs.CompanionBuffs
             if (!player.HasBuff(mod.BuffType("VortexShieldBuff")))
             {
                 player.AddBuff(mod.BuffType("HallowedShieldBuff"), 2);
-                if (player.ownedProjectileCounts[mod.ProjectileType("SpectralRingProj")] <= 0)
+                if (player.ownedProjectileCounts[ProjectileType<Projectiles.CompanionProj.Mage.SpectralRingProj>()] <= 0)
                 {
-                    Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, mod.ProjectileType("SpectralRingProj"), 90, 13, player.whoAmI);
-                    Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, mod.ProjectileType("HallowedShieldProj"), 0, 0, player.whoAmI);
+                    Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, ProjectileType<Projectiles.CompanionProj.Mage.SpectralRingProj>(), 90, 13, player.whoAmI);
+                    Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, ProjectileType<Projectiles.CompanionProj.Mage.HallowedShieldProj>(), 0, 0, player.whoAmI);
                 }
             }
         }

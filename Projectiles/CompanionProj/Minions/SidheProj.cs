@@ -30,7 +30,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
 			inertia = 8f;
-            //shoot = mod.ProjectileType("SlimeStingerProj");
+            //shoot = ModContent.ProjectileType("SlimeStingerProj");
             shoot = 124; //Emerald Staff
             shootSpeed = 14f;
 		}
@@ -39,7 +39,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 		{
             //projectile.spriteDirection = projectile.direction;
             Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.SidheMinion = false;

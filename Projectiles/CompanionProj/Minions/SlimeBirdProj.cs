@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Minions
 {
@@ -30,7 +31,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
 			inertia = 10f;
-            shoot = mod.ProjectileType("SlimeStingerProj");
+            shoot = ProjectileType<SlimeStingerProj>();
             //shoot = 123; //Sapphire Bolt
 			shootSpeed = 12f;
 		}
@@ -38,7 +39,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 		public override void CheckActive()
 		{
 			Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.SlimeBirdMinion = false;

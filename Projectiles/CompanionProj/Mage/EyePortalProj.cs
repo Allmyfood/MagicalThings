@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to basically indicate the folder where it is to be read from, so you the texture will load correctly
 
@@ -79,7 +80,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
                         shootToY *= distance * 3;
                         int damage = 24;  //this is the projectile2 damage                   
                                           //Shoot projectile and set ai back to 0
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("InfestedProj"), damage, 0, Main.myPlayer, 0f, 0f); //Spawning a projectile mod.ProjectileType("FlamethrowerProj") is an example of how to spawn a modded projectile. if you want to shot a terraria prjectile add instead ProjectileID.Nameofterrariaprojectile
+                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<Warrior.InfestedProj>(), damage, 0, Main.myPlayer, 0f, 0f); //Spawning a projectile ModContent.ProjectileType("FlamethrowerProj") is an example of how to spawn a modded projectile. if you want to shot a terraria prjectile add instead ProjectileID.Nameofterrariaprojectile
                         Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 24); //24 is the sound, so when this projectile is shot will make that sound
                         projectile.ai[0] = 0f;
                     }

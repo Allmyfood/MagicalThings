@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs.SodaBuffs
 {
@@ -20,7 +21,7 @@ namespace MagicalThings.Buffs.SodaBuffs
             player.gills = true;
             player.fishingSkill += 15;
             player.accFlipper = true;
-            //player.GetModPlayer<MagicalPlayer>(mod).SurgeBuff = true; //example of using a custom buff in the ModPlayer section.
+            //player.GetModPlayer<MagicalPlayer>().SurgeBuff = true; //example of using a custom buff in the ModPlayer section.
         }
     }
 }

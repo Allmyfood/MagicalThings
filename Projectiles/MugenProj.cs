@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles
 {
@@ -13,7 +14,8 @@ namespace MagicalThings.Projectiles
 			projectile.CloneDefaults(595); //Arkhalis clone
 			aiType = 595;
             projectile.aiStyle = 75;
-            Main.projFrames[mod.ProjectileType("MugenProj")] = 28;            
+            Main.projFrames[projectile.type] = 28;
+            //Main.projFrames[ModContent.ProjectileType("MugenProj")] = 28;
             projectile.penetrate = -1;
             projectile.melee = true;
             projectile.width = 100;
@@ -87,9 +89,9 @@ namespace MagicalThings.Projectiles
                         int damage = 880;
                         {
                             Main.PlaySound(SoundID.Item125.WithVolume(0.5f), projectile.position);
-                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("MugenGreatSlashProj"), damage, 0, Main.myPlayer, 0f, 0f);
-                            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, mod.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
-                            //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
+                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<MugenGreatSlashProj>(), damage, 0, Main.myPlayer, 0f, 0f);
+                            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, ModContent.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
+                            //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ModContent.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
                         }
                     }
                 }
@@ -114,9 +116,9 @@ namespace MagicalThings.Projectiles
                         int damage = 880;
                         {
                             Main.PlaySound(SoundID.Item125.WithVolume(0.5f), projectile.position);
-                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("MugenGreatSlashProj"), damage, 0, Main.myPlayer, 0f, 0f);
-                            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, mod.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
-                            //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, mod.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
+                            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<MugenGreatSlashProj>(), damage, 0, Main.myPlayer, 0f, 0f);
+                            //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity, ModContent.ProjectileType("InfestedProj"), projectile.damage, projectile.knockBack, projectile.owner);
+                            //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ModContent.ProjectileType("InfestedProj"), projectile.damage, 0, Main.myPlayer);
                         }
                     }
                 }

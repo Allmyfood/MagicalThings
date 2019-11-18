@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Summoner
 			item.value = Item.buyPrice(0, 0, 0, 40);
 			item.rare = 4;
 			item.UseSound = SoundID.Item25;
-			item.shoot = mod.ProjectileType("CrimsonPuffProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.CrimsonPuffProj>();
 			item.shootSpeed = 5f;
 			item.buffType = mod.BuffType("CrimsonPuffBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

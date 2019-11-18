@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using Terraria.Utilities;
 
 namespace MagicalThings.NPCs
@@ -29,11 +30,11 @@ namespace MagicalThings.NPCs
         public override void SetDefaults(NPC npc)
         {
             // Make Spears buff act like a bone javelin
-            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.PrimeSpearBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
-            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.EctoSpearBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
-            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.SkypiercerBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
-            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.BrionacBuff>()] = npc.buffImmune[BuffID.Daybreak];
-            npc.buffImmune[mod.BuffType<Buffs.CompanionBuffs.ValkyrieArrowBuff>()] = npc.buffImmune[BuffID.Daybreak];
+            npc.buffImmune[ModContent.BuffType<Buffs.CompanionBuffs.PrimeSpearBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[ModContent.BuffType<Buffs.CompanionBuffs.EctoSpearBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[ModContent.BuffType<Buffs.CompanionBuffs.SkypiercerBuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[ModContent.BuffType<Buffs.CompanionBuffs.BrionacBuff>()] = npc.buffImmune[BuffID.Daybreak];
+            npc.buffImmune[ModContent.BuffType<Buffs.CompanionBuffs.ValkyrieArrowBuff>()] = npc.buffImmune[BuffID.Daybreak];
         }
         #endregion
 
@@ -104,7 +105,7 @@ namespace MagicalThings.NPCs
                 for (int i = 0; i < 1000; i++)
                 {
                     Projectile p = Main.projectile[i];
-                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.PrimeSpearProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    if (p.active && p.type == ModContent.ProjectileType<Projectiles.CompanionProj.Warrior.PrimeSpearProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
                     {
                         PrimeSpearCount++;
                     }
@@ -125,7 +126,7 @@ namespace MagicalThings.NPCs
                 for (int i = 0; i < 1000; i++)
                 {
                     Projectile p = Main.projectile[i];
-                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.EctoSpearProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    if (p.active && p.type == ModContent.ProjectileType<Projectiles.CompanionProj.Warrior.EctoSpearProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
                     {
                         EctoSpearCount++;
                     }
@@ -146,7 +147,7 @@ namespace MagicalThings.NPCs
                 for (int i = 0; i < 1000; i++)
                 {
                     Projectile p = Main.projectile[i];
-                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.SkypiercerProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    if (p.active && p.type == ModContent.ProjectileType<Projectiles.CompanionProj.Warrior.SkypiercerProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
                     {
                         SkypiercerSpearCount++;
                     }
@@ -167,7 +168,7 @@ namespace MagicalThings.NPCs
                 for (int i = 0; i < 1000; i++)
                 {
                     Projectile p = Main.projectile[i];
-                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Warrior.BrionacProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    if (p.active && p.type == ModContent.ProjectileType<Projectiles.CompanionProj.Warrior.BrionacProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
                     {
                         BrionacSpearCount++;
                     }
@@ -188,7 +189,7 @@ namespace MagicalThings.NPCs
                 for (int i = 0; i < 1000; i++)
                 {
                     Projectile p = Main.projectile[i];
-                    if (p.active && p.type == mod.ProjectileType<Projectiles.CompanionProj.Ranger.ValkyrieArrowProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+                    if (p.active && p.type == ModContent.ProjectileType<Projectiles.CompanionProj.Ranger.ValkyrieArrowProj>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
                     {
                         ValkyrieArrowCount++;
                     }
@@ -224,21 +225,21 @@ namespace MagicalThings.NPCs
 
                     if (Main.hardMode) //if it's hardmode NPC will sell this.
                     {
-                        shop.item[nextSlot].SetDefaults(mod.ItemType<Items.Armor.Drow.DrowHelmet>());
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Drow.DrowHelmet>());
                         nextSlot++;
 
-                        shop.item[nextSlot].SetDefaults(mod.ItemType<Items.Armor.Drow.DrowBreastplate>());
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Drow.DrowBreastplate>());
                         nextSlot++;
 
-                        shop.item[nextSlot].SetDefaults(mod.ItemType<Items.Armor.Drow.DrowLeggings>());
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Drow.DrowLeggings>());
                         nextSlot++;
 
-                        shop.item[nextSlot].SetDefaults(mod.ItemType<Items.Accessory.DrowPiwafwi>());
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Accessory.DrowPiwafwi>());
                         nextSlot++;
                     }
                     if (type == NPCID.Wizard)//Items NPC will always sell
                     {
-                        shop.item[nextSlot].SetDefaults(mod.ItemType<Items.Armor.Drow.DrowMask>());
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Drow.DrowMask>());
                         nextSlot++;
 
                         //shop.item[nextSlot].SetDefaults(ItemID.LunarBar);    //this is an example of how to add a terraria item
@@ -256,35 +257,35 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.Next(24) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("WolfPet"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.WolfPet>());
                 }
             }
             if (npc.type == NPCID.MartianDrone)
             {
                 if (Main.rand.Next(35) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("NaniteAssembler"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.NaniteAssembler>());
                 }
             }
             if (npc.type == NPCID.Shark)
             {
                 if (Main.rand.Next(20) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Deployer"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Deployer>());
                 }
             }
             if (npc.type == NPCID.Mouse)
             {
                 if (Main.rand.Next(20) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CheeseWheel"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Accessory.CheeseWheel>());
                 }
             }
             if (npc.type == NPCID.GoldMouse)
             {
                 if (Main.rand.Next(1) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CheeseWheel"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Accessory.CheeseWheel>());
                 }
             }
 
@@ -294,18 +295,18 @@ namespace MagicalThings.NPCs
                 if (Main.rand.Next(2) == 0 && Main.expertMode)
                 {
                     var dropChooser = new WeightedRandom<int>();
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistHood>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistRobes>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistBottoms>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistHood>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistRobes>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistBottoms>());
                     int choice = dropChooser;
                     Item.NewItem(npc.getRect(), choice);
                 }
                 else if (Main.rand.Next(4) == 0)
                 {
                     var dropChooser = new WeightedRandom<int>();
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistHood>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistRobes>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistBottoms>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistHood>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistRobes>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistBottoms>());
                     int choice = dropChooser;
                     Item.NewItem(npc.getRect(), choice);
                 }
@@ -315,18 +316,18 @@ namespace MagicalThings.NPCs
                 if (Main.rand.Next(2) == 0 && Main.expertMode)
                 {
                     var dropChooser = new WeightedRandom<int>();
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistHood>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistRobes>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistBottoms>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistHood>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistRobes>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistBottoms>());
                     int choice = dropChooser;
                     Item.NewItem(npc.getRect(), choice);
                 }
                 else if (Main.rand.Next(4) == 0)
                 {
                     var dropChooser = new WeightedRandom<int>();
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistHood>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistRobes>());
-                    dropChooser.Add(mod.ItemType<Items.Armor.Cultist.CultistBottoms>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistHood>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistRobes>());
+                    dropChooser.Add(ModContent.ItemType<Items.Armor.Cultist.CultistBottoms>());
                     int choice = dropChooser;
                     Item.NewItem(npc.getRect(), choice);
                 }
@@ -338,12 +339,12 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.NextFloat() < .25f && Main.expertMode)
                 {
-                    Item.NewItem(npc.getRect(), mod.ItemType("ShinobiEmblem"));
+                    Item.NewItem(npc.getRect(), ItemType<Items.Accessory.ShinobiEmblem>());
                 }
                 else
                     if (Main.rand.NextFloat() < .125f)
                 {
-                    Item.NewItem(npc.getRect(), mod.ItemType("ShinobiEmblem"));
+                    Item.NewItem(npc.getRect(), ItemType<Items.Accessory.ShinobiEmblem>());
                 }
             }
             #endregion
@@ -352,7 +353,7 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.NextFloat() < .10f) //10% chance
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("FlyMask"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.FlyMask.FlyMask>());
                 }
             }
 
@@ -360,7 +361,7 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.Next(1) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ShinyMedkit"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Accessory.ShinyMedkit>());
                 }
             }
 
@@ -368,7 +369,7 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.Next(1) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CaptainsHat"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.CaptainsHat.CaptainsHat>());
                 }
             }
 
@@ -376,8 +377,8 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.NextFloat() < .25f) //25% chance
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GreatWizardHat"));
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GreatWizardRobes"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.GreatWizard.GreatWizardHat>());
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.GreatWizard.GreatWizardRobes>());
                 }
             }
 
@@ -386,7 +387,7 @@ namespace MagicalThings.NPCs
             {
                 if (Main.rand.Next(1) == 0)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Animus"));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Animus>());
                 }
             }
             #endregion

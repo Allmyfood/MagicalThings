@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Warrior
 {
@@ -88,7 +89,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
                     projectile.localAI[0] = 1f;
                     if (Collision.CanHit(Main.player[projectile.owner].position, Main.player[projectile.owner].width, Main.player[projectile.owner].height, new Vector2(projectile.Center.X + projectile.velocity.X * projectile.ai[0], projectile.Center.Y + projectile.velocity.Y * projectile.ai[0]), projectile.width, projectile.height))
                     {
-                        int z = Projectile.NewProjectile(projectile.Center.X + projectile.velocity.X, projectile.Center.Y + projectile.velocity.Y, projectile.velocity.X * 1.5f, projectile.velocity.Y * 1.5f, mod.ProjectileType("SpitProj"), projectile.damage, projectile.knockBack * 0.85f, projectile.owner, 0f, 0f);
+                        int z = Projectile.NewProjectile(projectile.Center.X + projectile.velocity.X, projectile.Center.Y + projectile.velocity.Y, projectile.velocity.X * 1.5f, projectile.velocity.Y * 1.5f, ProjectileType<Mage.SpitProj>(), projectile.damage, projectile.knockBack * 0.85f, projectile.owner, 0f, 0f);
                         Main.projectile[z].tileCollide = true;
                         Main.projectile[z].timeLeft = 240;
                     }

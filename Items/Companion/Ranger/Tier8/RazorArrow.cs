@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier8
 {
@@ -21,7 +22,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier8
 			item.knockBack = 2.75f;
 			item.value = 50;
 			item.rare = 9;
-			item.shoot = mod.ProjectileType("RazorArrowProj");   //The projectile shoot when your weapon using this ammo
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Ranger.RazorArrowProj>();   //The projectile shoot when your weapon using this ammo
 			//item.shootSpeed = 16f;                  //The speed of the projectile
             item.ammo = AmmoID.Arrow;            //The ammo class this ammo belongs to.
 		}

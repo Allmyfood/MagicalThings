@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier9
 {
@@ -29,7 +30,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier9
             item.autoReuse = true;
             item.crit = 14;
             item.scale = 1.5f;
-            //item.shoot = 389; // mod.ProjectileType("InfestedProj");
+            //item.shoot = 389; // ModContent.ProjectileType("InfestedProj");
             //item.shootSpeed = 17.5f;
         }
 

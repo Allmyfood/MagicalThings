@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior
 {
@@ -14,7 +15,7 @@ namespace MagicalThings.Items.Companion.Warrior
 			item.height = 26;
 
 			item.shootSpeed = 25f;
-			item.shoot = mod.ProjectileType("RockStringProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.RockStringProj>();
 			item.knockBack = 5;
 			item.value = 10;
 			item.rare = 1;

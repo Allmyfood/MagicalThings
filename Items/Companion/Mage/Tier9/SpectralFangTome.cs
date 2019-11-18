@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier9
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier9
             item.rare = 9;
             item.UseSound = SoundID.Item104;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("SpectralFangProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.SpectralFangProj>(); //this is a mod projectile
             item.shootSpeed = 16f;
         }
 

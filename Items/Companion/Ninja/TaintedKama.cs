@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja
 {
@@ -24,7 +25,7 @@ namespace MagicalThings.Items.Companion.Ninja
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.crit += 6;
-            item.shoot = 567; // mod.ProjectileType("InfestedProj");
+            item.shoot = 567; // ModContent.ProjectileType("InfestedProj");
             item.shootSpeed = 2f;
 
         }

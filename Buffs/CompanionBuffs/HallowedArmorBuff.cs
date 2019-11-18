@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs.CompanionBuffs
 {
@@ -22,9 +23,9 @@ namespace MagicalThings.Buffs.CompanionBuffs
                 if (!player.HasBuff(mod.BuffType("HallowedShieldBuff")))
                 {
                     player.AddBuff(mod.BuffType("HallowedArmorBuff"), 2);
-                    if (player.ownedProjectileCounts[mod.ProjectileType("HallowedShieldProj")] <= 0)
+                    if (player.ownedProjectileCounts[ProjectileType<Projectiles.CompanionProj.Mage.HallowedShieldProj>()] <= 0)
                     {
-                        Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, mod.ProjectileType("HallowedShieldProj"), 0, 0, player.whoAmI);
+                        Projectile.NewProjectile(player.position.X, player.position.Y, 0f, 0f, ProjectileType<Projectiles.CompanionProj.Mage.HallowedShieldProj>(), 0, 0, player.whoAmI);
                     }
                 }
             }

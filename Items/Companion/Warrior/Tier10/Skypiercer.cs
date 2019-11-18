@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier10
 {
@@ -34,7 +35,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier10
 			item.autoReuse = true;
             item.crit = 6;
 			item.UseSound = SoundID.Item1;
-			item.shoot = mod.ProjectileType<SkypiercerProj>();
+			item.shoot = ModContent.ProjectileType<SkypiercerProj>();
 		}
 
         #region Glow Effect

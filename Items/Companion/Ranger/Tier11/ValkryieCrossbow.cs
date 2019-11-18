@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger.Tier11
 {
@@ -36,7 +37,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier11
             item.autoReuse = true;
             item.shoot = 10; //10 is default for guns.
             item.shootSpeed = 20.0f;
-            item.useAmmo = AmmoID.Arrow;//mod.ItemType("VortexMissileAmmo");
+            item.useAmmo = AmmoID.Arrow;//ModContent.ItemType("VortexMissileAmmo");
             item.magic = false;
             item.noUseGraphic = false;
             //item.channel = true;
@@ -67,13 +68,13 @@ namespace MagicalThings.Items.Companion.Ranger.Tier11
             for (int i = 0; i < numberProjectiles; i++)
             {
                 Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 1.0f; // This defines the projectile roatation and speed. .4f == projectile speed
-                Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, mod.ProjectileType("ValkyrieArrowProj"), damage, knockBack, player.whoAmI);
+                Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, ProjectileType<ValkyrieArrowProj>(), damage, knockBack, player.whoAmI);
             }
 
             #region Change arrows to Valkyrie arrows
             if (type == ProjectileID.WoodenArrowFriendly) // or ProjectileID.WoodenArrowFriendly
             {
-                type = mod.ProjectileType("ValkyrieArrowProj");//ProjectileID.FrostburnArrow; // or ProjectileID.FireArrow;
+                type = ProjectileType<ValkyrieArrowProj>();//ProjectileID.FrostburnArrow; // or ProjectileID.FireArrow;
             }
             return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
             #endregion

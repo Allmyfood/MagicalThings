@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier5
 {
@@ -30,7 +31,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier5
 			item.rare = 5;
 			item.UseSound = SoundID.Item9;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("StarMarkProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.StarMarkProj>(); //this is a mod projectile
 			item.shootSpeed = 1f;
 		}
         //Shoot multiple projectiles in an even ark.

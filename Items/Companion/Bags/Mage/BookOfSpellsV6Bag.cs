@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Bags.Mage
 {
@@ -26,7 +27,7 @@ namespace MagicalThings.Items.Companion.Bags.Mage
 
 		public override void RightClick(Player player)
 		{
-			player.QuickSpawnItem(mod.ItemType("Animus"),1);
+			player.QuickSpawnItem(ItemType<Animus>(), 1);
 			player.QuickSpawnItem(ItemID.BookofSkulls, 1);
 		}
 

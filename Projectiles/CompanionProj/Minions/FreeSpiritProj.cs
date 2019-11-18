@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Minions
 {
@@ -30,7 +31,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 			projectile.ignoreWater = true;
 			inertia = 8f;
             projectile.damage = 45;
-            shoot = mod.ProjectileType("SpiritFireProj");
+            shoot = ProjectileType<SpiritFireProj>();
             //shoot = 124; //Emerald Staff
             shootSpeed = 14f;
             shootCool = 50f; //called from Hovershooter2
@@ -40,7 +41,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 		{
             //projectile.spriteDirection = projectile.direction;
             Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.FreeSpiritMinion = false;

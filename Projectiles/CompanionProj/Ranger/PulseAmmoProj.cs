@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Ranger
 {
@@ -146,7 +147,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
             else
             {
                 // Do we still have enough mana? If not, we kill the projectile because we cannot use it anymore
-                if (Main.time % 10 < 1 && !player.HasAmmo(player.inventory[mod.ItemType("PulseAmmo")], true))  //(player.inventory[player.selectedItem], true))
+                if (Main.time % 10 < 1 && !player.HasAmmo(player.inventory[ItemType< Items.Companion.Ranger.Tier8.PulseAmmo >()], true))  //(player.inventory[player.selectedItem], true))
                 {
                     projectile.Kill();
                 }
@@ -193,7 +194,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
                     projectile.soundDelay = 40;    //this is the proper sound delay for this type of weapon
                     if (Main.rand.NextFloat() < .75f) //has a 75% chance to consume ammo.
                     {
-                        player.ConsumeItem(mod.ItemType("PulseAmmo"), true);
+                        player.ConsumeItem(ItemType<Items.Companion.Ranger.Tier8.PulseAmmo>(), true);
                     }
                 }
             }

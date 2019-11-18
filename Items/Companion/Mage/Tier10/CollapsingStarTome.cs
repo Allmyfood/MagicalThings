@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier10
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier10
             item.rare = 10;
             item.UseSound = SoundID.Item104;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("CollapsingStarHoleProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.CollapsingStarHoleProj>(); //this is a mod projectile
             item.shootSpeed = 16f;
         }
 

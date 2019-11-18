@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier8
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier8
             item.rare = 9;
             item.UseSound = SoundID.Item72;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("WitherBoltProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.WitherBoltProj>(); //this is a mod projectile
             item.shootSpeed = 16f;
         }
         //Shoot at desired angle. Shoot 2 at a distance of 1 degree from each other and spread out from there slowly

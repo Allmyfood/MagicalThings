@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja.Tier8
 {
@@ -26,7 +27,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier8
             item.rare = 9;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("PrimeAxeProj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.PrimeAxeProj>();
             item.shootSpeed = 13.75f;
             item.crit += 14;
         }

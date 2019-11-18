@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Summoner
             item.value = 10; ;
 			item.rare = 0;
 			item.UseSound = SoundID.Item25;
-			item.shoot = mod.ProjectileType("WindPixieProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.WindPixieProj>();
 			item.shootSpeed = 10f;
 			item.buffType = mod.BuffType("WindPixieBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

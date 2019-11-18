@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ranger
 {
@@ -27,9 +28,9 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.rare = 0;
 			item.UseSound = SoundID.Item5;
 			item.autoReuse = false;
-            item.shoot = mod.ProjectileType("PebbleProj");//1; //1 for bows 10 for guns. 10; //idk why but all the guns in the vanilla source have this
+            item.shoot = ProjectileType<Projectiles.CompanionProj.PebbleProj>();//1; //1 for bows 10 for guns. 10; //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 4.5f;
-            item.useAmmo = mod.ItemType("Pebble");//AmmoID.Arrow;
+            item.useAmmo = ItemType<Pebble>();//AmmoID.Arrow;
 		}
 
         public override Vector2? HoldoutOffset()

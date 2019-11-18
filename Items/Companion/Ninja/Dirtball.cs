@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Ninja
 {
@@ -24,7 +25,7 @@ namespace MagicalThings.Items.Companion.Ninja
             item.rare = 0;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("Dirtballproj");
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Dirtballproj>();
             item.shootSpeed = 6.5f;
         }
 

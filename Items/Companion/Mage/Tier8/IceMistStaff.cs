@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Mage.Tier8
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier8
 			item.rare = 9;
             item.UseSound = SoundID.Item68; //for default
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("IceMistProj"); //this is a mod projectile
+            item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.IceMistProj>(); //this is a mod projectile
 			item.shootSpeed = 1f;
 		}
 

@@ -3,6 +3,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -93,7 +94,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                                 shootToX *= distance * 6;
                                 shootToY *= distance * 6;
                                 {
-                                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("SurtrsWrathShotProj"), 200, 0, projectile.owner);
+                                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<SurtrsWrathShotProj>(), 200, 0, projectile.owner);
                                     Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 102); //24 is the sound, so when this projectile is shot will make that sound
                                 }
                                 //projectile.ai[0] = 0f;

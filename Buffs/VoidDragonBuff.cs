@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Buffs
 {
@@ -16,8 +17,8 @@ namespace MagicalThings.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
-			if (player.ownedProjectileCounts[mod.ProjectileType("VoidDragon")] > 0)
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
+			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.VoidDragon>()] > 0)
 			{
 				modPlayer.VoidDragonMinion = true;
 			}

@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Summoner
 {
@@ -28,7 +29,7 @@ namespace MagicalThings.Items.Companion.Summoner
             item.value = 80;
             item.rare = 7;
             item.UseSound = SoundID.Item25;
-			item.shoot = mod.ProjectileType("FlameSkeletonProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.FlameSkeletonProj>();
 			item.shootSpeed = 5f;
 			item.buffType = mod.BuffType("FlameSkullBuff");	//The buff added to player after used the item
 			item.buffTime = 3600;				//The duration of the buff, here is 60 seconds

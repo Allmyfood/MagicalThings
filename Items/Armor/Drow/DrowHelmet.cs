@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Armor.Drow
 {
@@ -31,7 +32,7 @@ namespace MagicalThings.Items.Armor.Drow
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("DrowBreastplate") && legs.type == mod.ItemType("DrowLeggings");
+			return body.type == ItemType<DrowBreastplate>() && legs.type == ItemType<DrowLeggings>();
 		}
         public override bool DrawHead()
         {

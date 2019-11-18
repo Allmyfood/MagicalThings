@@ -40,7 +40,7 @@ namespace MagicalThings.Projectiles.Minions
         public override void CheckActive()
 		{
 			Player player = Main.player[projectile.owner];
-			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>(mod);
+			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
 			if (player.dead)
 			{
 				modPlayer.GwenMinion = false;

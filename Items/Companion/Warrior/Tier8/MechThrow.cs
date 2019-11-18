@@ -1,5 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier8
 {
@@ -13,7 +14,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier8
 			item.width = 30;
 			item.height = 26;
 			item.shootSpeed = 32f;
-			item.shoot = mod.ProjectileType("MechThrowProj");
+			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.MechThrowProj>();
 			item.knockBack = 3.75f;
 			item.value = 120;
 			item.rare = 9;

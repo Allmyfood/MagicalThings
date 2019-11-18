@@ -4,6 +4,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Mage
 {
@@ -69,7 +70,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     hitEffect = projectile.localAI[0] % droprate == 0;//75f == 0;
                     if (hitEffect)
                     {
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 0, mod.ProjectileType("StarFieldProj"), 140, 0f, projectile.owner);
+                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 0, ProjectileType<StarFieldProj>(), 140, 0f, projectile.owner);
                     }
                 }
             }

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Items.Companion.Warrior.Tier8
 {
@@ -32,7 +33,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier8
 			item.autoReuse = true; // Most spears don't autoReuse, but it's possible when used in conjunction with CanUseItem()
 
 			item.UseSound = SoundID.Item1;
-			item.shoot = mod.ProjectileType<PrimeSpearProj>();
+			item.shoot = ModContent.ProjectileType<PrimeSpearProj>();
 		}
 
         public override void AddRecipes()
