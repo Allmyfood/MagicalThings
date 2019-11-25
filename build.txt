@@ -1,11 +1,11 @@
 author = Allmyfood
 
-version = 0.1.6
+version = 0.1.7
 displayName = Magical Things
 homepage = https://forums.terraria.org/index.php?threads/magical-things-mod.68698/
 hideCode = false
 hideResources = false
 includeSource = true
-buildIgnore = *.user, obj\*, bin\*, .vs\*, packages\*, .Thumbs\*, gitignore, .gitattributes, sln, .git/
+buildIgnore = *.user, obj\*, bin\*, Debug\*, net45\*, .vs\*, packages\*, .Thumbs\*, gitignore, .gitattributes, sln, .git/
 includePDB = true
 noCompile = false
