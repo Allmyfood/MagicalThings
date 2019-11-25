@@ -3,3 +3,25 @@
 ################################################################################
 
 *.db
+/obj/Debug/net45
+/bin/Debug/net45
+/obj
+/packages/Newtonsoft.Json.12.0.1/lib/net20
+/packages/Newtonsoft.Json.12.0.1/lib/net35
+/packages/Newtonsoft.Json.12.0.1/lib/net40
+/packages/Newtonsoft.Json.12.0.1/lib/net45
+/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.0
+/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.3
+/packages/Newtonsoft.Json.12.0.1/lib/netstandard2.0
+/packages/Newtonsoft.Json.12.0.1/lib/portable-net40+sl5+win8+wp8+wpa81
+/packages/Newtonsoft.Json.12.0.1/lib/portable-net45+win8+wp8+wpa81
+/packages/Newtonsoft.Json.12.0.1
+/Properties
+/packages.config
+/app.config
+/.vs/MagicalThings/DesignTimeBuild/.dtbcache
+/.vs/MagicalThings/v15/Server/sqlite3
+/.vs/config/applicationhost.config
+/.vs/MagicalThings/v15/.suo
+/MagicalThings.csproj.user
+/.vs/MagicalThings/v14/.suo
