@@ -10,7 +10,7 @@ namespace MagicalThings.Items            //We need this to basically indicate th
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Purify with Explosions!\n" +
-                "Will not change Mushroom Biomes");
+                "Will change Mushroom Biomes to Jungle");
         }
         public override void SetDefaults()
         {

@@ -31,6 +31,8 @@ namespace MagicalThings.Projectiles.Minions
 			projectile.timeLeft = 18000;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
+            projectile.usesLocalNPCImmunity = true;
+            projectile.localNPCHitCooldown = 6;
             //inertia = 20f;
             //shoot = 389; //Sapphire Bolt
             //shootSpeed = 15f;
