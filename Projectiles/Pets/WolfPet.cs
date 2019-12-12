@@ -18,7 +18,7 @@ namespace MagicalThings.Projectiles.Pets
 			projectile.CloneDefaults(ProjectileID.Bunny);
 			aiType = ProjectileID.Bunny;
             projectile.width = 50;
-            projectile.height = 39;
+            projectile.height = 38;
 			
 		}
 

@@ -19,7 +19,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier8
             item.thrown = true;
             item.melee = false;
             item.width = 30;
-            item.height = 33;
+            item.height = 34;
             item.useTime = 13;
             item.useAnimation = 13;
             item.useStyle = 1;

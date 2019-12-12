@@ -18,7 +18,7 @@ namespace MagicalThings.Items.Companion.Mage
 			item.magic = true;
             item.melee = false;
 			item.mana = 2;
-			item.width = 21;
+			item.width = 22;
 			item.height = 30;
 			item.useTime = 26;
 			item.useAnimation = 26;

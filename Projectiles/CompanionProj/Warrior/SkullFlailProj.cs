@@ -13,7 +13,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
 		{
 
 			projectile.width = 40;
-			projectile.height = 51;
+			projectile.height = 50;
 			projectile.friendly = true;
 			projectile.penetrate = -1; // Penetrates NPCs infinitely.
 			projectile.melee = true; // Deals melee dmg.

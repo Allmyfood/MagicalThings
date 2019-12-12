@@ -33,7 +33,7 @@ namespace MagicalThings.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CopperCoin, 1);
+            recipe.AddIngredient(ItemID.PlatinumCoin, 1);
             recipe.AddTile(null, "SodaMachineBox");
             recipe.SetResult(this);
             recipe.AddRecipe();
