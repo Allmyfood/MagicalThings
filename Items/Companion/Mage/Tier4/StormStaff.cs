@@ -23,7 +23,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
             item.melee = false;
 			item.mana = 4;
 			item.width = 44;
-			item.height = 41;
+			item.height = 42;
 			item.useTime = 21;
 			item.useAnimation = 22;
             item.useStyle = 5; //Standard style including books

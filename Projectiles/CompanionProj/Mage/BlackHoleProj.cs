@@ -15,8 +15,8 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         {
             //projectile.CloneDefaults(ProjectileID.LaserMachinegunLaser); //439
             projectile.damage = 500;
-            projectile.width = 249;
-            projectile.height = 249;
+            projectile.width = 248;
+            projectile.height = 248;
             projectile.friendly = true;
             projectile.magic = true;
 			//Main.projFrames[projectile.type] = 4; //moved to static

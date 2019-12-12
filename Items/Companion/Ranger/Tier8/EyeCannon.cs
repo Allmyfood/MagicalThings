@@ -22,7 +22,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier8
 			item.damage = 40;
 			item.ranged = true;
 			item.width = 66;
-			item.height = 21;
+			item.height = 22;
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.useStyle = 5;

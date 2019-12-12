@@ -17,7 +17,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior	//We need this to basi
         }
         public override void SetDefaults()
         {
-            projectile.width = 37;  //Set the hitbox width
+            projectile.width = 36;  //Set the hitbox width
             projectile.height = 42; //Set the hitbox height
             projectile.aiStyle = 1; //Is classic beam sword / enchanted sword shot
             projectile.friendly = true;  //Tells the game whether it is friendly to players/friendly npcs or not

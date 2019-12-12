@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier4
 			item.useTime = 30;
 			item.shootSpeed = 4.25f;
 			item.knockBack = 5.75f;
-			item.width = 61;
+			item.width = 62;
 			item.height = 66;
 			item.scale = 1f;
 			item.rare = 4;

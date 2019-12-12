@@ -24,7 +24,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier11
             item.damage = 250;
             item.ranged = true;
             item.width = 68;
-            item.height = 29;
+            item.height = 28;
             item.useTime = 13;
             item.useAnimation = 13;
             item.useStyle = 5;

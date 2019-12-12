@@ -20,7 +20,7 @@ namespace MagicalThings.Items.Companion.Summoner
 			item.summon = true;
 			item.mana = 10;
 			item.width = 24;
-			item.height = 57;
+			item.height = 56;
 			item.useTime = 36;
 			item.useAnimation = 36;
 			item.useStyle = 1;

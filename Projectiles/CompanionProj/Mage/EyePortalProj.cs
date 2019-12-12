@@ -19,7 +19,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
         public override void SetDefaults()
         {
             projectile.width = 52; //Set the hitbox width
-            projectile.height = 51;   //Set the hitbox heinght
+            projectile.height = 52;   //Set the hitbox heinght
             projectile.hostile = false;    //tells the game if is hostile or not.
             projectile.friendly = true;   //Tells the game whether it is friendly to players/friendly npcs or not
             projectile.ignoreWater = true;    //Tells the game whether or not projectile will be affected by water
