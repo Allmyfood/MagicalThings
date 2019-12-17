@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using Terraria.GameContent.Events;
+using MagicalThings.Buffs;
 
 namespace MagicalThings.Mounts
 {
@@ -87,7 +88,8 @@ namespace MagicalThings.Mounts
                 Rectangle rect = player.getRect();
                 Dust.NewDust(new Vector2(rect.X - (23 * player.direction), rect.Y + 23), rect.Width / 2, rect.Height / 2, 92); //92 is dust type, could use mod.DustType("Sparkel"),3f; for a mod version
             }
-            if(mountData.buff == mod.BuffType("MartianMount"))
+            //if(mountData.buff == mod.BuffType("MartianMount"))
+            if (mountData.buff == BuffType<MartianMount>())
             //if (Math.Abs(player.velocity.X) != 0f)
             {
                 if (--TimeToShoot <= 0)

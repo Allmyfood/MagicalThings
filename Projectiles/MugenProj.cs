@@ -56,7 +56,7 @@ namespace MagicalThings.Projectiles
                     float DistXT = (float)(Math.Sin(Angle) * 29);
                     float DistYT = (float)(Math.Cos(Angle) * 29);
                     projectile.position.X = (Main.player[projectile.owner].Center.X + DistXT) - 40; // 30;
-                    projectile.position.Y = (Main.player[projectile.owner].Center.Y + DistYT) - 30; // 30;
+                    projectile.position.Y = (Main.player[projectile.owner].Center.Y + DistYT) - 40; // 30;
                 }
                 if (Main.player[projectile.owner].Center.Y >= mouse.Y)
                 {
@@ -65,8 +65,8 @@ namespace MagicalThings.Projectiles
                     float Angle = (float)Math.Atan(Xdis / Ydis);
                     float DistXT = (float)(Math.Sin(Angle) * 29);
                     float DistYT = (float)(Math.Cos(Angle) * 29);
-                    projectile.position.X = (Main.player[projectile.owner].Center.X + (0 - DistXT)) - 30;  //30;
-                    projectile.position.Y = (Main.player[projectile.owner].Center.Y + (0 - DistYT)) - 30;  //30;
+                    projectile.position.X = (Main.player[projectile.owner].Center.X + (0 - DistXT)) - 60;  //30;
+                    projectile.position.Y = (Main.player[projectile.owner].Center.Y + (0 - DistYT)) - 40;  //30;
                 }
                 #region Great Slash with Armor
                 Player player = Main.player[projectile.owner];

@@ -9,8 +9,8 @@ namespace MagicalThings.Items            //We need this to basically indicate th
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Purify with Explosions!\n" +
-                "Will change Mushroom Biomes to Jungle");
+            Tooltip.SetDefault("Purify with Explosions!"
+                + "\nWill change Mushroom Biomes to Jungle");
         }
         public override void SetDefaults()
         {
@@ -24,10 +24,10 @@ namespace MagicalThings.Items            //We need this to basically indicate th
             item.UseSound = SoundID.Item1; //The sound played when using this item
             item.useAnimation = 20;  //How long the item is used for.
             item.useTime = 20;     //How fast the item is used.
-            item.value = Item.buyPrice(0, 0, 3, 0);   //How much the item is worth, in copper coins, when you sell it to a merchant. It costs 1/5th of this to buy it back from them. An easy way to remember the value is platinum, gold, silver, copper or PPGGSSCC (so this item price is 3 silver)
+            item.value = item.value = Item.buyPrice(silver: 3);
             item.noUseGraphic = true;
             item.noMelee = true;      //Setting to True allows the weapon sprite to stop doing damage, so only the projectile does the damge
-            item.shoot = ModContent.ProjectileType<Projectiles.CleanseBombProj>(); //This defines what type of projectile this item will shoot
+            item.shoot = ProjectileType<Projectiles.CleanseBombProj>(); //This defines what type of projectile this item will shoot
             item.shootSpeed = 5f; //This defines the projectile speed when shot
         }
         public override void AddRecipes()   //This defines the crafting recepe for this item

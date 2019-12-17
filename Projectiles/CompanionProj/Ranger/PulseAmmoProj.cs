@@ -147,7 +147,8 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
             else
             {
                 // Do we still have enough mana? If not, we kill the projectile because we cannot use it anymore
-                if (Main.time % 10 < 1 && !player.HasAmmo(player.inventory[ItemType< Items.Companion.Ranger.Tier8.PulseAmmo >()], true))  //(player.inventory[player.selectedItem], true))
+                if (Main.time % 10 < 1 && !player.HasAmmo(player.inventory[player.selectedItem], true))  //(player.inventory[player.selectedItem], true))
+                //if (Main.time % 10 < 1 && !player.HasAmmo(player.inventory[ItemType<Items.Companion.Ranger.Tier8.PulseAmmo>()], true))  //(player.inventory[player.selectedItem], true))
                 {
                     projectile.Kill();
                 }

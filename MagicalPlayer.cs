@@ -74,6 +74,9 @@ namespace MagicalThings
         public int ValkyrieArrowCoolDown = 0;
         public int ValgrindShotCount = 0;
         public bool MugenArmorEquiped = false;
+        public bool SantaFiring = false;
+        public int SantaFireFrame = 1000;
+        
 
         #region OnHitBuffs
         public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)

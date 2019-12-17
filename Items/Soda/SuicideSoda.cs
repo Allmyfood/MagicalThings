@@ -28,7 +28,7 @@ namespace MagicalThings.Items.Soda
             item.height = 24; //28
             item.value = 100;                
             item.rare = 1;
-            item.buffType = mod.BuffType("SuicideSodaBuff");    //this is where you put your Buff name
+            item.buffType = BuffType<Buffs.SodaBuffs.SuicideSodaBuff>();
             item.buffTime = 200000;    //this is the buff duration        20000 = 6 min
             return;
         }
