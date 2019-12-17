@@ -9,6 +9,7 @@ using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework.Graphics;
 using ModConfiguration;
 using Terraria.Localization;
+using MagicalThings.Buffs;
 
 namespace MagicalThings
 {
@@ -47,6 +48,7 @@ namespace MagicalThings
             if (!Main.dedServ)
             {
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/Enkryption"), ItemType("EnkryptionMusicBox"), TileType("EnkryptionMusicBox"));
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BlueMoon"), ItemType("BlueMoonMusicBox"), TileType("BlueMoonMusicBox"));
                 AddEquipTexture(null, EquipType.Legs, "GreatWizardRobes_Legs", "MagicalThings/Items/Armor/GreatWizard/GreatWizardRobes_Legs");
             }
         }
@@ -250,13 +252,26 @@ namespace MagicalThings
             recipe.SetResult(ItemID.SpectreBoots, 1);
             recipe.AddRecipe();
 
-        //Added to normal recipe section
-//            recipe = new ModRecipe(this);
-//            recipe.AddIngredient(ItemID.PalladiumBar, 10);
-//            recipe.AddIngredient(ItemID.SoulofNight, 2);
-//            recipe.AddTile(TileID.MythrilAnvil);
-//            recipe.SetResult(null, "Twinkle", 1);
-//            recipe.AddRecipe();
+            //Added to normal recipe section
+            //            recipe = new ModRecipe(this);
+            //            recipe.AddIngredient(ItemID.PalladiumBar, 10);
+            //            recipe.AddIngredient(ItemID.SoulofNight, 2);
+            //            recipe.AddTile(TileID.MythrilAnvil);
+            //            recipe.SetResult(null, "Twinkle", 1);
+            //            recipe.AddRecipe();
+        }
+
+        public override void UpdateMusic(ref int music, ref MusicPriority priority)
+        {
+            if (Main.myPlayer == -1 || Main.gameMenu || !Main.LocalPlayer.active)
+            {
+                return;
+            }
+            if (Main.LocalPlayer.HasBuff(ModContent.BuffType<SantaNK2Buff>()))
+            {
+                music = MusicID.FrostMoon;
+                priority = MusicPriority.Environment;
+            }
         }
     }
 }

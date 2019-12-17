@@ -375,10 +375,17 @@ namespace MagicalThings.NPCs
 
             if (npc.type == NPCID.DarkCaster)
             {
-                if (Main.rand.NextFloat() < .25f) //25% chance
+                if (Main.rand.NextFloat() < .05f) //5% chance
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.GreatWizard.GreatWizardHat>());
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.GreatWizard.GreatWizardRobes>());
+                }
+            }
+            if (npc.type == NPCID.SantaNK1)
+            {
+                if (Main.rand.NextFloat() < .10f) //10% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Accessory.FancyBluePresent>());
                 }
             }
 

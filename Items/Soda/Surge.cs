@@ -25,7 +25,7 @@ namespace MagicalThings.Items.Soda
             item.height = 24; //28
             item.value = 100;                
             item.rare = 2;
-            item.buffType = mod.BuffType("SurgeBuff");    //this is where you put your Buff name
+            item.buffType = BuffType<Buffs.SodaBuffs.SurgeBuff>();
             item.buffTime = 200000;    //this is the buff duration        20000 = 6 min
             return;
         }

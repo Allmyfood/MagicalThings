@@ -8,14 +8,16 @@ Configuration shows up under Mod Configs. Named MagicalThings
   allowShoesInAccessorySlots: true or false
   slotLocation: 1 Shoe slot is on the Main Inventory page. 2 Shoe slot is on the Equipment menu 
   
-Updated! v0.1.8
+Updated! v0.1.9
+Added Tundra Bomb and Summer Bomb. Added Sword of Light, Darkness
+and the Chaos Breaker.
+Fixed Eye Cannon not firing laser. Fixed saftey guards
+for all biome bombs.
+Updated call method for sodas.
+-------------------------------
 Added Water Bomb, Air Bomb, Lava Bomb, and Lava Removal Bomb.
 Fixed several sprites
-------------------------------------------------------------------------
-Changed All biome bombs including Cleanse Bomb.
-Bombs now will not cause an error when at the edge of the world.
-Bombs will no longer change background walls that don't affect purity.
-
+-------------------------------
 
 Added Dev armor and weapons not available normally. Cheat in only.
 

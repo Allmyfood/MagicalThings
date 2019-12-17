@@ -209,6 +209,18 @@ namespace MagicalThings.Projectiles
                                 NetMessage.SendTileSquare(-1, xPosition, yPosition, 1);
                             }
                         }
+                        if (yPosition >= Main.maxTilesY - 43)
+                        {
+                            yPosition = Main.maxTilesY - 43;
+                            Tile tile = Main.tile[xPosition, yPosition];
+                            if (tile != null && Main.tile[xPosition, yPosition].liquid > 0 && Main.tile[xPosition, yPosition].liquidType() == 1)
+                            {
+                                Main.tile[xPosition, yPosition].lava(false);
+                                Main.tile[xPosition, yPosition].liquid = 0;
+                                WorldGen.SquareTileFrame(xPosition, yPosition, true);
+                                NetMessage.SendTileSquare(-1, xPosition, yPosition, 1);
+                            }
+                        }
                         #endregion
 
                         else

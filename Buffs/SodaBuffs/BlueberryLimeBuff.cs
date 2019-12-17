@@ -15,6 +15,7 @@ namespace MagicalThings.Buffs.SodaBuffs
             Description.SetDefault("Combines Gills, Fishing, and Flipper potions");
             Main.buffNoTimeDisplay[Type] = false;
             canBeCleared = true;
+            Main.debuff[Type] = false;
         }
         public override void Update(Player player, ref int buffIndex)
         {
