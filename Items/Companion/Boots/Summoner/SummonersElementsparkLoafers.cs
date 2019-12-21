@@ -37,6 +37,7 @@ namespace MagicalThings.Items.Companion.Boots.Summoner
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            player.maxTurrets += 3;
             player.minionDamage += 0.15f; //15% minion damage
             player.maxMinions += 3; //Max minions
             player.accRunSpeed += 8.75f; //Hermes Speed, Spectre. Lightning/Frostspark = 6.75f
