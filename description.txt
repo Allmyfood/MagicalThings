@@ -8,7 +8,10 @@ Configuration shows up under Mod Configs. Named MagicalThings
   allowShoesInAccessorySlots: true or false
   slotLocation: 1 Shoe slot is on the Main Inventory page. 2 Shoe slot is on the Equipment menu 
   
-Updated! v0.2.0
+Updated! v0.2.1
+Updated to tmodloader v0.11.6.2
+--------------------------------------------------------
+v0.2.0
 Added Tundra Bomb and Summer Bomb. Added Sword of Light, Darkness
 and the Chaos Breaker.
 Fixed Eye Cannon not firing laser. Fixed saftey guards
