@@ -381,6 +381,17 @@ namespace MagicalThings.NPCs
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.GreatWizard.GreatWizardRobes>());
                 }
             }
+
+            if (npc.type == NPCID.GoblinSummoner)
+            {
+                if (Main.rand.NextFloat() < .05f) //5% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.AngoryGoblin.GoblinMask>());
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.AngoryGoblin.GoblinTunic>());
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Items.Armor.AngoryGoblin.GoblinPants>());
+                }
+            }
+
             if (npc.type == NPCID.SantaNK1)
             {
                 if (Main.rand.NextFloat() < .10f) //10% chance

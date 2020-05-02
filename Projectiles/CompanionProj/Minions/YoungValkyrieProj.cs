@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using static Terraria.ModLoader.ModContent;
 
 namespace MagicalThings.Projectiles.CompanionProj.Minions
 {
@@ -30,7 +31,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 			projectile.ignoreWater = true;
 			inertia = 8f;
             projectile.damage = 55;
-            //shoot = ModContent.ProjectileType("SpiritFireProj");
+            //shoot = ProjectileType<Mage.AcidBurnBombProj>();
             shoot = 116;
             shootSpeed = 15f;
             shootCool = 45f; //called from Hovershooter2

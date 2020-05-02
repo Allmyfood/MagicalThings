@@ -395,9 +395,9 @@ namespace MagicalThings
         /// <param name="spriteBatch">drawing SpriteBatch</param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            int slotLocation;
+            //int slotLocation;
 
-            if (!ShouldDrawSlots(out slotLocation))
+            if (!ShouldDrawSlots())//(out slotLocation)) outdated
             {
                 return;
             }
@@ -417,7 +417,7 @@ namespace MagicalThings
                 }
             }
 
-            if (slotLocation == 2)
+            if(MagicalThings.ShoeSlotlocation) //(slotLocation == 2) used new config function
             {
                 if (Main.mapEnabled)
                 {
@@ -482,32 +482,37 @@ namespace MagicalThings
         /// Whether to draw the UIItemSlots.
         /// </summary>
         /// <returns>whether to draw the slots</returns>
-        private static bool ShouldDrawSlots(out int slotLocation)
+        //private static bool ShouldDrawSlots(out int slotLocation) out dated
+        //{
+        //    if (Main.playerInventory)
+        //    {
+        //        slotLocation = Convert.ToInt32(MagicalThings.Config.Get(MagicalThings.ShoeSlotlocation));
+
+        //        if ((slotLocation == 1 && Main.EquipPage == 0) ||
+        //           (slotLocation == 2 && Main.EquipPage == 2))
+        //        {
+        //            return true;
+        //        }
+        //    }
+
+        //    slotLocation = 1;
+        //    return false;
+        //}
+        private static bool ShouldDrawSlots()
         {
-            if (Main.playerInventory)
-            {
-                slotLocation = Convert.ToInt32(MagicalThings.Config.Get(MagicalThings.SlotLocation));
-
-                if ((slotLocation == 1 && Main.EquipPage == 0) ||
-                   (slotLocation == 2 && Main.EquipPage == 2))
-                {
-                    return true;
-                }
-            }
-
-            slotLocation = 1;
-            return false;
+            return Main.playerInventory && ((MagicalThings.ShoeSlotlocation && Main.EquipPage == 2) ||
+                    (!MagicalThings.ShoeSlotlocation && Main.EquipPage == 0));//First line true = 2 equipment pate, False = 0 Main page
         }
 
         /// <summary>
         /// Whether to draw the UIItemSlots.
         /// </summary>
         /// <returns>whether to draw the slots</returns>
-        private static bool ShouldDrawSlots()
-        {
-            int slotLocation;
-            return ShouldDrawSlots(out slotLocation);
-        }
+        //private static bool ShouldDrawSlots()
+        //{
+        //    int slotLocation;
+        //    return ShouldDrawSlots(out slotLocation);
+        //}
 
         /// <summary>
         /// Initialize the items in the UIItemSlots.

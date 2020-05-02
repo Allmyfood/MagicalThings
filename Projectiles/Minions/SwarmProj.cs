@@ -51,7 +51,8 @@ namespace MagicalThings.Projectiles.Minions
 
         public override void CheckActive()
 		{
-			Player player = Main.player[projectile.owner];
+            Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.95f, 0.84f, 0.26f);
+            Player player = Main.player[projectile.owner];
 			MagicalPlayer modPlayer = player.GetModPlayer<MagicalPlayer>();
             projectile.spriteDirection = projectile.direction = (projectile.velocity.X > 0).ToDirectionInt();
             projectile.rotation = projectile.velocity.ToRotation() + (projectile.spriteDirection == 1 ? 0f : MathHelper.Pi);

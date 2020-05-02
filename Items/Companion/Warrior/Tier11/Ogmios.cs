@@ -25,7 +25,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
             item.useAnimation = 10;
             item.useStyle = 1;
             item.knockBack = 11.75f;
-            item.value = 1200000;
+            Item.sellPrice(platinum: 2, gold: 40);
             item.rare = 11;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;

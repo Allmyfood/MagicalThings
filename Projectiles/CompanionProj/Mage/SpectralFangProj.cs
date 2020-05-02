@@ -101,5 +101,16 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             }
             #endregion
         }
+
+        public override void Kill(int timeLeft) //act like a flask explosion
+        {
+            Player player = Main.player[projectile.owner];
+            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 68, .5f);
+            
+            if (projectile.owner == Main.myPlayer)
+            {
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileType<IceMistProj>(), projectile.damage, 1f, projectile.owner, 0f);
+            }
+        }
     }
 }
