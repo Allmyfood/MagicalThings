@@ -30,7 +30,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier11
             item.useStyle = 5;
             item.noMelee = true;
             item.knockBack = 7;
-            item.value = 1200000;
+            Item.sellPrice(platinum: 2, gold: 40);
             item.rare = 11;
             item.UseSound = SoundID.Item94;
             item.autoReuse = true;

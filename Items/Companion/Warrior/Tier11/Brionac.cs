@@ -26,8 +26,8 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
 			item.knockBack = 6.5f;
 			item.width = 56;
 			item.height = 56;
-			//item.scale = 1f;
-            item.value = 1200000;
+            //item.scale = 1f;
+            Item.sellPrice(platinum: 2, gold: 40);
             item.rare = 11;
             item.melee = true;
 			item.noMelee = true;

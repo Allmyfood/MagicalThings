@@ -19,7 +19,7 @@ namespace MagicalThings.Items.Accessory
     }
         public override void SetDefaults()
         {
-            item.CloneDefaults(ItemID.FrostsparkBoots);
+            //item.CloneDefaults(ItemID.FrostsparkBoots);
             item.width = 34;
             item.height = 32;
             item.value = Item.sellPrice(gold: 20);

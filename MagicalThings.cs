@@ -7,7 +7,6 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework.Graphics;
-using ModConfiguration;
 using Terraria.Localization;
 using MagicalThings.Buffs;
 
@@ -15,13 +14,13 @@ namespace MagicalThings
 {
     public class MagicalThings : Mod
     {
-        public const string AllowAccessorySlots = "allowShoesInAccessorySlots";
-        public const string SlotLocation = "slotLocation";
+        public static bool AllowShoesInAccessorySlots = true;
+        public static bool ShoeSlotlocation = true;
         //public const string SHOE_SLOT_BACK_TEX = "ShoeSlotBackground";
         public const string ShoeSlotBackTex = "ShoeSlotBackground";
-        public static readonly ModConfig Config = new ModConfig("MagicalThings");
+        //public static readonly MagicalThingsConfig Config = new ModConfig("MagicalThings");
 
-        private static readonly List<Func<bool>> RightClickOverrides = new List<Func<bool>>();
+        private static List<Func<bool>> RightClickOverrides;
 
         internal static MagicalThings instance;
 
@@ -34,9 +33,9 @@ namespace MagicalThings
                 AutoloadSounds = true,
                 AutoloadBackgrounds = true //changed
             };
-            Config.Add(AllowAccessorySlots, true);
-            Config.Add(SlotLocation, 2);
-            Config.Load();
+            //Config.Add(AllowShoesInAccessorySlots, true);
+            //Config.Add(ShoeSlotlocation, 2);
+            //Config.Load();
             //TerraUI.Utilities.UIUtils.Mod = this;
             //TerraUI.Utilities.UIUtils.Subdirectory = "TerraUI";
         }
@@ -51,39 +50,115 @@ namespace MagicalThings
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BlueMoon"), ItemType("BlueMoonMusicBox"), TileType("BlueMoonMusicBox"));
                 AddEquipTexture(null, EquipType.Legs, "GreatWizardRobes_Legs", "MagicalThings/Items/Armor/GreatWizard/GreatWizardRobes_Legs");
             }
+            RightClickOverrides = new List<Func<bool>>();
         }
 
         public override void Unload()
         {
             instance = null;
-            RightClickOverrides.Clear();
+            if (RightClickOverrides != null)
+            {
+                RightClickOverrides.Clear();
+                RightClickOverrides = null;
+            }
         }
 
         public override object Call(params object[] args)
         {
-            string keyword = args[0] as string;
-            Func<bool> func = args[1] as Func<bool>;
-            if (string.IsNullOrEmpty(keyword) || func == null)
+            try
+            {
+                string keyword = args[0] as string;
+
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    return null;
+                }
+
+                switch (keyword)
+                {
+                    case "add":
+                    case "remove":
+                        // shoeSlot.Call(/* "add" or "remove" */, /* func<bool> returns true to cancel/false to continue */);
+                        // These two should be called in PostSetupContent
+                        Func<bool> func = args[1] as Func<bool>;
+
+                        if (func == null) return null;
+
+                        if (keyword == "add")
+                        {
+                            RightClickOverrides.Add(func);
+                        }
+                        else if (keyword == "remove")
+                        {
+                            RightClickOverrides.Remove(func);
+                        }
+                        break;
+                    case "getEquip":
+                    case "getVanity":
+                    case "getVisible":
+                        /* Can't use these three in PostSetupContent because EquipShoeSlot is a field in MagicalPlayer, but
+                         * that's not initialized yet, hence why I couldn't make some sort of delegate as an argument
+                         * that assigned it */
+
+                        // Item shoeItem = (Item)shoeSlot.Call(/* "getEquip"/"getVanity"/"getVisible" */, player.whoAmI);
+                        // These three should be called on demand
+                        int whoAmI = Convert.ToInt32(args[1]);
+                        MagicalPlayer mmp = Main.player[whoAmI].GetModPlayer<MagicalPlayer>();
+
+                        if (keyword == "getEquip")
+                        {
+                            return mmp.EquipShoeSlot.Item;
+                        }
+                        else if (keyword == "getVanity")
+                        {
+                            return mmp.VanityShoeSlot.Item;
+                        }
+                        // Returns the item that is responsible for the shoes to display on the player (at all times or during flight)
+                        else if (keyword == "getVisible")
+                        {
+                            if (mmp.VanityShoeSlot.Item.shoeSlot > 0)
+                            {
+                                return mmp.VanityShoeSlot.Item;
+                            }
+                            else
+                            {
+                                return mmp.EquipShoeSlot.Item;
+                            }
+                        }
+                        break;
+                }
+            }
+            catch
             {
                 return null;
             }
-
-            keyword = keyword.ToLower();
-            if (keyword == "add")
-            {
-                RightClickOverrides.Add(func);
-            }
-            else if (keyword == "remove")
-            {
-                RightClickOverrides.Remove(func);
-            }
-
             return null;
+            #region Old
+            //string keyword = args[0] as string;
+            //Func<bool> func = args[1] as Func<bool>;
+            //if (string.IsNullOrEmpty(keyword) || func == null)
+            //{
+            //    return null;
+            //}
+
+            //keyword = keyword.ToLower();
+            //if (keyword == "add")
+            //{
+            //    RightClickOverrides.Add(func);
+            //}
+            //else if (keyword == "remove")
+            //{
+            //    RightClickOverrides.Remove(func);
+            //}
+
+            //return null;
+            #endregion
         }
 
         public override void PostDrawInterface(SpriteBatch spriteBatch)
         {
-            MagicalPlayer mpp = Main.player[Main.myPlayer].GetModPlayer<MagicalPlayer>();
+            //MagicalPlayer mpp = Main.player[Main.myPlayer].GetModPlayer<MagicalPlayer>();
+            MagicalPlayer mpp = Main.LocalPlayer.GetModPlayer<MagicalPlayer>();
             mpp.Draw(spriteBatch);
         }
 

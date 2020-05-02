@@ -3,14 +3,16 @@ Useful for different kinds of boots. Still a work-in-progress. Shoe slot doesn't
 Shoe slot now has a configuration for the equipment pages and to allow shoes to be equipped in the non shoe slot. 
 Equip shoes with Right click, vanity shoes with Shift Right click
 Warning! Unequip your current shoes from shoe slot before updating. Usually fine, but just in case.
-
-Configuration shows up under Mod Configs. Named MagicalThings
-  allowShoesInAccessorySlots: true or false
-  slotLocation: 1 Shoe slot is on the Main Inventory page. 2 Shoe slot is on the Equipment menu 
   
-Updated! v0.2.1
+Updated! v0.2.2
+Fixed config, now shows up in mods of tmodloader!
+Added a potted sunflower that gives the Happy! buff, buff time is a little glitchy.
+Added Cleanse Bomb (Original) which adds back in a Cleanse Bomb that won't remove mushroom biomes.
+Fixed several biome bombs conversion ranges; now should not cause any errors.
+Added Sand, Forest, Jungle and Cultivator Bombs.
+-------------------------------
 Updated to tmodloader v0.11.6.2
---------------------------------------------------------
+-------------------------------
 v0.2.0
 Added Tundra Bomb and Summer Bomb. Added Sword of Light, Darkness
 and the Chaos Breaker.
@@ -25,10 +27,10 @@ Fixed several sprites
 
 Added Dev armor and weapons not available normally. Cheat in only.
 
-Known Bugs: Boot slot doesn't display properly.
+Known Bugs: Boot slot boots doesn't display properly on the player.
 Medium Core players death gives a new Animus scroll.
 
 [Credits]
-Coders: Big help from the tmodloader community and of course, jopojelly, bluemagic, and Wingslot.
+Coders: Big help from the tmodloader community and of course, jopojelly, bluemagic, Wingslot and Spirit mod.
 Sprites from: Cyrus Annihilator, Mageker, and Shadow443.
 Music from: modbom's ENKRYPTION album.

@@ -29,7 +29,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
             item.useStyle = 5; // 5; //Is default staff
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 0.5f;
-            item.value = 1200000;
+            Item.sellPrice(platinum: 2, gold: 40);
             item.rare = 11;
             item.UseSound = SoundID.Item44;
             item.autoReuse = true;

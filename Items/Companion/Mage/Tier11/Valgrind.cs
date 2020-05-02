@@ -30,7 +30,7 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
             item.useStyle = 5; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 3.5f;
-            item.value = 1200000;
+            Item.sellPrice(platinum: 2, gold: 40);
             item.rare = 11;
             item.UseSound = SoundID.Item104;
             item.autoReuse = true;

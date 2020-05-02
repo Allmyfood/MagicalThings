@@ -20,8 +20,8 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
 			item.shootSpeed = 32f;
 			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SinhtgruntProj>();
 			item.knockBack = 2.5f;
-			item.value = 1200000;
-			item.rare = 11;
+            Item.sellPrice(platinum: 2, gold: 40);
+            item.rare = 11;
 		}
 
 		public override void SetStaticDefaults()

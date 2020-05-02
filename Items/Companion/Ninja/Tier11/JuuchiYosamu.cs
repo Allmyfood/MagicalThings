@@ -26,7 +26,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier11
             item.useAnimation = 9;
             item.useStyle = 1;
             item.knockBack = 2.0f;
-            item.value = 1200000;
+            Item.sellPrice(platinum: 2, gold: 40);
             item.rare = 11;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
