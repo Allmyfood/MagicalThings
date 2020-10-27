@@ -21,10 +21,10 @@ namespace MagicalThings.Items.Companion.Ninja.Tier9
             item.height = 34;
             item.useTime = 14;
             item.useAnimation = 14;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 4.5f;
             item.value = 150;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.SpectralLabrysProj>();

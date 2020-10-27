@@ -22,7 +22,7 @@ namespace MagicalThings.Items.Armor.FishingHat   //We need this to basically ind
         {
             item.width = 34; //The size in width of the sprite in pixels.
             item.height = 22;   //The size in height of the sprite in pixels.
-            item.rare = 3;    //The color the title of your item when hovering over it ingame
+            item.rare = ItemRarityID.Orange;    //The color the title of your item when hovering over it ingame
             item.vanity = true; //this defines if this item is vanity or not.
             item.value = Item.sellPrice(silver: 40);
         }

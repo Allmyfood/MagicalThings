@@ -22,14 +22,14 @@ namespace MagicalThings.Items.Companion.Mage.Tier3
 			item.height = 34;
 			item.useTime = 21;
 			item.useAnimation = 22;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
 			item.value = 30;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.UseSound = SoundID.Item13;
 			item.autoReuse = true;
-            item.shoot = 22; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
+            item.shoot = ProjectileID.WaterStream; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
 			item.shootSpeed = 12.5f;
 		}
 

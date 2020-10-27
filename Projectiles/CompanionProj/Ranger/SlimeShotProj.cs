@@ -41,7 +41,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
 
         public override bool PreKill(int timeLeft)
         {
-            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 14);
+            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 14);
 
             for (int num459 = 0; num459 < 7; num459++)
             {

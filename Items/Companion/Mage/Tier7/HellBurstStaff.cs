@@ -26,11 +26,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier7
 			item.height = 48;
 			item.useTime = 18;
 			item.useAnimation = 18;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 3.5f;
 			item.value = 80;
-			item.rare = 7;
+			item.rare = ItemRarityID.Lime;
             item.UseSound = SoundID.Item73; //for default
 			item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.HellBurstFireballProj>(); //this is a mod projectile

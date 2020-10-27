@@ -18,8 +18,8 @@ namespace MagicalThings.Items            //We need this to basically indicate th
             item.height = 30;   //sprite height
             item.maxStack = 1;   //This defines the items max stack
             item.consumable = false;  //Tells the game that this should be used up once fired
-            item.useStyle = 1;   //The way your item will be used, 1 is the regular sword swing for example
-            item.rare = 4;     //The color the title of your item when hovering over it ingame
+            item.useStyle = ItemUseStyleID.SwingThrow;   //The way your item will be used, 1 is the regular sword swing for example
+            item.rare = ItemRarityID.LightRed;     //The color the title of your item when hovering over it ingame
             item.UseSound = SoundID.Item1; //The sound played when using this item
             item.useAnimation = 20;  //How long the item is used for.
             item.useTime = 20;     //How fast the item is used.

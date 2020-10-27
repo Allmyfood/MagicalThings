@@ -19,7 +19,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier10
 		public override void SetDefaults()
 		{
 			item.damage = 160;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
             item.useTime = 12;
             item.useAnimation = 12;			
 			item.shootSpeed = 18.75f;
@@ -28,7 +28,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier10
 			item.height = 56;
 			//item.scale = 1f;
             item.value = 250;
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.melee = true;
 			item.noMelee = true;
 			item.noUseGraphic = true;

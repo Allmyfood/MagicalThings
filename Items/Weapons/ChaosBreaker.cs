@@ -22,10 +22,10 @@ namespace MagicalThings.Items.Weapons
             item.height = 48;
             item.useTime = 15;
             item.useAnimation = 15;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 6;
             item.value = item.value = Item.buyPrice(gold: 50);
-            item.rare = 3;
+            item.rare = ItemRarityID.Orange;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shoot = ProjectileType<ChaosBreakerProj>();

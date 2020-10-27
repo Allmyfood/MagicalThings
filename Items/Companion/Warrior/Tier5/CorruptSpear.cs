@@ -16,7 +16,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
 		public override void SetDefaults()
 		{
 			item.damage = 24;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
             item.useTime = 28;
             item.useAnimation = 28;			
 			item.shootSpeed = 5.25f;
@@ -24,7 +24,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
 			item.width = 66;
 			item.height = 66;
 			item.scale = 1f;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 			item.value = Item.sellPrice(copper: 50);
 
 			item.melee = true;

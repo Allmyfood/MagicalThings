@@ -22,10 +22,10 @@ namespace MagicalThings.Items.Companion.Warrior.Tier6
             item.height = 32;
             item.useTime = 28;
             item.useAnimation = 28;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.knockBack = 6;
             item.value = 70;
-            item.rare = 6;
+            item.rare = ItemRarityID.LightPurple;
             item.scale = 1.1f;
             item.noUseGraphic = true;
             item.UseSound = SoundID.Item1;

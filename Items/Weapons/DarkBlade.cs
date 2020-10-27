@@ -20,13 +20,13 @@ namespace MagicalThings.Items.Weapons
             item.height = 50;
             item.useTime = 10;
             item.useAnimation = 15;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 6;
             item.value = 10000;
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shoot = 45; //ModContent.ProjectileType("LightBladeShot");
+            item.shoot = ProjectileID.DemonScythe; //ModContent.ProjectileType("LightBladeShot");
             item.shootSpeed = 4.5f;
         }
 

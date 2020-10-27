@@ -53,7 +53,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
                         float heal = damage / 10;
                         if (projectile.penetrate >= 0) heal = damage / 10;
                         owner.lifeSteal -= heal;
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, 298, 0, 0f, projectile.owner, (float)projectile.owner, heal);
+                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, projectile.owner, (float)projectile.owner, heal);
                     }
                 }
             }
@@ -64,7 +64,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
             Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.58f, 1.0f, 1.0f);
             if (Main.rand.Next(325) == 0)
             {
-                Main.PlaySound(4, (int)projectile.position.X, (int)projectile.position.Y, 7); //Twinkle sound
+                Main.PlaySound(SoundID.NPCKilled, (int)projectile.position.X, (int)projectile.position.Y, 7); //Twinkle sound
                 //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f, type, (int)(0.52f * projectile.damage), projectile.knockBack, projectile.owner, 0f, 0f);
             }
 

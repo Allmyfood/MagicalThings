@@ -13,7 +13,7 @@ namespace MagicalThings.Items.Placeable
 
         public override void SetDefaults()
         {
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.useTurn = true;
             item.useAnimation = 15;
             item.useTime = 10;
@@ -22,7 +22,7 @@ namespace MagicalThings.Items.Placeable
             item.createTile = mod.TileType("EnkryptionMusicBox");
             item.width = 24;
             item.height = 24;
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
             item.value = 100000;
             item.accessory = true;
         }

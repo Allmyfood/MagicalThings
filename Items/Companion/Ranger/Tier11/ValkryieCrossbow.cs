@@ -28,14 +28,14 @@ namespace MagicalThings.Items.Companion.Ranger.Tier11
             item.height = 29;
             item.useTime = 9;
             item.useAnimation = 9;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true;
             item.knockBack = 17;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item38;
             item.autoReuse = true;
-            item.shoot = 10; //10 is default for guns.
+            item.shoot = ProjectileID.PurificationPowder; //10 is default for guns.
             item.shootSpeed = 20.0f;
             item.useAmmo = AmmoID.Arrow;//ModContent.ItemType("VortexMissileAmmo");
             item.magic = false;

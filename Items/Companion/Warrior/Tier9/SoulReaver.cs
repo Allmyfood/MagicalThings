@@ -22,10 +22,10 @@ namespace MagicalThings.Items.Companion.Warrior.Tier9
             item.height = 56;
             item.useTime = 15;
             item.useAnimation = 15;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 2.75f;
             item.value = 150;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 14;
@@ -53,7 +53,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier9
                     if (owner.lifeSteal <= 0f) return;
                     float heal = damage / 10;
                     owner.lifeSteal -= heal;
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, 298, 0, 0f, item.owner, item.owner, heal);
+                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, item.owner, item.owner, heal);
                 }
             }
         }

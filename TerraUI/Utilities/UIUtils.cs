@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Terraria.UI;
 using TerraUI.Objects;
+using Terraria.ID;
 
 namespace TerraUI.Utilities {
     public static class UIUtils {
@@ -139,19 +140,19 @@ namespace TerraUI.Utilities {
         /// <param name="item1">first item</param>
         /// <param name="item2">second item</param>
         public static void SwitchItems(ref Item item1, ref Item item2) {
-            if((item1.type == 0 || item1.stack < 1) && (item2.type != 0 || item2.stack > 0)) //if item2 is mouseitem, then if item slot is empty and item is picked up
+            if((item1.type == ItemID.None || item1.stack < 1) && (item2.type != ItemID.None || item2.stack > 0)) //if item2 is mouseitem, then if item slot is empty and item is picked up
             {
                 item1 = item2;
                 item2 = new Item();
                 item2.SetDefaults();
             }
-            else if((item1.type != 0 || item1.stack > 0) && (item2.type == 0 || item2.stack < 1)) //if item2 is mouseitem, then if item slot is empty and item is picked up
+            else if((item1.type != ItemID.None || item1.stack > 0) && (item2.type == ItemID.None || item2.stack < 1)) //if item2 is mouseitem, then if item slot is empty and item is picked up
             {
                 item2 = item1;
                 item1 = new Item();
                 item1.SetDefaults();
             }
-            else if((item1.type != 0 || item1.stack > 0) && (item2.type != 0 || item2.stack > 0)) //if item2 is mouseitem, then if item slot is empty and item is picked up
+            else if((item1.type != ItemID.None || item1.stack > 0) && (item2.type != ItemID.None || item2.stack > 0)) //if item2 is mouseitem, then if item slot is empty and item is picked up
             {
                 Item item3 = item2;
                 item2 = item1;

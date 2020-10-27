@@ -27,11 +27,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
             item.height = 64;
             item.useTime = 16;
             item.useAnimation = 16;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 3.5f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item104;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.ValgrindShotProj>(); //this is a mod projectile

@@ -81,7 +81,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
 
         public override void Kill(int timeLeft)
         {
-            Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y); // Play a death sound
+            Main.PlaySound(SoundID.Dig, (int)projectile.position.X, (int)projectile.position.Y); // Play a death sound
             Vector2 usePos = projectile.position; // Position to use for dusts
                                                   // Please note the usage of MathHelper, please use this! We subtract 90 degrees as radians to the rotation vector to offset the sprite as its default rotation in the sprite isn't aligned properly.
             Vector2 rotVector =

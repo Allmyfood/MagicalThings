@@ -21,11 +21,11 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.height = 23;
 			item.useTime = 24;
 			item.useAnimation = 20;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 2;
 			item.value = 10;
-			item.rare = 0;
+			item.rare = ItemRarityID.White;
 			item.UseSound = SoundID.Item5;
 			item.autoReuse = false;
             item.shoot = ProjectileType<Projectiles.CompanionProj.PebbleProj>();//1; //1 for bows 10 for guns. 10; //idk why but all the guns in the vanilla source have this

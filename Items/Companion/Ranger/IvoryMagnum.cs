@@ -24,14 +24,14 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.height = 38;
 			item.useTime = 16;
 			item.useAnimation = 16;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 3;
 			item.value = 70;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
-			item.shoot = 10; //10 is default for guns.
+			item.shoot = ProjectileID.PurificationPowder; //10 is default for guns.
             //item.shoot = ProjectileType<PebbleProj>();
             item.shootSpeed = 12.75f;
 			item.useAmmo = AmmoID.Bullet; //Normal ammos.

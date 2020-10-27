@@ -15,7 +15,7 @@ namespace MagicalThings.Items.Soda
         {
             item.CloneDefaults(ItemID.WormholePotion);
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SodaCan");  //SoundID.Item3;                //this is the sound that plays when you use the item
-            item.useStyle = 2;                 //this is how the item is holded when used
+            item.useStyle = ItemUseStyleID.EatingUsing;                 //this is how the item is holded when used
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
@@ -24,7 +24,7 @@ namespace MagicalThings.Items.Soda
             item.width = 16; //20
             item.height = 24; //28
             item.value = 100;                
-            item.rare = 1;
+            item.rare = ItemRarityID.Blue;
             item.buffType = BuffType<Buffs.SodaBuffs.GrapeOrangeBuff>();
             item.buffTime = 200000;    //this is the buff duration        20000 = 6 min
             return;

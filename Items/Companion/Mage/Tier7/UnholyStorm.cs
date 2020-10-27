@@ -26,14 +26,14 @@ namespace MagicalThings.Items.Companion.Mage.Tier7
 			item.height = 50;
 			item.useTime = 20;
 			item.useAnimation = 20;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 2;
 			item.value = 80;
-			item.rare = 7;
+			item.rare = ItemRarityID.Lime;
 			//item.UseSound = SoundID.Item13;
 			item.autoReuse = true;
-            item.shoot = 114; //ModContent.ProjectileType("BoneStormProj"); //this is a mod projectile
+            item.shoot = ProjectileID.UnholyTridentFriendly; //ModContent.ProjectileType("BoneStormProj"); //this is a mod projectile
 			item.shootSpeed = 13.0f;
 		}
         //-----------------------------------------------StarWrath projectile style----------------------------------------------

@@ -23,11 +23,11 @@ namespace MagicalThings.Items.Companion.Summoner
 			item.height = 26;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.knockBack = .75f;
 			item.value = Item.buyPrice(0, 0, 0, 40);
-			item.rare = 4;
+			item.rare = ItemRarityID.LightRed;
 			item.UseSound = SoundID.Item25;
 			item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.CrimsonPuffProj>();
 			item.shootSpeed = 5f;

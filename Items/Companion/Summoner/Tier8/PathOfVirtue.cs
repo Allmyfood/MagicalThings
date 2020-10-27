@@ -23,11 +23,11 @@ namespace MagicalThings.Items.Companion.Summoner.Tier8
 			item.height = 32;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.knockBack = 4.0f;
             item.value = 120;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item25;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.SwordOfVirtueProj>();
 			item.shootSpeed = 5f;

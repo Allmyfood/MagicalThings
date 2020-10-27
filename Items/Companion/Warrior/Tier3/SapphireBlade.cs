@@ -18,10 +18,10 @@ namespace MagicalThings.Items.Companion.Warrior.Tier3
             item.height = 32;
             item.useTime = 20;
             item.useAnimation = 19;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 4.5f;
             item.value = 30;
-            item.rare = 3;
+            item.rare = ItemRarityID.Orange;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 6;

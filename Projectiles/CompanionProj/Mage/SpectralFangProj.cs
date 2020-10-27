@@ -96,7 +96,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     float heal = damage / 10;
                     if (projectile.penetrate >= 0) heal = damage / 10;
                     owner.lifeSteal -= heal;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, 298, 0, 0f, projectile.owner, (float)projectile.owner, heal);
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, projectile.owner, (float)projectile.owner, heal);
                 }
             }
             #endregion
@@ -105,7 +105,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void Kill(int timeLeft) //act like a flask explosion
         {
             Player player = Main.player[projectile.owner];
-            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 68, .5f);
+            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 68, .5f);
             
             if (projectile.owner == Main.myPlayer)
             {

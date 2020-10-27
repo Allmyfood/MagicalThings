@@ -39,7 +39,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void Kill(int timeLeft) //act like a flask explosion
         {
             Player player = Main.player[projectile.owner];
-            Main.PlaySound(4, (int)projectile.position.X, (int)projectile.position.Y, 62);
+            Main.PlaySound(SoundID.NPCKilled, (int)projectile.position.X, (int)projectile.position.Y, 62);
             //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileType<CollapsingStarFlashProj>(),, projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
             if (projectile.owner == Main.myPlayer)
             {
@@ -49,7 +49,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     Vector2 value17 = new Vector2(Main.rand.Next(-50, 50), Main.rand.Next(-50, 50));
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 645, projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ProjectileID.LunarFlare, projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                     
                 }
             }

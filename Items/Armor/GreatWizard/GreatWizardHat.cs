@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Armor.GreatWizard
 			item.width = 34;
 			item.height = 40;
 			item.value = Item.sellPrice(gold: 1);
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.vanity = true;
 		}
 

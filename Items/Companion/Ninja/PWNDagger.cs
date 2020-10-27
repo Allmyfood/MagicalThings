@@ -22,10 +22,10 @@ namespace MagicalThings.Items.Companion.Ninja
             item.height = 28;
             item.useTime = 15;
             item.useAnimation = 15;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 2.5f;
             item.value = 100;
-            item.rare = 8;
+            item.rare = ItemRarityID.Yellow;
             item.UseSound = SoundID.Item17;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.PWNDaggerProj>();
@@ -63,18 +63,18 @@ namespace MagicalThings.Items.Companion.Ninja
         {
             if (player.altFunctionUse == 2)
             {
-                item.useStyle = 1;
+                item.useStyle = ItemUseStyleID.SwingThrow;
                 item.useTime = 16;
                 item.useAnimation = 16;
                 item.damage = 80;
-                item.shoot = 0;
+                item.shoot = ProjectileID.None;
                 item.noMelee = false;
                 item.knockBack = 3.75f;
                 item.UseSound = SoundID.Item1;
             }
             else
             {
-                item.useStyle = 1;
+                item.useStyle = ItemUseStyleID.SwingThrow;
                 item.useTime = 15;
                 item.useAnimation = 15;
                 item.damage = 70;

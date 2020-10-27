@@ -19,7 +19,7 @@ namespace MagicalThings.Items.Armor.Drow
 			item.width = 18;
 			item.height = 18;
 			item.value = 10000;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 			item.defense = 45;
 		}
 

@@ -64,7 +64,7 @@ namespace MagicalThings.Mounts
             mountData.swimFrameCount = mountData.inAirFrameCount;
             mountData.swimFrameDelay = mountData.inAirFrameDelay;
             mountData.swimFrameStart = mountData.inAirFrameStart;
-            if (Main.netMode != 2)
+            if (Main.netMode != NetmodeID.Server)
             {
                 mountData.textureWidth = mountData.backTexture.Width + 20;
                 mountData.textureHeight = mountData.backTexture.Height;

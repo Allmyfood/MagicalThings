@@ -15,7 +15,7 @@ namespace MagicalThings.Items.Placeable
 
         public override void SetDefaults()
         {
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.useTurn = true;
             item.useAnimation = 15;
             item.useTime = 10;
@@ -25,7 +25,7 @@ namespace MagicalThings.Items.Placeable
             item.width = 24;
             item.height = 32;
             item.maxStack = 99;
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
             item.value = 100000;
         }
         public override void AddRecipes()   //This defines the crafting recepe for this item

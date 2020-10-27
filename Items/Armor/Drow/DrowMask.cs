@@ -20,7 +20,7 @@ namespace MagicalThings.Items.Armor.Drow   //We need this to basically indicate 
         {
             item.width = 18; //The size in width of the sprite in pixels.
             item.height = 18;   //The size in height of the sprite in pixels.
-            item.rare = 5;    //The color the title of your item when hovering over it ingame
+            item.rare = ItemRarityID.Pink;    //The color the title of your item when hovering over it ingame
             item.vanity = true; //this defines if this item is vanity or not.
             item.value = 1000;
         }

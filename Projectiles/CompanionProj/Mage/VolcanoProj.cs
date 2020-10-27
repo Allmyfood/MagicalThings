@@ -34,7 +34,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
         public override void Kill(int timeLeft)
         {
 
-            Main.PlaySound(2, projectile.Center, 62);    //this make so when this projectile disappear will make this sound.
+            Main.PlaySound(SoundID.Item, projectile.Center, 62);    //this make so when this projectile disappear will make this sound.
 
             for (int i = 0; i < 20; i++) //this is for a loop that makes dust spawn , the higher is the value the more dust will spawn
             {
@@ -82,7 +82,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
                         //Shoot projectile and set ai back to 0
                         {
                             Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<HellBurstFireballProj>(), damage, 0, Main.myPlayer, 0f, 0f);
-                            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 24); //24 is the sound, so when this projectile is shot will make that sound
+                            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 24); //24 is the sound, so when this projectile is shot will make that sound
                         }
                         projectile.ai[0] = 0f;
                     }

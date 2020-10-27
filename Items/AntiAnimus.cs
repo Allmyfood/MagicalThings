@@ -18,7 +18,7 @@ namespace MagicalThings.Items
         {
             item.width = 36;
             item.height = 36;
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.value = Item.buyPrice(copper: 1);
             item.maxStack = 99;
         }

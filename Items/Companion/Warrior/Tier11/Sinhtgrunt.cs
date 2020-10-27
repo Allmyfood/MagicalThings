@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
 			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SinhtgruntProj>();
 			item.knockBack = 2.5f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
 		}
 
 		public override void SetStaticDefaults()

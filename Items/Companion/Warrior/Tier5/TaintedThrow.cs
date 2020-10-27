@@ -18,7 +18,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier5
 			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.TaintedThrowProj>();
 			item.knockBack = 3.75f;
 			item.value = 50;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 		}
 
 		public override void SetStaticDefaults()

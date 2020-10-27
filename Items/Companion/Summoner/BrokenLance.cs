@@ -22,11 +22,11 @@ namespace MagicalThings.Items.Companion.Summoner
 			item.height = 38;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.knockBack = 3.25f;
             item.value = 80;
-            item.rare = 7;
+            item.rare = ItemRarityID.Lime;
             item.UseSound = SoundID.Item25;
 			item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.YoungValkyrieProj>();
 			item.shootSpeed = 6f;

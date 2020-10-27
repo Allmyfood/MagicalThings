@@ -123,7 +123,7 @@ namespace TerraUI.Objects {
         /// The default left click event.
         /// </summary>
         public override void OnLeftClick() {
-            if(Main.mouseItem.stack < 1 && item.type < 1) {
+            if(Main.mouseItem.stack < 1 && item.type < ItemID.IronPickaxe) {
                 return;
             }
 
@@ -221,7 +221,7 @@ namespace TerraUI.Objects {
                     OnDrawBackground(spriteBatch);
                 }
 
-                if(Item.type > 0) {
+                if(Item.type > ItemID.None) {
                     if(DrawItem != null) {
                         DrawItem(this, spriteBatch);
                     }

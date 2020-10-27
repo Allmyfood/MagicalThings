@@ -23,10 +23,10 @@ namespace MagicalThings.Items.Companion.Ninja.Tier9
             item.height = 32;
             item.useTime = 12;
             item.useAnimation = 12;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 4.5f;
             item.value = 150;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             //item.shoot = ProjectileType<PWNDaggerProj>();
@@ -56,7 +56,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier9
             if (player.altFunctionUse != 2)
             {
                 item.damage = item.damage;
-                item.shoot = 0;
+                item.shoot = ProjectileID.None;
                 item.noUseGraphic = false;
                 item.noMelee = false;
                 item.useTime = 12;
@@ -109,7 +109,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier9
                     if (owner.lifeSteal <= 0f) return;
                     float heal = damage / 10;
                     owner.lifeSteal -= heal;
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, 298, 0, 0f, item.owner, item.owner, heal);
+                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, item.owner, item.owner, heal);
                 }
             }
         }

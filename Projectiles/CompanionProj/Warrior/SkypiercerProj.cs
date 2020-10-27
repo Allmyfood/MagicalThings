@@ -47,7 +47,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
                         float heal = damage / 10;
                         if (projectile.penetrate >= 0) heal = damage / 10;
                         owner.lifeSteal -= heal;
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, 298, 0, 0f, projectile.owner, (float)projectile.owner, heal);
+                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, projectile.owner, (float)projectile.owner, heal);
                     }
                 }
                 #endregion
@@ -98,7 +98,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
         #region On Kill Proj
         public override void Kill(int timeLeft)
         {
-            Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y); // Play a death sound
+            Main.PlaySound(SoundID.Dig, (int)projectile.position.X, (int)projectile.position.Y); // Play a death sound
             Vector2 usePos = projectile.position; // Position to use for dusts
                                                   // Please note the usage of MathHelper, please use this! We subtract 90 degrees as radians to the rotation vector to offset the sprite as its default rotation in the sprite isn't aligned properly.
             Vector2 rotVector =

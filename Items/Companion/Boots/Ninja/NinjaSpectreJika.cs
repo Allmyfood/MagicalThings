@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Boots.Ninja
             item.width = 34;
             item.height = 28;
             item.value = Item.sellPrice(gold: 2);
-            item.rare = 3;
+            item.rare = ItemRarityID.Orange;
             item.accessory = true;
         }
         public override void AddRecipes()

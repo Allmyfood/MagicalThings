@@ -48,7 +48,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     float heal = damage / 10;
                     if (projectile.penetrate >= 0) heal = damage / 10;
                     owner.lifeSteal -= heal;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, 298, 0, 0f, projectile.owner, (float)projectile.owner, heal);
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, projectile.owner, (float)projectile.owner, heal);
                 }
             }
             #endregion

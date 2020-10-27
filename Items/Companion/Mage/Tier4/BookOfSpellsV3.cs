@@ -23,14 +23,14 @@ namespace MagicalThings.Items.Companion.Mage.Tier4
 			item.height = 32;
 			item.useTime = 20;
 			item.useAnimation = 20;
-            item.useStyle = 5; // 5; //Is default staff
+            item.useStyle = ItemUseStyleID.HoldingOut; // 5; //Is default staff
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 8;
 			item.value = 40;
-			item.rare = 4;
+			item.rare = ItemRarityID.LightRed;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shoot = 85; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
+            item.shoot = ProjectileID.Flames; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
 			item.shootSpeed = 4.5f;
 		}
         

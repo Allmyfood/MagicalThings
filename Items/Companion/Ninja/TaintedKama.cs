@@ -18,14 +18,14 @@ namespace MagicalThings.Items.Companion.Ninja
 			item.height = 28;
 			item.useTime = 14;
 			item.useAnimation = 14;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 3.75f;
 			item.value = 50;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.crit += 6;
-            item.shoot = 567; // ModContent.ProjectileType("InfestedProj");
+            item.shoot = ProjectileID.SporeTrap; // ModContent.ProjectileType("InfestedProj");
             item.shootSpeed = 2f;
 
         }

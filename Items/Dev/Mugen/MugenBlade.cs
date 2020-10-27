@@ -24,10 +24,10 @@ namespace MagicalThings.Items.Dev.Mugen
             item.melee = true;
             item.useTime = 22;
             item.useAnimation = 22;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             //item.noMelee = true;
             item.value = 500000;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.shoot = ProjectileType<Projectiles.MugenProj>();
             item.shootSpeed = 15;
 		}

@@ -75,7 +75,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                         shootToY *= distance * 6;
                         {
                             Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<WitherBoltProj>(), 200, 0, projectile.owner);
-                            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 72); //24 is the sound, so when this projectile is shot will make that sound
+                            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 72); //24 is the sound, so when this projectile is shot will make that sound
                         }
                         projectile.ai[0] = 0f;
                     }

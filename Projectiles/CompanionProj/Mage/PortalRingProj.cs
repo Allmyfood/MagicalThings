@@ -47,7 +47,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             projectile.rotation -= 0.005f;
             if (projectile.timeLeft == 1260 && projectile.owner == Main.myPlayer)
             {
-                Main.PlaySound(29, (int)projectile.position.X, (int)projectile.position.Y, 99);
+                Main.PlaySound(SoundID.Zombie, (int)projectile.position.X, (int)projectile.position.Y, 99);
                 Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileType<BlackHoleProj>(), 450, 1f, projectile.owner);
             }
 
@@ -179,7 +179,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     float heal = damage / 10;
                     if (projectile.penetrate >= 0) heal = damage / 10;
                     owner.lifeSteal -= heal;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, 298, 0, 0f, projectile.owner, (float)projectile.owner, heal);
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, projectile.owner, (float)projectile.owner, heal);
                 }
             }
             #endregion
@@ -190,7 +190,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void Kill(int timeLeft) //act like a flask explosion
         {
             Player player = Main.player[projectile.owner];
-            Main.PlaySound(4, (int)projectile.position.X, (int)projectile.position.Y, 62);
+            Main.PlaySound(SoundID.NPCKilled, (int)projectile.position.X, (int)projectile.position.Y, 62);
             //Projectile.NewProjectile(projectile.position.X, projectile.position.Y, projectile.velocity.X, projectile.velocity.Y, ModContent.ProjectileType("CollapsingStarFlashProj"), projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
             if (projectile.owner == Main.myPlayer)
             {
@@ -200,7 +200,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     Vector2 value17 = new Vector2(Main.rand.Next(-50, 50), Main.rand.Next(-50, 50));
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 645, projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ProjectileID.LunarFlare, projectile.damage, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                 }
             }
         }

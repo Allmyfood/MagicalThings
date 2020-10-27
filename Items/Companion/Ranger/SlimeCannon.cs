@@ -25,13 +25,13 @@ namespace MagicalThings.Items.Companion.Ranger
             item.shoot = ProjectileType<Projectiles.CompanionProj.Ranger.SlimeShotProj>();
             item.shootSpeed = 18f;
             item.useAnimation = 42;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true;
             item.knockBack = 11;
             item.value = 40;
             //item.useAmmo = AmmoID.Arrow;
             item.useAmmo = ItemType<SlimeShot>();
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
             item.UseSound = SoundID.Item14;//14 is explosion sound
             item.autoReuse = true;
         }

@@ -22,14 +22,14 @@ namespace MagicalThings.Items.Companion.Warrior
             item.height = 52;
             item.useTime = 17;
             item.useAnimation = 16;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 4.50f;
             item.value = 100;
-            item.rare = 8;
+            item.rare = ItemRarityID.Yellow;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 14;
-            item.shoot = 280; // ModContent.ProjectileType("InfestedProj");
+            item.shoot = ProjectileID.GoldenShowerFriendly; // ModContent.ProjectileType("InfestedProj");
             item.shootSpeed = 17.5f;
         }
 

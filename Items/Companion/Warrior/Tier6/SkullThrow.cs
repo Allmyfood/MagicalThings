@@ -17,7 +17,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier6
 			item.shoot = ProjectileType< Projectiles.CompanionProj.Warrior.SkullThrowProj>();
 			item.knockBack = 3.75f;
 			item.value = 70;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 		}
 
 		public override void SetStaticDefaults()

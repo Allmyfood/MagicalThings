@@ -25,11 +25,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier9
             item.height = 32;
             item.useTime = 20;
             item.useAnimation = 20;
-            item.useStyle = 5; // 5; //Is default staff
+            item.useStyle = ItemUseStyleID.HoldingOut; // 5; //Is default staff
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 13;
             item.value = 150;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item44;
             item.autoReuse = true;
             item.buffType = mod.BuffType("HallowedShieldBuff");

@@ -4,27 +4,19 @@ Shoe slot now has a configuration for the equipment pages and to allow shoes to 
 Equip shoes with Right click, vanity shoes with Shift Right click
 Warning! Unequip your current shoes from shoe slot before updating. Usually fine, but just in case.
   
-Updated! v0.2.2
+Updated! v0.2.3
+Update to work with tmodloader v0.11.7.5
+
+-------------------------------
+Updated to tmodloader v0.11.7.5
+-------------------------------
+v0.2.2
 Fixed config, now shows up in mods of tmodloader!
 Added a potted sunflower that gives the Happy! buff, buff time is a little glitchy.
 Added Cleanse Bomb (Original) which adds back in a Cleanse Bomb that won't remove mushroom biomes.
 Fixed several biome bombs conversion ranges; now should not cause any errors.
 Added Sand, Forest, Jungle and Cultivator Bombs.
 -------------------------------
-Updated to tmodloader v0.11.6.2
--------------------------------
-v0.2.0
-Added Tundra Bomb and Summer Bomb. Added Sword of Light, Darkness
-and the Chaos Breaker.
-Fixed Eye Cannon not firing laser. Fixed saftey guards
-for all biome bombs.
-Updated call method for sodas.
-Minor fix to Summoners Elementspark Loafers
--------------------------------
-Added Water Bomb, Air Bomb, Lava Bomb, and Lava Removal Bomb.
-Fixed several sprites
--------------------------------
-
 Added Dev armor and weapons not available normally. Cheat in only.
 
 Known Bugs: Boot slot boots doesn't display properly on the player.

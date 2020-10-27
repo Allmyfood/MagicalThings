@@ -21,8 +21,8 @@ namespace MagicalThings.Items
             item.height = 30;
             item.maxStack = 999;
             item.consumable = true;
-            item.useStyle = 1;
-            item.rare = 4;
+            item.useStyle = ItemUseStyleID.SwingThrow;
+            item.rare = ItemRarityID.LightRed;
             item.UseSound = SoundID.Item1;
             item.useAnimation = 20;
             item.useTime = 20;

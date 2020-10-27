@@ -51,7 +51,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
             {
                 Vector2 position = projectile.Center;
                 int target = 0;
-                Projectile.NewProjectile(position.X, position.Y, 0, 0, 518, 0, 0f, projectile.owner, target, 0f);
+                Projectile.NewProjectile(position.X, position.Y, 0, 0, ProjectileID.CoinPortal, 0, 0f, projectile.owner, target, 0f);
             }
         }
 

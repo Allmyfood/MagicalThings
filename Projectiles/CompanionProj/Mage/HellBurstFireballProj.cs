@@ -65,7 +65,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             if (projectile.penetrate <= 0)
             {
                 projectile.Kill();
-                Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 74);
+                Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 74);
                 Vector2 vel = new Vector2(-1, 0);
                 vel *= 10f;
                 Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vel.X, vel.Y, ProjectileType<ExplosionFake>(), projectile.damage, 0, Main.myPlayer); //Initial projectile death
@@ -98,7 +98,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             if (projectile.penetrate <= 0)
             {
                 projectile.Kill();
-                Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 74);
+                Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 74);
                 Vector2 vel = new Vector2(0, -1);
                 vel *= 0f;
                 Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vel.X, vel.Y, ProjectileType<ExplosionFake>(), projectile.damage, 0, Main.myPlayer);

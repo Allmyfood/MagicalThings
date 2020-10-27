@@ -33,7 +33,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
         public override void Kill(int timeLeft)
         {
 
-            Main.PlaySound(2, projectile.Center, 62);    //this make so when this projectile disappear will make this sound. you can find all the sound ID here: https://github.com/bluemagic123/tModLoader/wiki/Vanilla-Sound-IDs
+            Main.PlaySound(SoundID.Item, projectile.Center, 62);    //this make so when this projectile disappear will make this sound. you can find all the sound ID here: https://github.com/bluemagic123/tModLoader/wiki/Vanilla-Sound-IDs
 
             for (int i = 0; i < 20; i++) //this is for a loop that makes dust spawn , the higher is the value the more dust will spawn
             {
@@ -81,7 +81,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage      //We need this to ba
                         int damage = 24;  //this is the projectile2 damage                   
                                           //Shoot projectile and set ai back to 0
                         Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<Warrior.InfestedProj>(), damage, 0, Main.myPlayer, 0f, 0f); //Spawning a projectile ModContent.ProjectileType("FlamethrowerProj") is an example of how to spawn a modded projectile. if you want to shot a terraria prjectile add instead ProjectileID.Nameofterrariaprojectile
-                        Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 24); //24 is the sound, so when this projectile is shot will make that sound
+                        Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 24); //24 is the sound, so when this projectile is shot will make that sound
                         projectile.ai[0] = 0f;
                     }
                 }

@@ -19,9 +19,9 @@ namespace MagicalThings.Items.Accessory
 			item.height = 20;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.value = 30000;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.NPCDeath5;
 			item.noMelee = true;
             item.mountType = MountType<SantaNK2>();
