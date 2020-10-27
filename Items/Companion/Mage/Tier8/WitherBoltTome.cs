@@ -26,11 +26,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier8
             item.height = 32;
             item.useTime = 16;
             item.useAnimation = 16;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 3.5f;
             item.value = 120;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item72;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.WitherBoltProj>(); //this is a mod projectile

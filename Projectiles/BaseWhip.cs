@@ -184,7 +184,7 @@ namespace MagicalThings.Projectiles
             }
             public static void OnHitAny(Projectile projectile, NPC target, bool crit, bool whipSoftSound)
             {
-                if (crit) { Main.PlaySound(2, target.Center, whipSoftSound ? 98 : 40); }
+                if (crit) { Main.PlaySound(SoundID.Item, target.Center, whipSoftSound ? 98 : 40); }
                 if (target != null)
                 {
                     projectile.localNPCImmunity[target.whoAmI] = 10;

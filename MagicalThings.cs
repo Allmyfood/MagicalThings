@@ -174,7 +174,7 @@ namespace MagicalThings
                     modPlayer.EquipShoeSlot.Item = ItemIO.Receive(reader);
                     modPlayer.VanityShoeSlot.Item = ItemIO.Receive(reader);
                     modPlayer.ShoeDyeSlot.Item = ItemIO.Receive(reader);
-                    if (Main.netMode == 2)
+                    if (Main.netMode == NetmodeID.Server)
                     {
                         ModPacket packet = GetPacket();
                         packet.Write((byte)PacketMessageType.All);
@@ -187,21 +187,21 @@ namespace MagicalThings
                     break;
                 case PacketMessageType.EquipShoeSlot:
                     modPlayer.EquipShoeSlot.Item = ItemIO.Receive(reader);
-                    if (Main.netMode == 2)
+                    if (Main.netMode == NetmodeID.Server)
                     {
                         modPlayer.SendSingleItemPacket(PacketMessageType.EquipShoeSlot, modPlayer.EquipShoeSlot.Item, -1, whoAmI);
                     }
                     break;
                 case PacketMessageType.VanityShoeSlot:
                     modPlayer.VanityShoeSlot.Item = ItemIO.Receive(reader);
-                    if (Main.netMode == 2)
+                    if (Main.netMode == NetmodeID.Server)
                     {
                         modPlayer.SendSingleItemPacket(PacketMessageType.VanityShoeSlot, modPlayer.VanityShoeSlot.Item, -1, whoAmI);
                     }
                     break;
                 case PacketMessageType.ShoeDyeSlot:
                     modPlayer.ShoeDyeSlot.Item = ItemIO.Receive(reader);
-                    if (Main.netMode == 2)
+                    if (Main.netMode == NetmodeID.Server)
                     {
                         modPlayer.SendSingleItemPacket(PacketMessageType.ShoeDyeSlot, modPlayer.ShoeDyeSlot.Item, -1, whoAmI);
                     }

@@ -191,7 +191,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ranger
                 if (projectile.soundDelay <= 0)//this is the proper sound delay for this type of weapon
                 {
                     
-                    Main.PlaySound(2, (int)projectile.Center.X, (int)projectile.Center.Y, 15);    //this is the sound when the weapon is used   cheange 15 for diferent sound
+                    Main.PlaySound(SoundID.Item, (int)projectile.Center.X, (int)projectile.Center.Y, 15);    //this is the sound when the weapon is used   cheange 15 for diferent sound
                     projectile.soundDelay = 40;    //this is the proper sound delay for this type of weapon
                     if (Main.rand.NextFloat() < .75f) //has a 75% chance to consume ammo.
                     {

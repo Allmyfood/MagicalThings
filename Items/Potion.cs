@@ -15,7 +15,7 @@ namespace MagicalThings.Items
         {
             item.CloneDefaults(ItemID.WormholePotion);
             item.UseSound = SoundID.Item3;                //this is the sound that plays when you use the item
-            item.useStyle = 2;                 //this is how the item is holded when used
+            item.useStyle = ItemUseStyleID.EatingUsing;                 //this is how the item is holded when used
             item.useTurn = true;
             item.useAnimation = 17;
             item.useTime = 17;
@@ -24,7 +24,7 @@ namespace MagicalThings.Items
             item.width = 20; //20
             item.height = 28; //28
             item.value = 100;                
-            item.rare = 1;
+            item.rare = ItemRarityID.Blue;
             item.buffType = mod.BuffType("PotionBuff");    //this is where you put your Buff name
             item.buffTime = 20000;    //this is the buff duration        20000 = 6 min
             return;

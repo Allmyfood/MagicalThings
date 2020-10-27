@@ -22,10 +22,10 @@ namespace MagicalThings.Items.Companion.Ninja
             item.height = 38;
             item.useTime = 18;
             item.useAnimation = 18;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 4.5f;
             item.value = 40;
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.EndlessSlimeProj>();

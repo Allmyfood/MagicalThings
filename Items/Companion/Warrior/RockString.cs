@@ -18,7 +18,7 @@ namespace MagicalThings.Items.Companion.Warrior
 			item.shoot = ProjectileType<Projectiles.CompanionProj.RockStringProj>();
 			item.knockBack = 5;
 			item.value = 10;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 		}
 
 		public override void SetStaticDefaults()

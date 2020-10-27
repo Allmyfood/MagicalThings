@@ -20,10 +20,10 @@ namespace MagicalThings.Items.Weapons
             item.height = 34;
             item.useTime = 5;
             item.useAnimation = 15;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 6;
             item.value = 10000;
-            item.rare = 5;
+            item.rare = ItemRarityID.Pink;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 15;

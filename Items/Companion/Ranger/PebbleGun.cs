@@ -22,11 +22,11 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.height = 12;
 			item.useTime = 26;
 			item.useAnimation = 26;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 3;
 			item.value = 20;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
 			//item.shoot = 10; //10 is default for guns.

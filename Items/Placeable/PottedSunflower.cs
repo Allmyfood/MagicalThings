@@ -15,7 +15,7 @@ namespace MagicalThings.Items.Placeable
 
         public override void SetDefaults()
         {
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.useTurn = true;
             item.useAnimation = 15;
             item.useTime = 10;
@@ -25,7 +25,7 @@ namespace MagicalThings.Items.Placeable
             item.width = 16;
             item.height = 28;
             item.maxStack = 99;
-            item.rare = 1;
+            item.rare = ItemRarityID.Blue;
             item.value = Item.sellPrice(silver: 2, copper: 40);
             item.accessory = true;
         }

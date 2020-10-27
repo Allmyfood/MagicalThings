@@ -24,14 +24,14 @@ namespace MagicalThings.Items.Companion.Ranger.Tier9
             item.height = 21;
             item.useTime = 15;
             item.useAnimation = 15;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true;
             item.knockBack = 3;
             item.value = 150;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item68;
             item.autoReuse = true;
-            item.shoot = 10; //10 is default for guns.
+            item.shoot = ProjectileID.PurificationPowder; //10 is default for guns.
             //item.shoot = ProjectileType<PebbleProj>();
             item.shootSpeed = 14.0f;
             //item.useAmmo = AmmoID.Bullet; //Normal ammos.
@@ -60,7 +60,7 @@ namespace MagicalThings.Items.Companion.Ranger.Tier9
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             int target = 0;
-            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, 442, 80, knockBack, player.whoAmI, target, 0f);
+            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileID.ElectrosphereMissile, 80, knockBack, player.whoAmI, target, 0f);
             return false;
         }
     }

@@ -18,9 +18,9 @@ namespace MagicalThings.Items
 			item.height = 38;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.value = 30000;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.UseSound = SoundID.Item13;
 			item.noMelee = true;
 			item.mountType = mod.MountType("HorseofWar");

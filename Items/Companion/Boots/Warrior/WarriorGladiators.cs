@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Boots.Warrior
             item.width = 22;
             item.height = 18;
             item.value = Item.sellPrice(silver: 1);
-            item.rare = 1;
+            item.rare = ItemRarityID.Blue;
             item.accessory = true;
         }
         public override void AddRecipes()

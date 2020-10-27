@@ -24,11 +24,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier7
 			item.height = 34;
 			item.useTime = 20;
 			item.useAnimation = 20;
-            item.useStyle = 5; //Standard style including books and staves. Aka held out infront of the player
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books and staves. Aka held out infront of the player
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
 			item.value = 80;
-			item.rare = 7;
+			item.rare = ItemRarityID.Lime;
 			item.UseSound = SoundID.Item103;
 			item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.HellMarkProj>(); //this is a mod projectile //585; //is skulls

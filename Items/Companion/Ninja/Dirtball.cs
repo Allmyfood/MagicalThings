@@ -19,10 +19,10 @@ namespace MagicalThings.Items.Companion.Ninja
             item.height = 18;
             item.useTime = 24;
             item.useAnimation = 18;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 6;
             item.value = 10;
-            item.rare = 0;
+            item.rare = ItemRarityID.White;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Dirtballproj>();

@@ -23,10 +23,10 @@ namespace MagicalThings.Items.Companion.Ninja.Tier10
             item.height = 64;
             item.useTime = 11;
             item.useAnimation = 11;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 4.5f;
             item.value = 250;
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.TwistingNebulaProj>();

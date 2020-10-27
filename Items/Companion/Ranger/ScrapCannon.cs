@@ -25,13 +25,13 @@ namespace MagicalThings.Items.Companion.Ranger
             item.shoot = ProjectileType<Projectiles.CompanionProj.LeadShotProj>();
             item.shootSpeed = 16f;
             item.useAnimation = 45;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true;
             item.knockBack = 9;
             item.value = 30;
             //item.useAmmo = AmmoID.Arrow;
             item.useAmmo = ItemType<LeadShot>();
-            item.rare = 3;
+            item.rare = ItemRarityID.Orange;
             item.UseSound = SoundID.Item14;//14 is explosion sound
             item.autoReuse = true;
         }

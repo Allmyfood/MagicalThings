@@ -18,10 +18,10 @@ namespace MagicalThings.Items.Companion.Ninja
 			item.height = 26;
 			item.useTime = 11;
 			item.useAnimation = 11;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 3.75f;
 			item.value = 70;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.crit += 8;

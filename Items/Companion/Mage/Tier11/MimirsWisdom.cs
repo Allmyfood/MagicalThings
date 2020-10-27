@@ -28,11 +28,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
 			item.height = 24;
 			item.useTime = 5;
 			item.useAnimation = 10;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 4.5f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             //item.UseSound = SoundID.Item68; //for default
 			item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.MimirsShotProj>(); //this is a mod projectile

@@ -26,11 +26,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
             item.height = 28;
             item.useTime = 20;
             item.useAnimation = 20;
-            item.useStyle = 5; // 5; //Is default staff
+            item.useStyle = ItemUseStyleID.HoldingOut; // 5; //Is default staff
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 0.5f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item44;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.PortalRingProj>(); //this is a mod projectile

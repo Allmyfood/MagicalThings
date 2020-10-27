@@ -58,7 +58,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Warrior
         {
             if (Main.rand.Next(35)== 0)
             {
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, 480, (int)(0.52f * projectile.damage), projectile.knockBack, projectile.owner, 0f, 0f);
+                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, ProjectileID.CursedDartFlame, (int)(0.52f * projectile.damage), projectile.knockBack, projectile.owner, 0f, 0f);
             }
         }
 

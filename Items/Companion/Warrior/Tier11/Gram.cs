@@ -23,10 +23,10 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
             item.height = 56;
             item.useTime = 10;
             item.useAnimation = 10;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 3.25f;
             item.value = Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 20;
@@ -61,35 +61,35 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
                 switch (Main.rand.Next(9))
                 {
                     case 0:
-                        item.shoot = 173;
+                        item.shoot = ProjectileID.EnchantedBeam;
                         break;
 
                     case 1:
-                        item.shoot = 116;
+                        item.shoot = ProjectileID.SwordBeam;
                         break;
 
                     case 2:
-                        item.shoot = 156;
+                        item.shoot = ProjectileID.LightBeam;
                         break;
 
                     case 3:
-                        item.shoot = 157;
+                        item.shoot = ProjectileID.NightBeam;
                         break;
 
                     case 4:
-                        item.shoot = 451;
+                        item.shoot = ProjectileID.InfluxWaver;
                         break;
 
                     case 5:
-                        item.shoot = 132;
+                        item.shoot = ProjectileID.TerraBeam;
                         break;
 
                     case 6:
-                        item.shoot = 503;
+                        item.shoot = ProjectileID.StarWrath;
                         break;
 
                     case 7:
-                        item.shoot = 502;
+                        item.shoot = ProjectileID.Meowmere;
                         break;
 
                     case 8:

@@ -24,7 +24,7 @@ namespace MagicalThings.Items.Accessory
             item.width = 32;
             item.height = 32;
             item.value = Item.sellPrice(platinum: 1);
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.accessory = true;
         }
         public override void AddRecipes()  //How to craft this item

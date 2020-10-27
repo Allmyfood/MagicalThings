@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Boots.Summoner
             item.width = 32;
             item.height = 32;
             item.value = Item.sellPrice(gold: 7);
-            item.rare = 5;
+            item.rare = ItemRarityID.Pink;
             item.accessory = true;
         }
         public override void AddRecipes()

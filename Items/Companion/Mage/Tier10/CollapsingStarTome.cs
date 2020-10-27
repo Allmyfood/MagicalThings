@@ -26,11 +26,11 @@ namespace MagicalThings.Items.Companion.Mage.Tier10
             item.height = 32;
             item.useTime = 16;
             item.useAnimation = 16;
-            item.useStyle = 5; //Standard style including books
+            item.useStyle = ItemUseStyleID.HoldingOut; //Standard style including books
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 3.5f;
             item.value = 250;
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.UseSound = SoundID.Item104;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Mage.CollapsingStarHoleProj>(); //this is a mod projectile

@@ -24,14 +24,14 @@ namespace MagicalThings.Items.Companion.Mage
 			item.height = 32;
 			item.useTime = 26;
 			item.useAnimation = 26;
-            item.useStyle = 5; // 5; //Is default staff
+            item.useStyle = ItemUseStyleID.HoldingOut; // 5; //Is default staff
             item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
 			item.value = 20;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shoot = 271; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
+            item.shoot = ProjectileID.BoxingGlove; //ModContent.ProjectileType("LightBladeShot"); //this is a mod projectile
 			item.shootSpeed = 5f;
 		}
         //make it only shoot randomly not always

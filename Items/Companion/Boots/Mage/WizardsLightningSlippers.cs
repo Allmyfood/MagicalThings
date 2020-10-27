@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Boots.Mage
             item.width = 32;
             item.height = 28;
             item.value = Item.sellPrice(gold: 6);
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
             item.accessory = true;
         }
         public override void AddRecipes()

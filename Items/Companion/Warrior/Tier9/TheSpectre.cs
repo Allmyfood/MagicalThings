@@ -17,7 +17,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier9
 			item.shoot = ProjectileType<Projectiles.CompanionProj.Warrior.SpectreProj>();
 			item.knockBack = 2.5f;
 			item.value = 150;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 		}
 
 		public override void SetStaticDefaults()

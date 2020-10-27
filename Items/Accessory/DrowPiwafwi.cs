@@ -17,7 +17,7 @@ namespace MagicalThings.Items.Accessory   //We need this to basically indicate t
         {
             item.width = 26; //The size in width of the sprite in pixels.
             item.height = 30;   //The size in height of the sprite in pixels.
-            item.rare = 5;    //The color the title of your item when hovering over it ingame
+            item.rare = ItemRarityID.Pink;    //The color the title of your item when hovering over it ingame
             item.vanity = true; //this defines if this item is vanity or not.
             item.accessory = true;
             item.value = 10000;

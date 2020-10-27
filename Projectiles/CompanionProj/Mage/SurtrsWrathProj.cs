@@ -44,7 +44,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void Kill(int timeLeft) //act like a flask explosion
         {
             Player player = Main.player[projectile.owner];
-            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 100);
+            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 100);
             if (projectile.owner == Main.myPlayer)
             {
                 int num220 = Main.rand.Next(1, 2);//20, 31
@@ -54,7 +54,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
                     //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 612, projectile.damage * 2, 1f, projectile.owner);//, 0f, Main.rand.Next(-30, 2));
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, 612, projectile.damage, 10f, projectile.owner, 0f, 0.85f + Main.rand.NextFloat() * 1.15f);
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileID.SolarWhipSwordExplosion, projectile.damage, 10f, projectile.owner, 0f, 0.85f + Main.rand.NextFloat() * 1.15f);
                 }
             }
         }
@@ -95,7 +95,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                                 shootToY *= distance * 6;
                                 {
                                     Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, ProjectileType<SurtrsWrathShotProj>(), 200, 0, projectile.owner);
-                                    Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 102); //24 is the sound, so when this projectile is shot will make that sound
+                                    Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 102); //24 is the sound, so when this projectile is shot will make that sound
                                 }
                                 //projectile.ai[0] = 0f;
                             }
@@ -103,7 +103,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     }
                     //projectile.ai[0] += 1f;
                     #endregion
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, 400, projectile.damage, 10f, projectile.owner, 0f, 0.85f + Main.rand.NextFloat() * 1.15f);
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y, ProjectileID.MolotovFire, projectile.damage, 10f, projectile.owner, 0f, 0.85f + Main.rand.NextFloat() * 1.15f);
                 }
 
                 #region Frame Select

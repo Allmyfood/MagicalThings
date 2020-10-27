@@ -39,7 +39,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void Kill(int timeLeft) //Explode small crystal shards on NPC hit (cause no tile collide)
         {
             Player player = Main.player[projectile.owner];
-            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 9);//30
+            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 9);//30
             if (projectile.owner == Main.myPlayer)
             {
                 int num220 = Main.rand.Next(1, 3);
@@ -48,7 +48,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     Vector2 value17 = new Vector2(Main.rand.Next(-50, 50), Main.rand.Next(-50, 50));
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 90, projectile.damage * 2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ProjectileID.CrystalShard, projectile.damage * 2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                     //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ModContent.ProjectileType("IceMistProj"), projectile.damage * 2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                 }
             }

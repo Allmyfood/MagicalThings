@@ -27,11 +27,11 @@ namespace MagicalThings.Items.Dev.Maverick
 			item.height = 58;
             item.useTime = 20;
             item.useAnimation = 20;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = .5f;
             item.value = 50000;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item43;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.MaverickProj>(); //this is a mod projectile

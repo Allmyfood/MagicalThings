@@ -23,10 +23,10 @@ namespace MagicalThings.Items.Companion.Ninja.Tier11
             item.height = 70;
             item.useTime = 10;
             item.useAnimation = 10;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 6.5f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Ninja.IzanamiProj>();

@@ -24,10 +24,10 @@ namespace MagicalThings.Items.Companion.Ninja.Tier11
             item.height = 60;
             item.useTime = 9;
             item.useAnimation = 9;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 2.0f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             //item.shoot = ProjectileType<SakuraPetalFallingProj>();
@@ -75,7 +75,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier11
             if (player.altFunctionUse != 2)
             {
                 item.damage = item.damage;
-                item.shoot = 0;
+                item.shoot = ProjectileID.None;
                 item.noUseGraphic = false;
                 item.noMelee = false;
                 item.useTime = 9;
@@ -156,7 +156,7 @@ namespace MagicalThings.Items.Companion.Ninja.Tier11
                     if (owner.lifeSteal <= 0f) return;
                     float heal = damage / 10;
                     owner.lifeSteal -= heal;
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, 298, 0, 0f, item.owner, item.owner, heal);
+                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, ProjectileID.SpiritHeal, 0, 0f, item.owner, item.owner, heal);
                 }
             }
             #endregion

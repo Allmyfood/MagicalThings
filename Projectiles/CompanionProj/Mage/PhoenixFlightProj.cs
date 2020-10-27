@@ -41,7 +41,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
         public override void Kill(int timeLeft) //act like a flask explosion
         {
             Player player = Main.player[projectile.owner];
-            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 100);
+            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 100);
             if (projectile.owner == Main.myPlayer)
             {
                 int num220 = Main.rand.Next(1, 2);//20, 31
@@ -50,7 +50,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     Vector2 value17 = new Vector2(Main.rand.Next(-50, 50), Main.rand.Next(-50, 50));
                     value17.Normalize();
                     value17 *= Main.rand.Next(20, 302) * 0.01f;
-                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, 696, projectile.damage *2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
+                    Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, value17.X, value17.Y, ProjectileID.DD2ExplosiveTrapT3Explosion, projectile.damage *2, 1f, projectile.owner, 0f, Main.rand.Next(-30, 2));
                 }
             }
         }

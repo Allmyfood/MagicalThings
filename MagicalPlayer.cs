@@ -430,7 +430,7 @@ namespace MagicalThings
                 rX = Main.screenWidth - 92 - (47 * 2);
                 rY = mapH + 223;
 
-                if (Main.netMode == 1)
+                if (Main.netMode == NetmodeID.MultiplayerClient)
                 {
                     rX -= 47;
                 }

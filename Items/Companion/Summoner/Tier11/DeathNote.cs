@@ -24,11 +24,11 @@ namespace MagicalThings.Items.Companion.Summoner.Tier11
             item.height = 32;
             item.useTime = 36;
             item.useAnimation = 36;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.noMelee = true;
             item.knockBack = 4.0f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item117;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.DeathProj>();
             item.shootSpeed = 5f;

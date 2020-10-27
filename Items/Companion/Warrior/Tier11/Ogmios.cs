@@ -23,14 +23,14 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
             item.height = 88;
             item.useTime = 10;
             item.useAnimation = 10;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 11.75f;
             Item.sellPrice(platinum: 2, gold: 40);
-            item.rare = 11;
+            item.rare = ItemRarityID.Purple;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 22;
-            item.shoot = 645;//ModContent.ProjectileType("OgmiosShotProj"); //645;
+            item.shoot = ProjectileID.LunarFlare;//ModContent.ProjectileType("OgmiosShotProj"); //645;
             item.shootSpeed = 10;//12.5f;
         }
 
@@ -50,7 +50,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
             target.AddBuff(mod.BuffType("CutDebuff"), 420);
             target.AddBuff(mod.BuffType("ArmorBreak"), 420);
             target.AddBuff(BuffID.Frostburn, 300);
-            Projectile.NewProjectile(target.position.X, target.position.Y, 3 * player.direction, 0, 263, damage, knockback, player.whoAmI);
+            Projectile.NewProjectile(target.position.X, target.position.Y, 3 * player.direction, 0, ProjectileID.IceSickle, damage, knockback, player.whoAmI);
         }
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
@@ -89,7 +89,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier11
                 num82 *= num84;
                 num83 *= num84;
                 Vector2 vector12 = new Vector2(num82, num83) / 2f;
-                Main.PlaySound(2, (int)vector2.X, (int)vector2.Y, 88);
+                Main.PlaySound(SoundID.Item, (int)vector2.X, (int)vector2.Y, 88);
                 Projectile.NewProjectile(vector2.X, vector2.Y, vector12.X, vector12.Y, type, damage, knockBack, player.whoAmI, 0f, ai2);
                 num2 = num118;
                 //Projectile.NewProjectile(vector2.X, vector2.Y, vector12.X, vector12.Y, num75, num77, num78, item.owner, 0f, ai2);

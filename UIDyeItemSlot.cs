@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.GameContent.Achievements;
 using TerraUI;
 using TerraUI.Objects;
+using Terraria.ID;
 
 namespace MagicalThings {
     // Because I can't change TerraUI, I subclass UIItemSlot to get proper dye slot behavior. I think
@@ -11,45 +12,45 @@ namespace MagicalThings {
         }
 
         public override void OnLeftClick() {
-            if(Main.mouseItem.stack == 1 && Main.mouseItem.dye > 0 && Item.type > 0 && Item.type != Main.mouseItem.type) {
+            if(Main.mouseItem.stack == 1 && Main.mouseItem.dye > 0 && Item.type > ItemID.None && Item.type != Main.mouseItem.type) {
                 Utils.Swap(ref item, ref Main.mouseItem);
-                Main.PlaySound(7);
+                Main.PlaySound(SoundID.Grab);
                 if(Item.stack > 0) {
                     AchievementsHelper.HandleOnEquip(Main.LocalPlayer, Item, 12);
                 }
             }
-            else if(Main.mouseItem.type == 0 && Item.type > 0) {
+            else if(Main.mouseItem.type == ItemID.None && Item.type > ItemID.None) {
                 Utils.Swap(ref item, ref Main.mouseItem);
-                if(Item.type == 0 || Item.stack < 1) {
+                if(Item.type == ItemID.None || Item.stack < 1) {
                     Item = new Item();
                 }
-                if(Main.mouseItem.type == 0 || Main.mouseItem.stack < 1) {
+                if(Main.mouseItem.type == ItemID.None || Main.mouseItem.stack < 1) {
                     Main.mouseItem = new Item();
                 }
-                if(Main.mouseItem.type > 0 || Item.type > 0) {
+                if(Main.mouseItem.type > ItemID.None || Item.type > ItemID.None) {
                     Recipe.FindRecipes();
-                    Main.PlaySound(7);
+                    Main.PlaySound(SoundID.Grab);
                 }
             }
-            else if(Main.mouseItem.dye > 0 && Item.type == 0) {
+            else if(Main.mouseItem.dye > 0 && Item.type == ItemID.None) {
                 if(Main.mouseItem.stack == 1) {
                     Utils.Swap(ref item, ref Main.mouseItem);
-                    if(Item.type == 0 || Item.stack < 1) {
+                    if(Item.type == ItemID.None || Item.stack < 1) {
                         Item = new Item();
                     }
-                    if(Main.mouseItem.type == 0 || Main.mouseItem.stack < 1) {
+                    if(Main.mouseItem.type == ItemID.None || Main.mouseItem.stack < 1) {
                         Main.mouseItem = new Item();
                     }
-                    if(Main.mouseItem.type > 0 || Item.type > 0) {
+                    if(Main.mouseItem.type > ItemID.None || Item.type > ItemID.None) {
                         Recipe.FindRecipes();
-                        Main.PlaySound(7);
+                        Main.PlaySound(SoundID.Grab);
                     }
                 }
                 else {
                     Main.mouseItem.stack--;
                     Item.SetDefaults(Main.mouseItem.type);
                     Recipe.FindRecipes();
-                    Main.PlaySound(7);
+                    Main.PlaySound(SoundID.Grab);
                 }
                 if(Item.stack > 0) {
                     AchievementsHelper.HandleOnEquip(Main.LocalPlayer, Item, 12);

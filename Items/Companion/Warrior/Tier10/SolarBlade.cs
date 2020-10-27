@@ -22,10 +22,10 @@ namespace MagicalThings.Items.Companion.Warrior.Tier10
             item.height = 66;
             item.useTime = 14;
             item.useAnimation = 14;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 3.25f;
             item.value = 250;
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 16;
@@ -49,7 +49,7 @@ namespace MagicalThings.Items.Companion.Warrior.Tier10
             target.AddBuff(BuffID.OnFire, 300);
             if (Main.rand.Next(16) == 0)
             {
-                Projectile.NewProjectile(target.Center.X, target.Center.Y, item.velocity.X, item.velocity.Y, 612, (int)(0.52f * item.damage), item.knockBack, item.owner, 0f, 0f);
+                Projectile.NewProjectile(target.Center.X, target.Center.Y, item.velocity.X, item.velocity.Y, ProjectileID.SolarWhipSwordExplosion, (int)(0.52f * item.damage), item.knockBack, item.owner, 0f, 0f);
             }
         }
 

@@ -45,7 +45,7 @@ namespace MagicalThings.Projectiles.Pets
 
             if (Main.rand.Next(1000) == 0)
             {
-                Main.PlaySound(29, (int)projectile.position.X, (int)projectile.position.Y, 15, .125f); //Chance for mousey to squeak
+                Main.PlaySound(SoundID.Zombie, (int)projectile.position.X, (int)projectile.position.Y, 15, .125f); //Chance for mousey to squeak
             }
         }
 	}

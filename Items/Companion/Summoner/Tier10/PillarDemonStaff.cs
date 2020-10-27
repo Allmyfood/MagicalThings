@@ -24,11 +24,11 @@ namespace MagicalThings.Items.Companion.Summoner.Tier10
 			item.height = 35;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.knockBack = 3.0f;
             item.value = 250;
-            item.rare = 10;
+            item.rare = ItemRarityID.Red;
             item.UseSound = SoundID.Item25;
             item.shoot = ProjectileType<Projectiles.CompanionProj.Minions.PillarDemonProj>();
 			item.shootSpeed = 5f;

@@ -24,12 +24,12 @@ namespace MagicalThings.Items.Companion.Ranger.Tier9
 			item.height = 30;
 			item.useTime = 14;
             item.useAnimation = 14;
-            item.shoot = 1;
+            item.shoot = ProjectileID.WoodenArrowFriendly;
 			item.shootSpeed = 14.25f;			
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 4.5f;
 			item.value = 150;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.useAmmo = AmmoID.Arrow;
 			item.UseSound = SoundID.Item11;//5
 			item.autoReuse = true;

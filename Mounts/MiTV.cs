@@ -69,7 +69,7 @@ namespace MagicalThings.Mounts
             mountData.swimFrameCount = mountData.inAirFrameCount;
             mountData.swimFrameDelay = mountData.inAirFrameDelay;
             mountData.swimFrameStart = mountData.inAirFrameStart;
-            if (Main.netMode != 2)
+            if (Main.netMode != NetmodeID.Server)
             {
                 mountData.textureWidth = mountData.backTexture.Width + 20;
                 mountData.textureHeight = mountData.backTexture.Height;
@@ -108,8 +108,8 @@ namespace MagicalThings.Mounts
                             Vector2 vector6 = target.position + target.Size * Utils.RandomVector2(Main.rand, 0f, 1f) - minecartMechPoint;
                             num10 += vector6.ToRotation();
                             num9++;
-                            int num11 = Projectile.NewProjectile(minecartMechPoint.X, minecartMechPoint.Y, vector6.X, vector6.Y, 440, 0, 0f, player.whoAmI, player.whoAmI, 0f); //default minecraft shot is 591
-                            Projectile.NewProjectile(minecartMechPoint.X, minecartMechPoint.Y, vector6.X, vector6.Y, 440, damage, 1.5f, Main.myPlayer, 0, 0f);
+                            int num11 = Projectile.NewProjectile(minecartMechPoint.X, minecartMechPoint.Y, vector6.X, vector6.Y, ProjectileID.LaserMachinegunLaser, 0, 0f, player.whoAmI, player.whoAmI, 0f); //default minecraft shot is 591
+                            Projectile.NewProjectile(minecartMechPoint.X, minecartMechPoint.Y, vector6.X, vector6.Y, ProjectileID.LaserMachinegunLaser, damage, 1.5f, Main.myPlayer, 0, 0f);
                             Main.projectile[num11].Center = target.Center;
                             Main.projectile[num11].damage = damage;
                             Main.projectile[num11].Damage();

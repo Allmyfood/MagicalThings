@@ -22,7 +22,7 @@ namespace MagicalThings.Items.Dev.Mugen
 			item.width = 18;
 			item.height = 18;
 			item.value = 1000000;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.defense = 100;
 		}
 

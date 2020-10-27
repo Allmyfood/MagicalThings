@@ -22,14 +22,14 @@ namespace MagicalThings.Items.Companion.Warrior.Tier8
             item.height = 56;
             item.useTime = 16;
             item.useAnimation = 16;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.knockBack = 2.75f;
             item.value = 120;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 14;
-            item.shoot = 389; // ModContent.ProjectileType("InfestedProj");
+            item.shoot = ProjectileID.MiniRetinaLaser; // ModContent.ProjectileType("InfestedProj");
             item.shootSpeed = 17.5f;
         }
 

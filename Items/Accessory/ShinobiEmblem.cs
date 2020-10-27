@@ -13,7 +13,7 @@ namespace MagicalThings.Items.Accessory
 			item.width = 28;
 			item.height = 28;
 			item.value = Item.sellPrice(gold: 2);
-            item.rare = 4;
+            item.rare = ItemRarityID.LightRed;
 			item.accessory = true;
 		}
 

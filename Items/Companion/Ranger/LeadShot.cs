@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Companion.Ranger
 			item.consumable = true;             //You need to set the item consumable so that the ammo would automatically consumed
 			item.knockBack = 9.5f;
 			item.value = 30;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.shoot = ProjectileType<Projectiles.CompanionProj.LeadShotProj>();   //The projectile shoot when your weapon using this ammo
 			//item.shootSpeed = 16f;                  //The speed of the projectile
             item.ammo = item.type;            //The ammo class this ammo belongs to.

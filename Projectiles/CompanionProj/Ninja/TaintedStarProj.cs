@@ -42,7 +42,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Ninja
         public override void Kill(int timeLeft)
         {
             Player player = Main.player[projectile.owner];
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, -projectile.velocity.X, -projectile.velocity.Y, 567, projectile.damage, projectile.knockBack, Main.myPlayer);
+            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, -projectile.velocity.X, -projectile.velocity.Y, ProjectileID.SporeTrap, projectile.damage, projectile.knockBack, Main.myPlayer);
         }
         //public override bool OnTileCollide(Vector2 oldVelocity)
         //   {

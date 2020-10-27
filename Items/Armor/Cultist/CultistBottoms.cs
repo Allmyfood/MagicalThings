@@ -21,7 +21,7 @@ namespace MagicalThings.Items.Armor.Cultist
 			item.width = 18;
 			item.height = 18;
 			item.value = 10000;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.defense = 15;
 		}
 

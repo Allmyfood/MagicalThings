@@ -26,7 +26,7 @@ namespace MagicalThings.Mounts
             mountData.spawnDust = 59;
             mountData.spawnDust = 135;
             mountData.buff = BuffType<SantaNK2Buff>();
-            mountData.heightBoost = 34;
+            mountData.heightBoost = 34;//34;
             mountData.fallDamage = 0.0f;
             mountData.runSpeed = 8f;
             mountData.dashSpeed = 15f;
@@ -75,6 +75,7 @@ namespace MagicalThings.Mounts
             mountData.idleFrameDelay = 15;
             mountData.idleFrameStart = 0;
             mountData.idleFrameLoop = false;
+            mountData.textureHeight = 250;
             mountData.swimFrameCount = mountData.inAirFrameCount;
             mountData.swimFrameDelay = mountData.inAirFrameDelay;
             mountData.swimFrameStart = mountData.inAirFrameStart;
@@ -174,7 +175,7 @@ namespace MagicalThings.Mounts
                             vX += Main.rand.Next(-15, 16) * 0.02f;
                             vY += Main.rand.Next(-15, 16) * 0.02f;
                         }
-                        Main.PlaySound(2, (int)player.position.X, (int)player.position.Y, 41);
+                        Main.PlaySound(SoundID.Item, (int)player.position.X, (int)player.position.Y, 41);
                         Projectile.NewProjectile(muzzle.X, muzzle.Y, vX, vY, ProjectileID.BulletHighVelocity, (int)(damage * player.minionDamage), knockback * player.minionKB, player.whoAmI); //CandyCopterBullet
                     }
                     Point point = player.Center.ToTileCoordinates();

@@ -24,10 +24,10 @@ namespace MagicalThings.Items.Weapons
             item.height = 34;
             item.useTime = 20;
             item.useAnimation = 20;
-            item.useStyle = 5;
+            item.useStyle = ItemUseStyleID.HoldingOut;
             item.knockBack = 2f;
             item.value = 120;
-            item.rare = 9;
+            item.rare = ItemRarityID.Cyan;
             item.UseSound = SoundID.Item116;
             item.autoReuse = true;
             item.shoot = ModContent.ProjectileType<MechChains>();
