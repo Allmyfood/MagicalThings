@@ -4,8 +4,9 @@ Shoe slot now has a configuration for the equipment pages and to allow shoes to 
 Equip shoes with Right click, vanity shoes with Shift Right click
 Warning! Unequip your current shoes from shoe slot before updating. Usually fine, but just in case.
   
-Updated! v0.2.3
-Update to work with tmodloader v0.11.7.5
+Updated! v0.2.4
+-------------------------------
+Update to work with tmodloader v0.11.7.7
 
 -------------------------------
 Updated to tmodloader v0.11.7.5
