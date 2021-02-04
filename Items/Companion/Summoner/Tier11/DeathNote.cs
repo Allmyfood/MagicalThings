@@ -12,12 +12,12 @@ namespace MagicalThings.Items.Companion.Summoner.Tier11
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Profound Darkness Tome");
-            Tooltip.SetDefault("Death will head your call" + "\nDoes not use a minion slot");
+            Tooltip.SetDefault("Death will head your call" + "\nDoes not use a minion slot" + "\nSlightly slower than Blazing Glory");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 250;
+            item.damage = 280;
             item.summon = true;
             item.mana = 10;
             item.width = 28;
