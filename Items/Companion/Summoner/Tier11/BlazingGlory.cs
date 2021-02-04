@@ -12,7 +12,7 @@ namespace MagicalThings.Items.Companion.Summoner.Tier11
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blazing Glory");
-            Tooltip.SetDefault("The Valkyrie will protect you" + "\nDoes not use a minion slot");
+            Tooltip.SetDefault("The Valkyrie will protect you" + "\nDoes not use a minion slot" + "\nSlightly faster than Profound Darkness Tome");
         }
 
         public override void SetDefaults()

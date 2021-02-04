@@ -43,9 +43,9 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 
         public enum Animation { Idle, Alert, Attacking };
         public Animation spriteAnimation;
-        public const float aggroDist = 600;
+        public const float aggroDist = 650;
         public const float chaseDist = 1000;
-        public const int attackRange = 50;
+        public const int attackRange = 50;//50
 
         public int AILogicMode { get { return (int)projectile.ai[0]; } set { projectile.ai[0] = value; } }//default 0
         public int AIAttackingState { get { return (int)projectile.ai[1]; } set { projectile.ai[1] = value; } }//1
@@ -67,7 +67,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 
             // Default resting point at player
             float clampSpeed = -1f;
-            float lerpSpeed = 0.2f;
+            float lerpSpeed = 0.2f;//time to get back to the player
             spriteAnimation = Animation.Idle;
             Vector2 targetCentre = player.Center;
             targetCentre = player.Center + new Vector2(-32f * player.direction, -50 * player.gravDir);
@@ -142,7 +142,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
                             targetCentre = MoveToAttack(player, target);
 
                             projectile.friendly = true;
-                            projectile.damage = 250;
+                            projectile.damage = 280;//250
                             projectile.knockBack = 5f;
                         }
                         else
@@ -195,11 +195,11 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
                         targetCentre = MoveToAttack(player, target);
                         mpm.DeathCoolDown = 600;
                         projectile.friendly = true;
-                        projectile.damage = 250;
+                        projectile.damage = 280;//250
                         projectile.knockBack = 5f;
 
                         // Only go so fast, or speed up to catch up with it
-                        clampSpeed = Math.Max(54f, (target.oldPosition - target.position).Length() * 2); //24 * 2
+                        clampSpeed = Math.Max(44f, (target.oldPosition - target.position).Length() * 2); //24 * 2 48f slower than valkyrie
                     }
                     else
                     { lerpSpeed /= 4; }

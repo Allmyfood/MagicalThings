@@ -68,7 +68,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
 
             // Default resting point at player
             float clampSpeed = -1f;
-            float lerpSpeed = 0.2f;
+            float lerpSpeed = 0.18f;//0.2f; time to get back to the player
             spriteAnimation = Animation.Idle;
             Vector2 targetCentre = player.Center;
             targetCentre = player.Center + new Vector2(-32f * player.direction, -50 * player.gravDir);
@@ -92,7 +92,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
                     readyup = true;
                     closestBad = distx;
                     cooloff = true;
-                    mpm.ValkyrieCoolDown = 600;//my player cooldown
+                    mpm.ValkyrieCoolDown = 600;//my player cooldown 600
 
                 }
 
@@ -200,7 +200,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Minions
                         projectile.knockBack = 5f;
 
                         // Only go so fast, or speed up to catch up with it
-                        clampSpeed = Math.Max(54f, (target.oldPosition - target.position).Length() * 2); //24 * 2
+                        clampSpeed = Math.Max(58f, (target.oldPosition - target.position).Length() * 2); //24 * 2 54f is max speed
                     }
                     else
                     { lerpSpeed /= 4; }
