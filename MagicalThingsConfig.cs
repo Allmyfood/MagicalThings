@@ -11,16 +11,19 @@ using Terraria.ModLoader.Config;
 
 namespace MagicalThings
 {
+    [Label("Client Config")]
     public class MagicalThingsConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
+        public static MagicalThingsConfig Instance => ModContent.GetInstance<MagicalThingsConfig>();
 
         [DefaultValue(true)]
-        [Tooltip("On : Place the Shoe Slot in the Equipment page (grappling hook)\nOff : Boot Slot on the Main Inventory Page")]
-        [Label("Shoe Slot location equipment page")]
+        [Tooltip("On : Place the BootSlot in the Equipment page (grappling hook)\nOff : Bootslot on the Main Inventory Page")]
+        [Label("Bootslot location equipment page")]
         public bool ShoeSlotlocation;
 
         [DefaultValue(true)]
+        [Tooltip("On : Allows normal boots in Equipment slots\nOff : Boots may only be equipped in Bootslot")]
         [Label("Allow equipping boots in accessory slots")]
         public bool AllowShoesInAccessorySlots;
 
