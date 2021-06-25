@@ -150,7 +150,8 @@ namespace MagicalThings
 
         #endregion
 
-        #region Updated Shoe Slot
+        #region Updated Shoe Slot now with server config
+        #region Setup Bootslot
         public override void clientClone(ModPlayer clientClone)
         {
             MagicalPlayer clone = clientClone as MagicalPlayer;
@@ -209,6 +210,7 @@ namespace MagicalThings
             ItemIO.Send(ShoeDyeSlot.Item, packet);
             packet.Send(toWho, fromWho);
         }
+        #endregion
 
         /// <summary>
         /// Initialize the ModPlayer.
@@ -224,7 +226,6 @@ namespace MagicalThings
                 drawBackground: ShoeDyeSlot_DrawBackground, scaleToInventory: true);
             VanityShoeSlot.Partner = EquipShoeSlot;
             EquipShoeSlot.BackOpacity = VanityShoeSlot.BackOpacity = ShoeDyeSlot.BackOpacity = .8f;
-
             InitializeShoes();
         }
 
@@ -262,7 +263,7 @@ namespace MagicalThings
         /// </summary>
         public override void PreUpdateBuffs()
         {
-            // A little redundant code, but mirrors vanilla code exactly.
+            //A little redundant code, but mirrors vanilla code exactly.
             if (ShoeDyeSlot.Item != null && !EquipShoeSlot.Item.IsAir && EquipShoeSlot.ItemVisible && EquipShoeSlot.Item.shoeSlot > 0)
             {
                 if (EquipShoeSlot.Item.shoeSlot > 0)
@@ -285,7 +286,7 @@ namespace MagicalThings
                 { ShoesTag, ItemIO.Save(EquipShoeSlot.Item) },
                 { VanityshoesTag, ItemIO.Save(VanityShoeSlot.Item) },
                 { ShoeDyeTag, ItemIO.Save(ShoeDyeSlot.Item) }
-            };
+                };
         }
 
         /// <summary>
@@ -395,7 +396,7 @@ namespace MagicalThings
         /// <param name="spriteBatch">drawing SpriteBatch</param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            //int slotLocation;
+            //int slotLocation; //old
 
             if (!ShouldDrawSlots())//(out slotLocation)) outdated
             {
@@ -498,11 +499,15 @@ namespace MagicalThings
         //    slotLocation = 1;
         //    return false;
         //}
+        #region Server Config to Draw Bootslot
+            //If the server config Bootslot Enable is true Bootslot is visible. If it is false the Bootslot
+            //is disabled and items will not be placed in it. Even if you place the boot in the right location it won't work.
         private static bool ShouldDrawSlots()
         {
-            return Main.playerInventory && ((MagicalThings.ShoeSlotlocation && Main.EquipPage == 2) ||
+            return Main.playerInventory && MagicalThingsServerConfig.Instance.EnableBootslot &&((MagicalThings.ShoeSlotlocation && Main.EquipPage == 2) ||
                     (!MagicalThings.ShoeSlotlocation && Main.EquipPage == 0));//First line true = 2 equipment pate, False = 0 Main page
         }
+        #endregion
 
         /// <summary>
         /// Whether to draw the UIItemSlots.
@@ -610,7 +615,6 @@ namespace MagicalThings
         public void EquipDye(Item item)
         {
             int fromSlot = Array.FindIndex(player.inventory, i => i == item);
-
             // from inv to slot
             if (fromSlot < 0)
             {
@@ -630,6 +634,7 @@ namespace MagicalThings
         /// <returns>dyed shoes</returns>
         public Item GetDyedShoes()
         {
+
             if (VanityShoeSlot.Item.stack > 0)
             {
                 return VanityShoeSlot.Item;
@@ -642,7 +647,7 @@ namespace MagicalThings
 
             return new Item();
         }
-
+         
         #endregion
 
         #region Reset Effects

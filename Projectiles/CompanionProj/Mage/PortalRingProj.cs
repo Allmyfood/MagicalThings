@@ -30,6 +30,8 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             projectile.alpha = 255;
             projectile.usesIDStaticNPCImmunity = true;
             projectile.idStaticNPCHitCooldown = 5;
+            projectile.netImportant = true;
+            projectile.netUpdate = true;
         }
 
         public override void SetStaticDefaults()
@@ -42,6 +44,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
 
         public override void AI()
         {
+            projectile.netUpdate2 = true;
             Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 1.0f, 0.89f, 0.45f);
             projectile.velocity = projectile.velocity * .001f;
             projectile.rotation -= 0.005f;

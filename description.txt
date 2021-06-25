@@ -7,7 +7,7 @@ Warning! Unequip your current boots from Bootslot before updating. Usually fine,
 Updated! v0.2.6
 -------------------------------
 Update to work with tmodloader v0.11.7.8.4
-
+Added Server config to Enable or Disable entire Bootslot.
 -------------------------------
 Updated to tmodloader v0.11.7.5
 -------------------------------
@@ -22,6 +22,7 @@ Added Dev armor and weapons not available normally. Cheat in only.
 
 Known Bugs: Bootslot boots don't display properly on the player.
 Medium Core players death gives a new Animus scroll.
+Viking Amulet is a little strange on multiplayer.
 
 [Credits]
 Coders: Big help from the tmodloader community and of course, jopojelly, bluemagic, Wingslot and Spirit mod.

@@ -32,6 +32,8 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
             projectile.alpha = 255;
             projectile.usesLocalNPCImmunity = true;
             projectile.knockBack = 0.25f;
+            projectile.netImportant = true;
+            projectile.netUpdate = true;
         }
 
         public override void SetStaticDefaults()
@@ -44,6 +46,7 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
 
         public override void AI()
         {
+            projectile.netUpdate2 = true;
             Lighting.AddLight((int)(projectile.Center.X / 16f), (int)(projectile.Center.Y / 16f), 0.01f, 0.43f, 0.76f);
             projectile.rotation += 0.005f;
             #region Velocity and frame selection
@@ -131,8 +134,8 @@ namespace MagicalThings.Projectiles.CompanionProj.Mage
                     projectile.alpha -= 5;
                 }
 
-                #endregion
-    }
+            #endregion
+        }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
