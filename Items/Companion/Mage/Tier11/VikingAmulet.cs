@@ -40,21 +40,29 @@ namespace MagicalThings.Items.Companion.Mage.Tier11
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            position = Main.MouseWorld;
-            Projectile.NewProjectile(position.X, position.Y, 0, 0, ProjectileType<Projectiles.CompanionProj.Mage.PortalRingProj>(), damage, knockBack, player.whoAmI);
+            //position = Main.MouseWorld;
+            //Projectile.NewProjectile(position.X, position.Y, 0, 0, ProjectileType<Projectiles.CompanionProj.Mage.PortalRingProj>(), damage, knockBack, player.whoAmI);
+            MagicalPlayer mpm = player.GetModPlayer<MagicalPlayer>();
             for (int l = 0; l < Main.projectile.Length; l++)
             {                                                                  //this make so you can only spawn one of this projectile at the time,
                 Projectile proj = Main.projectile[l];
+                
                 if (proj.active && proj.type == item.shoot && proj.owner == player.whoAmI)
                 {
                     proj.active = false;
                 }
-                Projectile other = Main.projectile[ProjectileType<Projectiles.CompanionProj.Mage.BlackHoleProj>()];
+            }
+            for (int i = 0; i < Main.projectile.Length; i++)
+            {                                                                  //this make so you can only spawn one of this projectile at the time,
+                Projectile other = Main.projectile[i];
+                if (other.active && other.type == ProjectileType<Projectiles.CompanionProj.Mage.BlackHoleProj>() && other.owner == player.whoAmI)
                 {
-                    proj.Kill();
+                    other.active = false;
                 }
             }
-            return true;
+            position = Main.MouseWorld;
+            Projectile.NewProjectile(position.X, position.Y, 0, 0, ProjectileType<Projectiles.CompanionProj.Mage.PortalRingProj>(), damage, knockBack, player.whoAmI);
+            return false;
         }
 
         #region Glow Effect
