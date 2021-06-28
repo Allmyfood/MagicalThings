@@ -4,10 +4,11 @@ Bootslot now has a configuration for the equipment pages and to allow shoes to b
 Equip boots with Right click, vanity boots with Shift Right click
 Warning! Unequip your current boots from Bootslot before updating. Usually fine, but just in case.
   
-Updated! v0.2.6
+Updated! v0.2.7
 -------------------------------
-Update to work with tmodloader v0.11.7.8.4
+Update to work with tmodloader v0.11.8.4
 Added Server config to Enable or Disable entire Bootslot.
+Fixed version typo.
 -------------------------------
 Updated to tmodloader v0.11.7.5
 -------------------------------
